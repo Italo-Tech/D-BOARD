@@ -1,73 +1,128 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!--    <meta name="viewport" content="width=device-width,initial-scale=1.0">-->
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-
-    <!--DASHBOARD-->
-    <link rel="dns-prefetch" href="//s3.envato.com">
-      <script async="" src="https://s.pinimg.com/ct/lib/main.2a04f3ee.js"></script>
-      <script async="" src="https://s.pinimg.com/ct/lib/main.2a04f3ee.js"></script>
-      <script type="text/javascript" async="" src="//bat.bing.com/bat.js" nonce="N5DP1d5+WEA2iLLJ+wIC8Q=="></script>
-      <script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js" nonce="N5DP1d5+WEA2iLLJ+wIC8Q=="></script>
-      <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-585RXMV"></script>
-      <script type="text/javascript" src="https://bam-cell.nr-data.net/1/NRBR-281af528f2b1e2422b5?a=13909&amp;v=1208.49599aa&amp;to=NTU0DRQNDwshOmIZBRM3dR8TDg84Nys/FRQYBSoLAxQKAjM%3D&amp;rst=39018&amp;ck=1&amp;ref=https://preview.themeforest.net/item/dboard-nextjs-admin-template/full_screen_preview/27870045&amp;qt=1&amp;ap=37&amp;be=417&amp;fe=38912&amp;dc=544&amp;perf=%7B%22timing%22:%7B%22of%22:1615811728602,%22n%22:0,%22f%22:39,%22dn%22:58,%22dne%22:104,%22c%22:104,%22s%22:110,%22ce%22:138,%22rq%22:138,%22rp%22:351,%22rpe%22:356,%22dl%22:358,%22di%22:544,%22ds%22:544,%22de%22:584,%22dc%22:38912,%22l%22:38912,%22le%22:38914%7D,%22navigation%22:%7B%7D%7D&amp;fp=650&amp;fcp=650&amp;at=DXgvW1wZQRQtPChSS1QOMhwLByUINi0%2BBFNaeCgcEAsQDismb0pTRG5oQAUDAVNmNTA%3D&amp;ja=%7B%22pageType%22:%22other%22%7D&amp;jsonp=NREUM.setToken"></script>
-      <script src="https://js-agent.newrelic.com/nr-1208.min.js"></script>
-      <script type="text/javascript" charset="UTF-8" async="" src="https://consentcdn.cookiebot.com/consentconfig/4a6af4ea-f614-41d8-b0a9-8bb6d7fe4799/state.js"></script>
-      <script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-5VPWWP&amp;t=m&amp;cid=2082138383.1615234552" nonce="N5DP1d5+WEA2iLLJ+wIC8Q=="></script>
-      <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js" nonce="N5DP1d5+WEA2iLLJ+wIC8Q=="></script>
-      <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js" nonce="N5DP1d5+WEA2iLLJ+wIC8Q=="></script>
-      <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-      <script nonce="N5DP1d5+WEA2iLLJ+wIC8Q==">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"NRBR-281af528f2b1e2422b5","applicationID":"13909","transactionName":"NTU0DRQNDwshOmIZBRM3dR8TDg84Nys/FRQYBSoLAxQKAjM=","queueTime":1,"applicationTime":37,"agent":"","atts":"DXgvW1wZQRQtPChSS1QOMhwLByUINi0+BFNaeCgcEAsQDismb0pTRG5oQAUDAVNmNTA="}</script>
-      <script nonce="N5DP1d5+WEA2iLLJ+wIC8Q==">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRBR-281af528f2b1e2422b5",applicationID:"13909"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
-
-      <meta name="description" content="&amp;lt;p&amp;gt;D-board is an advanced, responsive admin template built with Next.js, Redux, and Tailwin...">
-      <meta name="robots" content="noindex, nofollow">
-      <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-      <meta name="turbo-visit-control" content="reload">
-
-      <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/core/index-98f684ccef84b460b84ed80460a3ab48f64cc85b09edaca105a51f4020f30c69.css">
-      <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/pages/preview/index-004d35cdd5d555cdd3e956d1b916825642de06529f0fe91fd9f390813761d2fc.css">
-      <link rel="stylesheet" media="all" href="https://cookiebot-assets.envato-static.com/cookiebot.css">
-      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-72x72-precomposed.png" sizes="72x72">
-      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-114x114-precomposed.png" sizes="114x114">
-      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-144x144-precomposed.png" sizes="144x144">
-      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-precomposed.png">
-
-      <script src="https://public-assets.envato-static.com/assets/market/pages/full_screen_preview/index-908950ef3ecdc9c38c400187aa20f0f3aaed760661969ce49e5759af43207ec0.js" nonce="N5DP1d5+WEA2iLLJ+wIC8Q=="></script>
-      <script nonce="N5DP1d5+WEA2iLLJ+wIC8Q==">
-          //<![CDATA[
-          //function to fix height of iframe!
-          let calcHeight = function () {
-              let headerDimensions = $('.preview__header').height();
-              $('.full-screen-preview__frame').height($(window).height() - headerDimensions);
-          };
-
-          $(document).ready(function() {
-              calcHeight();
-          });
-
-          $(window).resize(function() {
-              calcHeight();
-          }).load(function() {
-              calcHeight();
-          });
-
-          //]]>
-      </script>
-
-      <style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin,.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing{display:block;display:initial;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:none;}</style>
-      <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/943617023/?random=1615811768958&amp;cv=9&amp;fst=1615811768958&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1053&amp;u_aw=1865&amp;u_cd=24&amp;u_his=2&amp;u_tz=-180&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;gtm=2wg330&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fpreview.themeforest.net%2Fitem%2Fdboard-nextjs-admin-template%2Ffull_screen_preview%2F27870045%3F_ga%3D2.104284613.472086540.1600781564-671528386.1600779907&amp;tiba=D-Board%20-%20Next.js%20Admin%20Template%20Preview%20-%20ThemeForest&amp;hn=www.googleadservices.com&amp;us_privacy=1---&amp;async=1&amp;rfmt=3&amp;fmt=4" nonce="N5DP1d5+WEA2iLLJ+wIC8Q=="></script>
-
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
+    <meta name="description" content="React TailwindCSS admin template">
+<!--    <link rel="icon" href="/favicon.ico">-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>D-board</title>
+    <meta name="next-head-count" content="3">
+    <link rel="preload" href="/_next/static/css/3836f918ec3705e1f348.css" as="style">
+    <link rel="stylesheet" href="/_next/static/css/3836f918ec3705e1f348.css" data-n-g="">
+    <noscript data-n-css=""></noscript>
+    <link rel="preload" href="/_next/static/chunks/main-bdc1311b5d287368c36c.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/webpack-e067438c4cf4ef2ef178.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/framework.a3ab6d70963b928e4674.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/5bfee4fb19ae23551062f386782f9c4706748be8.c77d3722392d1406a88f.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/8da6b5ecd7db099ffaa055c8eb319a5785ca98ec.31709e6789014fb5c002.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/8bab16237b6390afce5bf573bb926f25fb44058c.7b4a4f1164a299eb496b.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/a31a331c03918d293cc76c73022ac042566c58ad.e294ef0e41be4c2301f9.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/pages/_app-8189bf430e5d396de266.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/75fc9c18.6c8f97b1758722c33b2b.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/adce4e8c100eeb78fbb6aa227fc5bae09e0abfee.3d5a2347f9161b8a2684.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/659d287e5f2ba23092c00d3e79ce033565166930.e1f6d1b17a8942db14ac.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/e307bf274ed54948bcb6dbf5396b2b3d2241d08f.56f85a0ce1aac18d6244.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/8ceaa29b11aa16f5ef2028a0ba8a50f1abefff70.2789a0fc06f742f0eb0d.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/3549fc0b7234fae2980ee12d3941339d68554a6c.d2f396902d910b1ce6d6.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/30e6bf3dd2818b0c902bad4f0f4d85fb2279fc2b.b57155097ea5ce4d1c3a.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/6ce14619abb9de17fc2e5f3943b2c8cf547a7e5a.175f14db449b020b9fa3.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/pages/index-32fbf2acd596b257b0a7.js" as="script">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/75fc9c18.6c8f97b1758722c33b2b.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/adce4e8c100eeb78fbb6aa227fc5bae09e0abfee.3d5a2347f9161b8a2684.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/659d287e5f2ba23092c00d3e79ce033565166930.e1f6d1b17a8942db14ac.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/e307bf274ed54948bcb6dbf5396b2b3d2241d08f.56f85a0ce1aac18d6244.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/8ceaa29b11aa16f5ef2028a0ba8a50f1abefff70.2789a0fc06f742f0eb0d.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/3549fc0b7234fae2980ee12d3941339d68554a6c.d2f396902d910b1ce6d6.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/30e6bf3dd2818b0c902bad4f0f4d85fb2279fc2b.b57155097ea5ce4d1c3a.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/6ce14619abb9de17fc2e5f3943b2c8cf547a7e5a.175f14db449b020b9fa3.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/index-32fbf2acd596b257b0a7.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/dashboard-2a2698c8edd390ab2476.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/documentation-933c4eae628a36ce2d31.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/landing-8c06e36871feef005360.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/social-feed-5d8e2f452c5585194435.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/tasks-7a9cb71c59b530720d88.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/297103e9a71195ed2052a7239fbd201b1bda76a0.bde9b9da80e07b2efdd4.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/inbox-187235cf026181af626a.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/bee240a3.5a1e16c0047f963ab19c.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/kanban-147e0343bb2eac3ea272.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/todo-30d72a68fc507175cfec.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/badges-7ba048b82255ff1d2f72.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/breadcrumbs-6e5cfbc80b4f7e467009.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/buttons-1348c11c3725c25a1b54.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/59192815e522bf180a3ea388343e93b45d6dd5e6.19b6151c123b1ebf1325.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/dropdowns-b561b7d28acd96100c6c.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/images-f4628b553c568a3bf2a1.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/1bfc9850.150c3b2c90bc5a6f7b76.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/lists-2c66b55e75792f4a34a7.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/progress-bars-5d99a457f8e5fa3906f7.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/pagination-6f78a64e0b6d1c4ae4b1.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/tabs-e9de3fde0f155ab06737.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/typography-0cdc2b57e4aff4b6a228.js">
+</head>
+<body cz-shortcut-listen="true">
     <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+    <script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"a0MXlNnn_2K9u94l6LOtv",  "nextExport":true,"autoExport":true,"isFallback":false}</script>
+    <script nomodule="" src="/_next/static/chunks/polyfills-c942a1ae76f77dadb207.js"></script>
+    <script src="/_next/static/chunks/main-bdc1311b5d287368c36c.js" async=""></script>
+    <script src="/_next/static/chunks/webpack-e067438c4cf4ef2ef178.js" async=""></script>
+    <script src="/_next/static/chunks/framework.a3ab6d70963b928e4674.js" async=""></script>
+    <script src="/_next/static/chunks/5bfee4fb19ae23551062f386782f9c4706748be8.c77d3722392d1406a88f.js" async=""></script>
+    <script src="/_next/static/chunks/8da6b5ecd7db099ffaa055c8eb319a5785ca98ec.31709e6789014fb5c002.js" async=""></script>
+    <script src="/_next/static/chunks/8bab16237b6390afce5bf573bb926f25fb44058c.7b4a4f1164a299eb496b.js" async=""></script>
+    <script src="/_next/static/chunks/a31a331c03918d293cc76c73022ac042566c58ad.e294ef0e41be4c2301f9.js" async=""></script>
+    <script src="/_next/static/chunks/pages/_app-8189bf430e5d396de266.js" async=""></script>
+    <script src="/_next/static/chunks/75fc9c18.6c8f97b1758722c33b2b.js" async=""></script>
+    <script src="/_next/static/chunks/adce4e8c100eeb78fbb6aa227fc5bae09e0abfee.3d5a2347f9161b8a2684.js" async=""></script>
+    <script src="/_next/static/chunks/659d287e5f2ba23092c00d3e79ce033565166930.e1f6d1b17a8942db14ac.js" async=""></script>
+    <script src="/_next/static/chunks/e307bf274ed54948bcb6dbf5396b2b3d2241d08f.56f85a0ce1aac18d6244.js" async=""></script>
+    <script src="/_next/static/chunks/8ceaa29b11aa16f5ef2028a0ba8a50f1abefff70.2789a0fc06f742f0eb0d.js" async=""></script>
+    <script src="/_next/static/chunks/3549fc0b7234fae2980ee12d3941339d68554a6c.d2f396902d910b1ce6d6.js" async=""></script>
+    <script src="/_next/static/chunks/30e6bf3dd2818b0c902bad4f0f4d85fb2279fc2b.b57155097ea5ce4d1c3a.js" async=""></script>
+    <script src="/_next/static/chunks/6ce14619abb9de17fc2e5f3943b2c8cf547a7e5a.175f14db449b020b9fa3.js" async=""></script>
+    <script src="/_next/static/chunks/pages/index-32fbf2acd596b257b0a7.js" async=""></script>
+    <script src="/_next/static/a0MXlNnn_2K9u94l6LOtv/_buildManifest.js" async=""></script>
+    <script src="/_next/static/a0MXlNnn_2K9u94l6LOtv/_ssgManifest.js" async=""></script>
+    <span id="recharts_measurement_span" style="position: absolute; top: -20000px; left: 0px; padding: 0px; margin: 0px; border: none; white-space: pre;">0</span>
+    <script src="/_next/static/chunks/pages/dashboard-2a2698c8edd390ab2476.js"></script>
+    <script src="/_next/static/chunks/pages/documentation-933c4eae628a36ce2d31.js"></script>
+    <script src="/_next/static/chunks/pages/landing-8c06e36871feef005360.js"></script>
+    <script src="/_next/static/chunks/pages/social-feed-5d8e2f452c5585194435.js"></script>
+    <script src="/_next/static/chunks/297103e9a71195ed2052a7239fbd201b1bda76a0.bde9b9da80e07b2efdd4.js"></script>
+    <script src="/_next/static/chunks/pages/inbox-187235cf026181af626a.js"></script>
+    <script src="/_next/static/chunks/pages/tasks-7a9cb71c59b530720d88.js"></script>
+    <script src="/_next/static/chunks/bee240a3.5a1e16c0047f963ab19c.js"></script>
+    <script src="/_next/static/chunks/pages/kanban-147e0343bb2eac3ea272.js"></script>
+    <script src="/_next/static/chunks/pages/todo-30d72a68fc507175cfec.js"></script>
+    <script src="/_next/static/chunks/pages/badges-7ba048b82255ff1d2f72.js"></script>
+    <script src="/_next/static/chunks/pages/breadcrumbs-6e5cfbc80b4f7e467009.js"></script>
+    <script src="/_next/static/chunks/pages/buttons-1348c11c3725c25a1b54.js"></script>
+    <script src="/_next/static/chunks/59192815e522bf180a3ea388343e93b45d6dd5e6.19b6151c123b1ebf1325.js"></script>
+    <script src="/_next/static/chunks/pages/dropdowns-b561b7d28acd96100c6c.js"></script>
+    <script src="/_next/static/chunks/pages/images-f4628b553c568a3bf2a1.js"></script>
+    <script src="/_next/static/chunks/1bfc9850.150c3b2c90bc5a6f7b76.js"></script>
+    <script src="/_next/static/chunks/pages/lists-2c66b55e75792f4a34a7.js"></script>
+    <script src="/_next/static/chunks/pages/pagination-6f78a64e0b6d1c4ae4b1.js"></script>
+    <script src="/_next/static/chunks/pages/progress-bars-5d99a457f8e5fa3906f7.js"></script>
+    <script src="/_next/static/chunks/pages/typography-0cdc2b57e4aff4b6a228.js"></script>
+    <script src="/_next/static/chunks/pages/tabs-e9de3fde0f155ab06737.js"></script>
+
+</body>
 </html>
