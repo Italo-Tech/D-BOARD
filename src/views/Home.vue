@@ -1,6 +1,6 @@
 <template>
   <div id="__next" class="bg-white w-full min-w-min h-full min-h-full p-0 m-0 overflow-hidden relative">
-    <div data-layout="layout-1" data-collapsed="false" data-background="light" data-navbar="light" data-left-sidebar="light" data-right-sidebar="light" class="font-sans antialiased text-sm disable-scrollbars">
+    <div class="font-sans antialiased text-sm disable-scrollbars w-full" data-layout="layout-1" data-collapsed="false" data-background="light" data-navbar="light" data-left-sidebar="light" data-right-sidebar="light">
     <!--SETTINGS RIGHT-->
       <div class="right-sidebar right-sidebar-1 open">
         <div>
@@ -108,7 +108,7 @@
           </div>
 
             <ul>
-              <!--dashboard-->
+              <!--DASHBOARD-->
               <li class="l0">
                 <a class="left-sidebar-item active" href="/dashboard">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
@@ -116,15 +116,15 @@
                 </a>
                 <ul></ul>
               </li>
-              <!--apps-->
+              <!--APPS-->
               <li class="l0">
-                <button class="left-sidebar-item hidden-sibling">
+                <button @click.prevent="isApps = !isApps" class="left-sidebar-item  focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                   <span class="title">Apps</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
                 <!--sub-apps-->
-                <ul>
+                <ul v-show="isApps">
                   <li class="l1">
                     <a class="left-sidebar-item" href="/#">
                       <span class="title">Social feed</span>
@@ -139,9 +139,9 @@
                   </li>
                 </ul>
               </li>
-              <!--menu levels-->
+              <!--MENU LEVELS-->
               <li class="l0">
-                <button class="left-sidebar-item hidden-sibling">
+                <button @click.prevent="isMenu = !isMenu" class="left-sidebar-item focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                     <line x1="8" y1="6" x2="21" y2="6"></line>
                     <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -155,72 +155,36 @@
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
                 </button>
-                <ul>
+                <ul v-show="isMenu">
                   <!--L1-->
                   <li class="l1">
-                    <button class="left-sidebar-item hidden-sibling">
+                    <button @click.prevent="isMenu1 = !isMenu1" class="left-sidebar-item focus:outline-none">
                       <span class="title">Level 1-1</span>
                       <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <polyline points="9 18 15 12 9 6"></polyline>
                       </svg>
                     </button>
                     <!--L2-->
-                    <ul>
+                    <ul v-show="isMenu1">
                       <li class="l2">
-                        <button class="left-sidebar-item hidden-sibling">
-                          <span class="title">Level 2-1</span>
-                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <polyline points="9 18 15 12 9 6"></polyline>
+                        <button @click.prevent="isMenu2 = !isMenu2" class="left-sidebar-item focus:outline-none">
+                          <span class="title ml-4">Level 2-1</span>
+                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline>
                           </svg>
                         </button>
                         <!--L3-->
-                        <ul>
+                        <ul v-show="isMenu2 ">
                           <li class="l3">
-                            <button class="left-sidebar-item hidden-sibling">
-                            <span class="title">Level 3-1</span>
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </button>
-                            <!--L4-->
-                            <ul>
-                              <li class="l4"><button class="left-sidebar-item hidden-sibling">
-                                  <span class="title">Level 4-2</span>
-                                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                  </svg>
-                                </button></li>
-                              <li class="l4"><button class="left-sidebar-item hidden-sibling">
-                                  <span class="title">Level 4-1</span>
-                                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                  </svg>
-                                </button></li>
-                              <li class="l4"><button class="left-sidebar-item hidden-sibling">
-                                  <span class="title">Level 4-3</span>
-                                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                  </svg>
-                                </button></li>
-                            </ul>
+                            <button class="left-sidebar-item focus:outline-none">
+                              <span class="title ml-6">Level 3-1</span>
+                            </button>
                           </li>
-
+                        </ul>
+                        <ul v-show="isMenu2 ">
                           <li class="l3">
-                            <button class="left-sidebar-item hidden-sibling">
-                            <span class="title">Level 3-2</span>
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </button>
-                          </li>
-
-                          <li class="l3">
-                            <button class="left-sidebar-item hidden-sibling">
-                            <span class="title">Level 3-3</span>
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </button>
+                            <button class="left-sidebar-item focus:outline-none">
+                              <span class="title ml-6">Level 3-2</span>
+                            </button>
                           </li>
                         </ul>
                       </li>
@@ -230,12 +194,12 @@
               </li>
               <!--Demos-->
               <li class="l0">
-                <button class="left-sidebar-item  open-sibling">
+                <button @click.prevent="isDemos = !isDemos" class="left-sidebar-item focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                   <span class="title">Demos</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
-                <ul>
+                <ul v-show="isDemos">
                   <li class="l1">
                     <a class="left-sidebar-item " href="/demo-1"><span class="title">Light background</span></a>
                     <ul></ul>
@@ -273,12 +237,12 @@
         <div class="main w-full bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
           <div class="navbar navbar-1 border-b">
             <div class="navbar-inner  w-full flex items-center justify-start">
-              <button class="mx-4"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+              <button class="mx-4 focus:outline-none"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
               <!--Button Search-->
               <form class="w-full max-w-xs navbar-search" action="">
                 <div class="relative">
                   <input type="search" name="search" placeholder="Procurar..." class="bg-gray-200 pl-10 pr-5 appearance-none h-10 2-full rounded-full text-sm focus:outline-none">
-                  <button type="submit" class="absolute top-0 mt-3 left-0 ml-4">
+                  <button type="submit" class="absolute top-0 mt-3 left-0 ml-4 focus:outline-none">
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                   </button>
                 </div>
@@ -286,27 +250,88 @@
 
               <!--Explore-->
               <div class="relative">
-                <button class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
+                <button @click.prevent="isExplore = !isExplore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
                   <span class="mr-2">Explore</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>
-                <div class="dropdown absolute top-0 left-0 mt-16 open">
-                  <div class="dropdown-content w-128 bottom-start">
-                    <div class="flex flex-row flex-wrap focus:outline-none">
-                      <div class="w-1/2 p-2 dropdown-item">
-                        <div class="flex flex-row items-center justify-start hover:bg-gray-200">
-                          <div class="flex-shrink-0 w-8">
-                            <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">01</span>
+                  <div v-show="isExplore" class="dropdown transition absolute top-0 left-0 mt-16">
+                    <div class="dropdown-content bottom-start" style="width: 32rem">
+                      <div class="flex flex-row flex-wrap focus:outline-none">
+                        <!--Teams-->
+                        <div class="w-1/2 p-2 dropdown-item">
+                          <div class="flex flex-row items-center justify-start hover:bg-gray-200">
+                            <div class="flex-shrink-0 w-8">
+                              <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">01</span>
+                            </div>
+                            <div class="ml-2">
+                              <div class="text-sm font-bold">Teams</div>
+                              <div class="text-xs">Minima quasi sunt.</div>
+                            </div>
                           </div>
-                          <div class="ml-2">
-                            <div class="text-sm font-bold">Teams</div>
-                            <div class="text-xs">Meet</div>
+                        </div>
+                        <!--Blog-->
+                        <div class="w-1/2 p-2 dropdown-item">
+                          <div class="flex flex-row items-center justify-start hover:bg-gray-200">
+                            <div class="flex-shrink-0 w-8">
+                              <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">01</span>
+                            </div>
+                            <div class="ml-2">
+                              <div class="text-sm font-bold">Blog</div>
+                              <div class="text-xs">Possuimos quasi sunt.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--Meetups-->
+                        <div class="w-1/2 p-2 dropdown-item">
+                          <div class="flex flex-row items-center justify-start hover:bg-gray-200">
+                            <div class="flex-shrink-0 w-8">
+                              <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">03</span>
+                            </div>
+                            <div class="ml-2">
+                              <div class="text-sm font-bold">Meetups</div>
+                              <div class="text-xs">Cupdate uno lalilo.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--Advertise-->
+                        <div class="w-1/2 p-2 dropdown-item">
+                          <div class="flex flex-row items-center justify-start hover:bg-gray-200">
+                            <div class="flex-shrink-0 w-8">
+                              <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">04</span>
+                            </div>
+                            <div class="ml-2">
+                              <div class="text-sm font-bold">Advertise with us</div>
+                              <div class="text-xs">Dolorius leviosa.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--Features-->
+                        <div class="w-1/2 p-2 dropdown-item">
+                          <div class="flex flex-row items-center justify-start hover:bg-gray-200">
+                            <div class="flex-shrink-0 w-8">
+                              <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">05</span>
+                            </div>
+                            <div class="ml-2">
+                              <div class="text-sm font-bold">Features</div>
+                              <div class="text-xs">Mordekaiser bolado.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--League-->
+                        <div class="w-1/2 p-2 dropdown-item">
+                          <div class="flex flex-row items-center justify-start hover:bg-gray-200">
+                            <div class="flex-shrink-0 w-8">
+                              <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">06</span>
+                            </div>
+                            <div class="ml-2">
+                              <div class="text-sm font-bold">League of Legends</div>
+                              <div class="text-xs">Champions.</div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
@@ -322,17 +347,29 @@ export default {
   name: 'Home',
   components: {
 
+    },
+  data() {
+    return {
+      isExplore: false,
+
+      isApps: false,
+
+      isMenu: false,
+      isMenu1: false,
+      isMenu2: false,
+      isMenu3: false,
+
+      isDemos: false
+    }
+  },
+  methods: {
+
   }
 }
 </script>
 
 <style>
 /*layout-1*/
-@media (min-width: 768px) {
-  [data-layout=layout-1] {
-    width: 100%;
-  }
-}
 [data-background=light] {
   --tw-text-opacity: 1;
   color: rgba(17, 24, 39, var(--tw-text-opacity));
@@ -591,5 +628,22 @@ export default {
     display: flex;
     flex-direction: column;
   }
+}
+
+.btn.btn-default {
+  padding: .5rem 1rem;
+}
+.btn.btn-default, .btn.btn-sm {
+  font-size: .75rem;
+  line-height: 1rem;
+}
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.dropdown .dropdown-content {
+  border-radius: .375rem;
+  --tw-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
 }
 </style>
