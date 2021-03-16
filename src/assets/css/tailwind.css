@@ -2,7 +2,7 @@
 @tailwind base;
 
         .btn {
-            @apply inline-flex items-center justify-center text-xs leading-4
+            @apply inline-flex items-center justify-center text-xs leading-4 uppercase font-bold
         }
         .btn-circle {
             @apply rounded-full h-8 w-8 p-0 bg-transparent
@@ -44,6 +44,10 @@
         .btn-raised {
             --tw-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06);
             box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
+        }
+
+        .left-sidebar-item.active, .left-sidebar-item:hover {
+            color: #3B82F6;
         }
 
 @tailwind components;

@@ -1,15 +1,15 @@
 <template>
   <div id="__next" class="bg-white w-full min-w-min h-full min-h-full p-0 m-0 overflow-hidden relative">
-    <div class="font-sans antialiased text-sm disable-scrollbars w-full" data-layout="layout-1" data-collapsed="false" data-background="light" data-navbar="light" data-left-sidebar="light" data-right-sidebar="light">
+    <div class="font-sans antialiased text-sm disable-scrollbars w-full text-gray-900 bg-white" data-layout="layout-1" data-collapsed="false" data-navbar="light" data-left-sidebar="light">
     <!--SETTINGS RIGHT-->
-      <div class="right-sidebar right-sidebar-1 open">
+      <div class="right-sidebar bg-white text-gray-900 right-sidebar-1 open">
         <div>
           <div>
             <!--Cabeçalho DEMO-->
             <div class="flex flex-col">
               <div class="px-4 h-16 flex flex-row items-center justify-between text-white bg-blue-500">
                 <div class="uppercase text-sm font-bold tracking-wider">Settings</div>
-                <button class="btn btn-circle">
+                <button class="btn btn-circle focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
               </div>
@@ -232,14 +232,13 @@
             </ul>
         </div>
 
-
         <!--MAIN-->
         <div class="main w-full bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
           <div class="navbar navbar-1 border-b">
             <div class="navbar-inner  w-full flex items-center justify-start">
               <button class="mx-4 focus:outline-none"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
               <!--Button Search-->
-              <form class="w-full max-w-xs navbar-search" action="">
+              <form class="w-full max-w-xs navbar-search">
                 <div class="relative">
                   <input type="search" name="search" placeholder="Procurar..." class="bg-gray-200 pl-10 pr-5 appearance-none h-10 2-full rounded-full text-sm focus:outline-none">
                   <button type="submit" class="absolute top-0 mt-3 left-0 ml-4 focus:outline-none">
@@ -370,20 +369,10 @@ export default {
 
 <style>
 /*layout-1*/
-[data-background=light] {
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
-}
 
 /*RIGHT SIDEBAR*/
 .right-sidebar.right-sidebar-1.open {
-  --tw-translate-x: 0px;
-}
-[data-right-sidebar=light] .right-sidebar {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
+  transform: translateX(0px);
 }
 .right-sidebar.right-sidebar-1 {
   height: 100%;
@@ -538,12 +527,6 @@ export default {
   }
 }
 @media (min-width: 768px) {
-  .left-sidebar-item.active, .left-sidebar-item:hover {
-    --tw-text-opacity: 1;
-    color: rgba(59,130,246,var(--tw-text-opacity));
-  }
-}
-@media (min-width: 768px) {
   .left-sidebar-item {
     display: flex;
     flex-direction: row;
@@ -565,27 +548,25 @@ export default {
     width: calc(.25rem * 16);
   }
 }
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   [data-collapsed=false] .l0>.left-sidebar-item>.title {
-    opacity: 1;
     visibility: visible;
   }
-}
-@media (min-width: 768px) {
+}*/
+/*@media (min-width: 768px) {
   .left-sidebar-item.active:after, .left-sidebar-item:hover:after {
     display: block;
   }
-}
+}*/
 @media (min-width: 768px) {
-  .left-sidebar-item.open-sibling:after, .left-sidebar-item:after {
+  .left-sidebar-item:after, .left-sidebar-item:after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     width: 4px;
-    --tw-bg-opacity: 1;
-    background-color: rgba(59,130,246,var(--tw-bg-opacity));
+    background-color: rgba(59,130,246,1);
   }
 }
 @media (min-width: 768px) {
@@ -637,10 +618,7 @@ export default {
   font-size: .75rem;
   line-height: 1rem;
 }
-.btn {
-  font-weight: 700;
-  text-transform: uppercase;
-}
+
 .dropdown .dropdown-content {
   border-radius: .375rem;
   --tw-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
