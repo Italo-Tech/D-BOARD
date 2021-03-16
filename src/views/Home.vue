@@ -1,5 +1,5 @@
 <template>
-  <div id="__next" class="bg-white w-full min-w-min h-full min-h-full p-0 m-0 overflow-hidden relative">
+  <div id="__next" class="bg-white w-full min-w-min h-screen min-h-full p-0 m-0 overflow-hidden relative">
     <div class="font-sans antialiased text-sm disable-scrollbars w-full text-gray-900 bg-white" data-layout="layout-1" data-collapsed="false" data-navbar="light" data-left-sidebar="light">
     <!--SETTINGS RIGHT-->
       <div class="right-sidebar bg-white text-gray-900 right-sidebar-1 open">
@@ -227,7 +227,6 @@
                 </ul>
               </li>
 
-
               <li class="l0"></li>
             </ul>
         </div>
@@ -247,7 +246,7 @@
                 </div>
               </form>
 
-              <!--Explore-->
+              <!--EXPLORE-->
               <div class="relative">
                 <button @click.prevent="isExplore = !isExplore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
                   <span class="mr-2">Explore</span>
@@ -332,6 +331,129 @@
                     </div>
                   </div>
               </div>
+
+              <span class="ml-auto"></span>
+
+              <!--CHANGE NATION-->
+              <div class="hidden lg:flex relative">
+                <button @click.prevent="isNation = !isNation" class="flex items-center justify-center h-16 w-12 focus:outline-none">
+                  <span class="text-base flag-icon flag-icon-br"></span>
+                </button>
+                <div v-show="isNation" class="dropdown absolute top-0 right-0 mt-16 transition">
+                  <div class="dropdown-content w-64 bottom-start">
+                    <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Escolha um país</div>
+                    <div class="flex flex-wrap">
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-us"></span>
+                        <span>USA</span>
+                      </a>
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-es"></span>
+                        <span>Espanha</span>
+                      </a>
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-ru"></span>
+                        <span>Rússia</span>
+                      </a>
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-cn"></span>
+                        <span>China</span>
+                      </a>
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-in"></span>
+                        <span>India</span>
+                      </a>
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-ca"></span>
+                        <span>Canadá</span>
+                      </a>
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-au"></span>
+                        <span>Australia</span>
+                      </a>
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-jp"></span>
+                        <span>Japão</span>
+                      </a>
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-kr"></span>
+                        <span>Koreia</span>
+                      </a>
+                      <a class="w-1/2 flex items-center justify-start p-2 text-sm space-x-2 dropdown-item" href="/">
+                        <span class="text-base flag-icon flag-icon-fr"></span>
+                        <span>França</span>
+                      </a>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <!--CUBO-->
+              <div class="hidden lg:flex relative">
+                <button @click.prevent="isCubo = !isCubo" class="flex items-center justify-center h-16 w-12 focus:outline-none">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </button>
+                <div v-show="isCubo" class="dropdown absolute top-0 right-0 mt-16 transition">
+                  <div class="dropdown-content w-64 bottom-start">
+                    <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Apps</div>
+                    <div class="flex flex-wrap">
+                      <!--ICON HOME-->
+                      <div class="w-1/3 flex flex-col items-center justify-center h-20 space-y-1 dropdown-item">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-xl text-gray-700" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span class="text-xs">Home</span>
+                      </div>
+                      <!--ICON ACCOUNT-->
+                      <div class="w-1/3 flex flex-col items-center justify-center h-20 space-y-1 dropdown-item">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-xl text-blue-700" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+
+                        <span class="text-xs">Account</span>
+                      </div>
+                      <!--ICON COMMENTS-->
+                      <div class="w-1/3 flex flex-col items-center justify-center h-20 space-y-1 dropdown-item">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-xl text-orange-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        <span class="text-xs">Comments</span>
+                      </div>
+                      <!--ICON SETTINGS-->
+                      <div class="w-1/3 flex flex-col items-center justify-center h-20 space-y-1 dropdown-item">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-xl text-green-700" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                        <span class="text-xs">Settings</span>
+                      </div>
+                      <!--ICON MAPS-->
+                      <div class="w-1/3 flex flex-col items-center justify-center h-20 space-y-1 dropdown-item">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-xl text-red-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span class="text-xs">Maps</span>
+                      </div>
+                      <!--ICON TWITTER-->
+                      <div class="w-1/3 flex flex-col items-center justify-center h-20 space-y-1 dropdown-item">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-xl text-blue-400" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        <span class="text-xs">Twitter</span>
+                      </div>
+                      <!--ICON FACEBOOK-->
+                      <div class="w-1/3 flex flex-col items-center justify-center h-20 space-y-1 dropdown-item">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-xl text-blue-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        <span class="text-xs">Facebook</span>
+                      </div>
+                      <!--ICON INSTAGRAM-->
+                      <div class="w-1/3 flex flex-col items-center justify-center h-20 space-y-1 dropdown-item">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-xl text-pink-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span class="text-xs">Instagram</span>
+                      </div>
+                      <!--ICON LINKEDIN-->
+                      <div class="w-1/3 flex flex-col items-center justify-center h-20 space-y-1 dropdown-item">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-xl text-blue-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span class="text-xs">Linkedin</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="hidden lg:flex relative"></div>
+              <div class="hidden lg:flex relative"></div>
             </div>
           </div>
         </div>
@@ -358,7 +480,10 @@ export default {
       isMenu2: false,
       isMenu3: false,
 
-      isDemos: false
+      isDemos: false,
+
+      isNation: false,
+      isCubo: false,
     }
   },
   methods: {
@@ -371,9 +496,9 @@ export default {
 /*layout-1*/
 
 /*RIGHT SIDEBAR*/
-.right-sidebar.right-sidebar-1.open {
+/*.right-sidebar.right-sidebar-1.open {
   transform: translateX(0px);
-}
+}*/
 .right-sidebar.right-sidebar-1 {
   height: 100%;
   font-size: .825rem;
@@ -623,5 +748,8 @@ export default {
   border-radius: .375rem;
   --tw-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
+}
+.flag-icon::before {
+  content: '\00a0';
 }
 </style>
