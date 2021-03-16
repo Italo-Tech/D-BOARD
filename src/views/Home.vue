@@ -139,11 +139,177 @@
                   </li>
                 </ul>
               </li>
+              <!--menu levels-->
+              <li class="l0">
+                <button class="left-sidebar-item hidden-sibling">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg>
+                  <span class="title">Menu Levels</span>
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <ul>
+                  <!--L1-->
+                  <li class="l1">
+                    <button class="left-sidebar-item hidden-sibling">
+                      <span class="title">Level 1-1</span>
+                      <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </button>
+                    <!--L2-->
+                    <ul>
+                      <li class="l2">
+                        <button class="left-sidebar-item hidden-sibling">
+                          <span class="title">Level 2-1</span>
+                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </button>
+                        <!--L3-->
+                        <ul>
+                          <li class="l3">
+                            <button class="left-sidebar-item hidden-sibling">
+                            <span class="title">Level 3-1</span>
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          </button>
+                            <!--L4-->
+                            <ul>
+                              <li class="l4"><button class="left-sidebar-item hidden-sibling">
+                                  <span class="title">Level 4-2</span>
+                                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                  </svg>
+                                </button></li>
+                              <li class="l4"><button class="left-sidebar-item hidden-sibling">
+                                  <span class="title">Level 4-1</span>
+                                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                  </svg>
+                                </button></li>
+                              <li class="l4"><button class="left-sidebar-item hidden-sibling">
+                                  <span class="title">Level 4-3</span>
+                                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                  </svg>
+                                </button></li>
+                            </ul>
+                          </li>
+
+                          <li class="l3">
+                            <button class="left-sidebar-item hidden-sibling">
+                            <span class="title">Level 3-2</span>
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          </button>
+                          </li>
+
+                          <li class="l3">
+                            <button class="left-sidebar-item hidden-sibling">
+                            <span class="title">Level 3-3</span>
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          </button>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!--Demos-->
+              <li class="l0">
+                <button class="left-sidebar-item  open-sibling">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <span class="title">Demos</span>
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <ul>
+                  <li class="l1">
+                    <a class="left-sidebar-item " href="/demo-1"><span class="title">Light background</span></a>
+                    <ul></ul>
+                  </li>
+                  <li class="l1">
+                    <a class="left-sidebar-item " href="/demo-2"><span class="title">Dark Background</span></a>
+                    <ul></ul>
+                  </li>
+                  <li class="l1">
+                    <a class="left-sidebar-item " href="/demo-4"><span class="title">Dark Sidebar</span></a>
+                    <ul></ul>
+                  </li>
+                  <li class="l1">
+                    <a class="left-sidebar-item " href="/demo-3"><span class="title">Small Sidebar</span></a>
+                    <ul></ul>
+                  </li>
+                  <li class="l1">
+                    <a class="left-sidebar-item " href="/demo-5"><span class="title">Dark Small Sidebar</span></a>
+                    <ul></ul>
+                  </li>
+                  <li class="l1">
+                    <a class="left-sidebar-item " href="/demo-6"><span class="title">Dark navbar</span></a>
+                    <ul></ul>
+                  </li>
+                </ul>
+              </li>
+
 
               <li class="l0"></li>
-              <li class="l0"></li>
-              <li class="l0"></li>
             </ul>
+        </div>
+
+
+        <!--MAIN-->
+        <div class="main w-full bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
+          <div class="navbar navbar-1 border-b">
+            <div class="navbar-inner  w-full flex items-center justify-start">
+              <button class="mx-4"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+              <!--Button Search-->
+              <form class="w-full max-w-xs navbar-search" action="">
+                <div class="relative">
+                  <input type="search" name="search" placeholder="Procurar..." class="bg-gray-200 pl-10 pr-5 appearance-none h-10 2-full rounded-full text-sm focus:outline-none">
+                  <button type="submit" class="absolute top-0 mt-3 left-0 ml-4">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </button>
+                </div>
+              </form>
+
+              <!--Explore-->
+              <div class="relative">
+                <button class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
+                  <span class="mr-2">Explore</span>
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="dropdown absolute top-0 left-0 mt-16 open">
+                  <div class="dropdown-content w-128 bottom-start">
+                    <div class="flex flex-row flex-wrap focus:outline-none">
+                      <div class="w-1/2 p-2 dropdown-item">
+                        <div class="flex flex-row items-center justify-start hover:bg-gray-200">
+                          <div class="flex-shrink-0 w-8">
+                            <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">01</span>
+                          </div>
+                          <div class="ml-2">
+                            <div class="text-sm font-bold">Teams</div>
+                            <div class="text-xs">Meet</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -402,6 +568,28 @@ export default {
 @media (min-width: 768px) {
   .left-sidebar-item.open-sibling:after {
     display: block;
+  }
+}
+@media (min-width: 768px) {
+  .arrow {
+    transform: rotate(
+        90deg
+    );
+    transition: transform .15s ease-in-out;
+  }
+}
+@media (min-width: 768px) {
+  [data-collapsed=false] .hidden-sibling+ul, [data-collapsed=true] .arrow {
+    display: none;
+  }
+}
+
+/*MAIN*/
+@media (min-width: 768px) {
+  [data-layout=layout-1] .wrapper .main {
+    min-width: calc(100% - (.25rem * 64));
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>
