@@ -2,7 +2,7 @@
   <div id="__next" class="bg-white w-full min-w-min h-screen min-h-full p-0 m-0 overflow-hidden relative">
     <div class="font-sans antialiased text-sm disable-scrollbars w-full text-gray-900 bg-white" data-layout="layout-1" data-collapsed="false" data-navbar="light" data-left-sidebar="light">
     <!--SETTINGS RIGHT-->
-      <div class="right-sidebar bg-white text-gray-900 right-sidebar-1 open">
+      <div class="right-sidebar bg-white text-gray-900 right-sidebar-1 openSettings">
         <div>
           <div>
             <!--Cabeçalho DEMO-->
@@ -233,6 +233,7 @@
 
         <!--MAIN-->
         <div class="main w-full bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
+          <!--NAVBAR-->
           <div class="navbar navbar-1 border-b">
             <div class="navbar-inner  w-full flex items-center justify-start">
               <button class="mx-4 focus:outline-none"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
@@ -523,14 +524,264 @@
 
               <!--PROFILE-->
               <div class="hidden lg:flex relative">
-                <div>
-                  <button @click.prevent="isProfile = !isProfile" class="flex h-16 w-8 focus:outline-none relative ml-2 mr-8">
-                    <span class="absolute top-0 left-0 pt-4">
-                      <img class="h-8 w-8 rounded-full shadow bg-yellow-500" src="../assets/img/perfil.png" alt="avatar">
-                      <span class="absolute uppercase font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-red-500 text-white ring-white" style="top: 10px; right: -4px">2</span>
-                    </span>
-                  </button>
+                <button @click.prevent="isProfile = !isProfile" class="flex h-16 w-8 focus:outline-none relative ml-2">
+                  <span class="absolute top-0 left-0 pt-4">
+                    <img class="h-8 w-8 rounded-full shadow bg-yellow-500" src="../assets/img/perfil.png" alt="avatar">
+                    <span class="absolute uppercase font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-red-500 text-white ring-white" style="top: 10px; right: -4px">2</span>
+                  </span>
+                </button>
+                <div v-show="isProfile" class="absolute top-0 right-0 mt-16">
+                  <div class="w-48 bottom-end">
+                    <div class="flex flex-col w-full">
+                      <ul class="list-none shadow-xl">
+                        <!--Inbox-->
+                        <li class="hover:text-blue-500 hover:bg-gray-100">
+                          <a href="/" class="flex flex-row items-center justify-start h-10 w-full px-2">
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <span class="mx-2">Inbox</span>
+                            <span class="uppercase font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-red-500 text-white ml-auto">2</span>
+                          </a>
+                        </li>
+                        <!--Messages-->
+                        <li class="hover:text-blue-500 hover:bg-gray-100">
+                          <a href="/" class="flex flex-row items-center justify-start h-10 w-full px-2">
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <span class="mx-2">Messages</span>
+                            <span class="uppercase font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-blue-500 text-white ml-auto">5</span>
+                          </a>
+                        </li>
+                        <!--Profile-->
+                        <li class="hover:text-blue-500 hover:bg-gray-100">
+                          <a href="/" class="flex flex-row items-center justify-start h-10 w-full px-2">
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <span class="mx-2">Profile</span>
+                          </a>
+                        </li>
+                        <!--Logout-->
+                        <li class="hover:text-blue-500 hover:bg-gray-100">
+                          <a href="/" class="flex flex-row items-center justify-start h-10 w-full px-2">
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                            <span class="mx-2">Logout</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <!--BUTTON CONFIG-->
+              <button @click.prevent="isSettings = !isSettings" class="btn-transparent flex items-center justify-center h-16 w-8 mx-4 focus:outline-none">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!--CONTENT-->
+          <div class="min-h-screen w-full p-4">
+            <!--DASHBOARD/BUTTON-->
+            <div class="flex flex-row items-center justify-between mb-4">
+              <div class="flex flex-col">
+                <div class="text-xs uppercase font-light text-gray-500">Overview</div>
+                <div class="text-xl font-bold">Dashboard</div>
+              </div>
+              <div class="flex-shrink-0 space-x-2">
+                <button class="btn btn-default rounded-lg btn-icon bg-blue-500 hover:bg-blue-600 text-white space-x-1">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-white" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  <span>Add Widget</span>
+                </button>
+              </div>
+            </div>
+
+            <!--CONTENT-->
+            <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
+              <!--USERS-->
+              <div class="w-full lg:w-1/4">
+                <div class="widget w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+                  <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                      <div class="text-xs uppercase font-light text-gray-500">Users</div>
+                      <div class="text-xl font-bold">588</div>
+                    </div>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-gray-500" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  </div>
+                </div>
+              </div>
+              <!--SESSIONS-->
+              <div class="w-full lg:w-1/4">
+                <div class="widget w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+                  <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                      <div class="text-xs uppercase font-light text-gray-500">Sessions</div>
+                      <div class="text-xl font-bold">455</div>
+                    </div>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-gray-500" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  </div>
+                </div>
+              </div>
+              <!--BOUNCE RATE-->
+              <div class="w-full lg:w-1/4">
+                <div class="widget w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+                  <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                      <div class="text-xs uppercase font-light text-gray-500">Bounce Rate</div>
+                      <div class="text-xl font-bold">40.5%</div>
+                    </div>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-gray-500" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </div>
+                </div>
+              </div>
+              <!--SESSOION DURATION-->
+              <div class="w-full lg:w-1/4">
+                <div class="widget w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+                  <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col">
+                      <div class="text-xs uppercase font-light text-gray-500">Sessions Duration</div>
+                      <div class="text-xl font-bold">1m 24s</div>
+                    </div>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current text-gray-500" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--GHRAPICS-->
+            <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
+              <div class="w-full lg:w-2/3">
+                <div class="w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+                  <!--header ghrapics-->
+                  <div class="flex flex-row items-center justify-between mb-6">
+                    <!--conversions title-->
+                    <div class="flex flex-col">
+                      <div class="text-sm font-light text-gray-500">Conversions</div>
+                      <div class="text-sm font-bold">
+                        <span>This year</span>
+                      </div>
+                    </div>
+                    <!--icon ellipsis-->
+                    <div class="relative">
+                      <button @click.prevent="isConversions = !isConversions" class="bg-gray-200 pl-1.5 btn-default btn-circle btn-icon hover:scale-100 hover:scale-100 hover:bg-gray-300 relative focus:outline-none">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current stroke-1" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                      </button>
+                      <div v-show="isConversions" class="dropdown absolute top-0 right-0 mt-8 transition">
+                        <div class="dropdown-content w-48 bottom-start">
+                          <div class="flex flex-col w-full">
+                            <ul class="list-none">
+                              <li>
+                                <a class="flex flex-row items-center justify-start h-10 w-full px-2 bg-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800" href="/">Today</a>
+                              </li>
+                              <li>
+                                <a class="flex flex-row items-center justify-start h-10 w-full px-2 bg-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800" href="/">This week</a>
+                              </li>
+                              <li>
+                                <a class="flex flex-row items-center justify-start h-10 w-full px-2 bg-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800" href="/">This month</a>
+                              </li>
+                              <li>
+                                <a class="flex flex-row items-center justify-start h-10 w-full px-2 bg-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800" href="/">This year</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--ghrapics-->
+                  <div class="flex flex-row w-full">
+                    <div style="width: 100%;height: 240px">
+                      <div class="recharts-responsive-container" style="width:100%;height:100%">
+                        <div class="recharts-wrapper" style="position: relative; cursor: default; width: 889px; height: 240px;">
+                          <svg class="recharts-surface" width="889" height="240" viewBox="0 0 889 240" version="1.1"><defs><clipPath id="recharts3-clip"><rect x="40" y="10" height="190" width="839"></rect></clipPath></defs><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="74.95833333333334" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="74.95833333333334" dy="0.71em">Jan</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="144.875" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="144.875" dy="0.71em">Feb</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="214.79166666666669" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="214.79166666666669" dy="0.71em">Mar</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="284.7083333333333" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="284.7083333333333" dy="0.71em">Apr</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="354.625" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="354.625" dy="0.71em">May</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="424.5416666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="424.5416666666667" dy="0.71em">Jun</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="494.4583333333333" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="494.4583333333333" dy="0.71em">Jul</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="564.3750000000001" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="564.3750000000001" dy="0.71em">Aug</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="634.2916666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="634.2916666666667" dy="0.71em">Sep</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="704.2083333333334" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="704.2083333333334" dy="0.71em">Oct</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="774.1250000000001" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="774.1250000000001" dy="0.71em">Nov</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="844.0416666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="844.0416666666667" dy="0.71em">Dec</tspan></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="200" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="152.5" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">60</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="105" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">120</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="57.5" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">180</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="10" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">240</tspan></text></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="128.25" x="62" y="71.74999999999999" radius="0" class="recharts-rectangle" d="M 62,71.74999999999999 h 10 v 128.25 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="131.91666666666669" y="105" radius="0" class="recharts-rectangle" d="M 131.91666666666669,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="201.83333333333334" y="105" radius="0" class="recharts-rectangle" d="M 201.83333333333334,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="143.29166666666666" x="271.75" y="56.708333333333336" radius="0" class="recharts-rectangle" d="M 271.75,56.708333333333336 h 10 v 143.29166666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="89.45833333333334" x="341.6666666666667" y="110.54166666666666" radius="0" class="recharts-rectangle" d="M 341.6666666666667,110.54166666666666 h 10 v 89.45833333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="152" x="411.58333333333337" y="48" radius="0" class="recharts-rectangle" d="M 411.58333333333337,48 h 10 v 152 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="143.29166666666666" x="481.5" y="56.70833333333334" radius="0" class="recharts-rectangle" d="M 481.5,56.70833333333334 h 10 v 143.29166666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="98.16666666666667" x="551.4166666666667" y="101.83333333333333" radius="0" class="recharts-rectangle" d="M 551.4166666666667,101.83333333333333 h 10 v 98.16666666666667 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="82.33333333333334" x="621.3333333333334" y="117.66666666666666" radius="0" class="recharts-rectangle" d="M 621.3333333333334,117.66666666666666 h 10 v 82.33333333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="691.25" y="105" radius="0" class="recharts-rectangle" d="M 691.25,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="131.41666666666666" x="761.1666666666667" y="68.58333333333334" radius="0" class="recharts-rectangle" d="M 761.1666666666667,68.58333333333334 h 10 v 131.41666666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="121.91666666666667" x="831.0833333333334" y="78.08333333333333" radius="0" class="recharts-rectangle" d="M 831.0833333333334,78.08333333333333 h 10 v 121.91666666666667 h -10 Z"></path></g></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="187.625" x="76" y="12.374999999999993" radius="0" class="recharts-rectangle" d="M 76,12.374999999999993 h 10 v 187.625 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="118.75" x="145.91666666666669" y="81.25" radius="0" class="recharts-rectangle" d="M 145.91666666666669,81.25 h 10 v 118.75 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="151.20833333333331" x="215.83333333333334" y="48.79166666666668" radius="0" class="recharts-rectangle" d="M 215.83333333333334,48.79166666666668 h 10 v 151.20833333333331 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="187.625" x="285.75" y="12.374999999999991" radius="0" class="recharts-rectangle" d="M 285.75,12.374999999999991 h 10 v 187.625 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="146.45833333333334" x="355.6666666666667" y="53.541666666666664" radius="0" class="recharts-rectangle" d="M 355.6666666666667,53.541666666666664 h 10 v 146.45833333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="176.54166666666669" x="425.58333333333337" y="23.45833333333333" radius="0" class="recharts-rectangle" d="M 425.58333333333337,23.45833333333333 h 10 v 176.54166666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="185.25" x="495.5" y="14.75" radius="0" class="recharts-rectangle" d="M 495.5,14.75 h 10 v 185.25 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="145.66666666666669" x="565.4166666666667" y="54.33333333333332" radius="0" class="recharts-rectangle" d="M 565.4166666666667,54.33333333333332 h 10 v 145.66666666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="182.875" x="635.3333333333334" y="17.124999999999993" radius="0" class="recharts-rectangle" d="M 635.3333333333334,17.124999999999993 h 10 v 182.875 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="178.91666666666666" x="705.25" y="21.083333333333336" radius="0" class="recharts-rectangle" d="M 705.25,21.083333333333336 h 10 v 178.91666666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="181.29166666666669" x="775.1666666666667" y="18.70833333333332" radius="0" class="recharts-rectangle" d="M 775.1666666666667,18.70833333333332 h 10 v 181.29166666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="133" x="845.0833333333334" y="67" radius="0" class="recharts-rectangle" d="M 845.0833333333334,67 h 10 v 133 h -10 Z"></path></g></g></g></g></svg>
+                          <div class="recharts-tooltip-wrapper" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; transform: translate(504.458px, 122px);">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full lg:w-1/3">
+                <div class="w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+                  <div class="flex flex-row items-center justify-between mb-6">
+                    <div class="flex flex-col">
+                      <div class="text-gray-500 text-sm font-light">Sessions</div>
+                      <div class="text-sm font-bold">
+                        <span>By device</span>
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <button @click.prevent="isConversions2 = !isConversions2" class="bg-gray-200 pl-1.5 btn-default btn-circle btn-icon hover:scale-100 hover:scale-100 hover:bg-gray-300 relative focus:outline-none">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current stroke-1" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                      </button>
+                      <div v-show="isConversions2" class="dropdown absolute top-0 right-0 mt-8 transition">
+                        <div class="dropdown-content w-48 bottom-start">
+                          <div class="flex flex-col w-full">
+                            <ul class="list-none">
+                              <li>
+                                <a class="flex flex-row items-center justify-start h-10 w-full px-2 bg-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800" href="/">Today</a>
+                              </li>
+                              <li>
+                                <a class="flex flex-row items-center justify-start h-10 w-full px-2 bg-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800" href="/">This week</a>
+                              </li>
+                              <li>
+                                <a class="flex flex-row items-center justify-start h-10 w-full px-2 bg-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800" href="/">This month</a>
+                              </li>
+                              <li>
+                                <a class="flex flex-row items-center justify-start h-10 w-full px-2 bg-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800" href="/">This year</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row w-full">
+                    <div style="width:100%;height:240px">
+                      <div class="recharts-responsive-container" style="width:100%;height:100%">
+                        <div class="recharts-wrapper relative" style="width: 427px; height: 240px;">
+                          <svg class="recharts-surface" width="427" height="240" viewBox="0 0 427 240" version="1.1"><defs><clipPath id="recharts6-clip"><rect x="5" y="5" height="210" width="417"></rect></clipPath></defs><g class="recharts-layer recharts-pie"><g class="recharts-layer recharts-pie-sector"><path fill="#bfdbfe" stroke="#fff" class="recharts-sector" d="M 297.5,110
+    A 84,84,0,
+    0,0,
+    134.5658198539837,81.2703079606438
+  L 157.1184427528455,89.47879140045987
+            A 60,60,0,
+            0,1,
+            273.5,110 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path fill="#60a5fa" stroke="#fff" class="recharts-sector" d="M 134.5658198539837,81.2703079606438
+    A 84,84,0,
+    0,0,
+    228.0864469240221,192.7238512530255
+  L 223.9188906600158,169.0884651807325
+            A 60,60,0,
+            0,1,
+            157.1184427528455,89.47879140045987 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path fill="#2563eb" stroke="#fff" class="recharts-sector" d="M 228.0864469240221,192.7238512530255
+    A 84,84,0,
+    0,0,
+    297.5,110.00000000000001
+  L 273.5,110.00000000000001
+            A 60,60,0,
+            0,1,
+            223.9188906600158,169.0884651807325 Z"></path></g></g>
+                          </svg>
+                          
+                          <div class="recharts-legend-wrapper absolute" style="width: 417px; height: auto; left: 5px; bottom: 5px;">
+                            <ul class="recharts-default-legend p-0 m-0 text-center">
+                              <li class="recharts-legend-item legend-item-0 inline-block" style="margin-right: 10px;"><svg class="recharts-surface" width="14" height="14" viewBox="0 0 32 32" version="1.1" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path fill="#bfdbfe" class="recharts-symbols" transform="translate(16, 16)" d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"></path></svg>
+                                <span class="recharts-legend-item-text">Desktop</span>
+                              </li>
+                              <li class="recharts-legend-item legend-item-1 inline-block" style="margin-right: 10px;"><svg class="recharts-surface" width="14" height="14" viewBox="0 0 32 32" version="1.1" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path fill="#60a5fa" class="recharts-symbols" transform="translate(16, 16)" d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"></path></svg>
+                                <span class="recharts-legend-item-text">Mobile</span>
+                              </li>
+                              <li class="recharts-legend-item legend-item-2 inline-block" style="margin-right: 10px;"><svg class="recharts-surface" width="14" height="14" viewBox="0 0 32 32" version="1.1" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path fill="#2563eb" class="recharts-symbols" transform="translate(16, 16)" d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"></path></svg>
+                                <span class="recharts-legend-item-text">Tablet</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -566,6 +817,13 @@ export default {
       isProjectStatus: false,
 
       isProfile: false,
+
+      setting: {
+        isSettings: false,
+      },
+
+      isConversions: false,
+      isConversions2: false,
     }
   },
   methods: {
@@ -575,12 +833,10 @@ export default {
 </script>
 
 <style>
-/*layout-1*/
-
 /*RIGHT SIDEBAR*/
-/*.right-sidebar.right-sidebar-1.open {
-  transform: translateX(0px);
-}*/
+.right-sidebar.right-sidebar-1.openSettings {
+  /*transform: translateX(0px);*/
+}
 .right-sidebar.right-sidebar-1 {
   height: 100%;
   font-size: .825rem;
