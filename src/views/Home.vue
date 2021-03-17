@@ -451,9 +451,87 @@
                 </div>
               </div>
 
+              <!--PROJECT STATUS-->
+              <div class="hidden lg:flex relative">
+                <button @click.prevent="isProjectStatus = !isProjectStatus" class="flex items-center justify-center h-16 w-12 focus:outline-none">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  <span class="uppercase absolute font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-blue-500 text-white" style="top: 14px; right: 8px">5</span>
+                </button>
+                <div v-show="isProjectStatus" class="dropdown absolute top-0 right-0 mt-16 transition">
+                  <div class="dropdown-content w-64 bottom-start">
+                    <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Project Status</div>
+                    <div class="flex flex-col">
+                      <!--Mobile-->
+                      <div class="flex flex-col p-2 dropdown-item">
+                        <div class="flex items-center justify-between mb-2">
+                          <div class="text-sm font-bold">Mobile</div>
+                          <div class="text-xs whitespace-nowrap">33<!-- -->%</div>
+                        </div>
 
-              <div class="hidden lg:flex relative"></div>
-              <div class="hidden lg:flex relative"></div>
+                        <div class="relative flex flex-row w-full text-center text-xs items-center h-1">
+                          <div class="top-0 left-0 h-1 w-full bg-green-500" style="width: 33%"></div>
+                        </div>
+                      </div>
+                      <!--Deploy Github-->
+                      <div class="flex flex-col p-2 dropdown-item">
+                        <div class="flex items-center justify-between mb-2">
+                          <div class="text-sm font-bold">Deploy Github</div>
+                          <div class="text-xs whitespace-nowrap">50<!-- -->%</div>
+                        </div>
+
+                        <div class="relative flex flex-row w-full text-center text-xs items-center h-1">
+                          <div class="top-0 left-0 h-1 w-full bg-yellow-500" style="width: 50%"></div>
+                        </div>
+                      </div>
+                      <!--Deploy Github-->
+                      <div class="flex flex-col p-2 dropdown-item">
+                        <div class="flex items-center justify-between mb-2">
+                          <div class="text-sm font-bold">Custos de Desenvolvimento</div>
+                          <div class="text-xs whitespace-nowrap">66<!-- -->%</div>
+                        </div>
+
+                        <div class="relative flex flex-row w-full text-center text-xs items-center h-1">
+                          <div class="top-0 left-0 h-1 w-full bg-red-500" style="width: 66%"></div>
+                        </div>
+                      </div>
+                      <!--Banco de Dados Backup-->
+                      <div class="flex flex-col p-2 dropdown-item">
+                        <div class="flex items-center justify-between mb-2">
+                          <div class="text-sm font-bold">Backup DB</div>
+                          <div class="text-xs whitespace-nowrap">25<!-- -->%</div>
+                        </div>
+
+                        <div class="relative flex flex-row w-full text-center text-xs items-center h-1">
+                          <div class="top-0 left-0 h-1 w-full bg-purple-500" style="width: 25%"></div>
+                        </div>
+                      </div>
+                      <!--Versão-->
+                      <div class="flex flex-col p-2 dropdown-item">
+                        <div class="flex items-center justify-between mb-2">
+                          <div class="text-sm font-bold">Backup DB</div>
+                          <div class="text-xs whitespace-nowrap">80<!-- -->%</div>
+                        </div>
+
+                        <div class="relative flex flex-row w-full text-center text-xs items-center h-1">
+                          <div class="top-0 left-0 h-1 w-full bg-blue-500" style="width: 80%"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--PROFILE-->
+              <div class="hidden lg:flex relative">
+                <div>
+                  <button @click.prevent="isProfile = !isProfile" class="flex h-16 w-8 focus:outline-none relative ml-2 mr-8">
+                    <span class="absolute top-0 left-0 pt-4">
+                      <img class="h-8 w-8 rounded-full shadow bg-yellow-500" src="../assets/img/perfil.png" alt="avatar">
+                      <span class="absolute uppercase font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-red-500 text-white ring-white" style="top: 10px; right: -4px">2</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -484,6 +562,10 @@ export default {
 
       isNation: false,
       isCubo: false,
+
+      isProjectStatus: false,
+
+      isProfile: false,
     }
   },
   methods: {
