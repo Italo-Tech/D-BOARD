@@ -746,21 +746,23 @@
   L 157.1184427528455,89.47879140045987
             A 60,60,0,
             0,1,
-            273.5,110 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path fill="#60a5fa" stroke="#fff" class="recharts-sector" d="M 134.5658198539837,81.2703079606438
-    A 84,84,0,
-    0,0,
+            273.5,110 Z"></path></g>
+                            <g class="recharts-layer recharts-pie-sector"><path fill="#60a5fa" stroke="#fff" class="recharts-sector" d="M 134.5658198539837,81.2703079606438A 84,84,0,0,0,
     228.0864469240221,192.7238512530255
   L 223.9188906600158,169.0884651807325
             A 60,60,0,
             0,1,
-            157.1184427528455,89.47879140045987 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path fill="#2563eb" stroke="#fff" class="recharts-sector" d="M 228.0864469240221,192.7238512530255
+            157.1184427528455,89.47879140045987 Z"></path></g>
+                            <g class="recharts-layer recharts-pie-sector"><path fill="#2563eb" stroke="#fff" class="recharts-sector" d="M 228.0864469240221,192.7238512530255
     A 84,84,0,
     0,0,
     297.5,110.00000000000001
   L 273.5,110.00000000000001
             A 60,60,0,
             0,1,
-            223.9188906600158,169.0884651807325 Z"></path></g></g>
+            223.9188906600158,169.0884651807325 Z">
+
+                            </path></g></g>
                           </svg>
                           
                           <div class="recharts-legend-wrapper absolute" style="width: 417px; height: auto; left: 5px; bottom: 5px;">
