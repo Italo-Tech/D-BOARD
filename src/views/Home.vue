@@ -337,7 +337,7 @@
 
               <!--CHANGE NATION-->
               <div class="hidden lg:flex relative">
-                <button @click.prevent="isNation = !isNation" class="flex items-center justify-center h-16 w-12 focus:outline-none">
+                <button @click.prevent="nation" class="flex items-center justify-center h-16 w-12 focus:outline-none">
                   <span class="text-base flag-icon flag-icon-br"></span>
                 </button>
                 <div v-show="isNation" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
@@ -391,10 +391,10 @@
 
               <!--CUBO-->
               <div class="hidden lg:flex relative">
-                <button @click.prevent="isCubo = !isCubo" class="flex items-center justify-center h-16 w-12 focus:outline-none">
+                <button @click.prevent="cube" class="flex items-center justify-center h-16 w-12 focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                 </button>
-                <div v-show="isCubo" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
+                <div v-show="isCube" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
                   <div class="dropdown-content w-64 bottom-start">
                     <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Apps</div>
                     <div class="flex flex-wrap">
@@ -454,7 +454,7 @@
 
               <!--PROJECT STATUS-->
               <div class="hidden lg:flex relative">
-                <button @click.prevent="isProjectStatus = !isProjectStatus" class="flex items-center justify-center h-16 w-12 focus:outline-none">
+                <button @click.prevent="projectStatus" class="flex items-center justify-center h-16 w-12 focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                   <span class="uppercase absolute font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-blue-500 text-white" style="top: 14px; right: 8px">5</span>
                 </button>
@@ -524,7 +524,7 @@
 
               <!--PROFILE-->
               <div class="hidden lg:flex relative">
-                <button @click.prevent="isProfile = !isProfile" class="flex h-16 w-8 focus:outline-none relative ml-2">
+                <button @click.prevent="profile" class="flex h-16 w-8 focus:outline-none relative ml-2">
                   <span class="absolute top-0 left-0 pt-4">
                     <img class="h-8 w-8 rounded-full shadow bg-yellow-500" src="../assets/img/perfil.png" alt="avatar">
                     <span class="absolute uppercase font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-red-500 text-white ring-white" style="top: 10px; right: -4px">2</span>
@@ -1037,7 +1037,7 @@ export default {
       isDemos: false,
 
       isNation: false,
-      isCubo: false,
+      isCube: false,
 
       isProjectStatus: false,
 
@@ -1052,7 +1052,30 @@ export default {
     }
   },
   methods: {
-
+    nation() {
+      this.isNation = !this.isNation
+      this.isCube = false
+      this.isProjectStatus = false
+      this.isProfile = false
+    },
+    cube() {
+      this.isNation = false
+      this.isCube = !this.isCube
+      this.isProjectStatus = false
+      this.isProfile = false
+    },
+    projectStatus() {
+      this.isNation = false
+      this.isCube = false
+      this.isProjectStatus = !this.isProjectStatus
+      this.isProfile = false
+    },
+    profile() {
+      this.isNation = false
+      this.isCube = false
+      this.isProjectStatus = false
+      this.isProfile = !this.isProfile
+    }
   }
 }
 </script>
