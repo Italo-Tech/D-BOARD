@@ -1,5 +1,5 @@
 <template>
-  <div id="__next" class="bg-white w-full min-w-min h-screen min-h-full p-0 m-0 overflow-hidden relative">
+  <div id="__next" class="bg-white w-full min-w-min h-screen min-h-full p-0 m-0 relative">
     <div class="font-sans antialiased text-sm disable-scrollbars w-full text-gray-900 bg-white" data-layout="layout-1" data-collapsed="false" data-navbar="light" data-left-sidebar="light">
     <!--SETTINGS RIGHT-->
       <div class="right-sidebar bg-white text-gray-900 right-sidebar-1 openSettings">
@@ -644,6 +644,7 @@
                 </div>
               </div>
             </div>
+
             <!--GHRAPICS-->
             <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
               <div class="w-full lg:w-2/3">
@@ -786,6 +787,211 @@
 
               </div>
             </div>
+
+            <!--USERS-->
+            <div class="w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
+              <div class="w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+
+              <!--Header Users-->
+              <div class="flex flex-row items-center justify-between mb-6">
+                <div class="flex flex-col">
+                  <div class="font-light text-sm text-gray-500">Users</div>
+                  <div class="font-bold text-sm">
+                    <span>Most Important markets</span>
+                  </div>
+                </div>
+              </div>
+              <!--LIST USERS-->
+              <div class="flex flex-col w-full">
+                <div class="overflow-x-scroll lg:overflow-hidden">
+
+                  <!--TABLE-->
+                  <table role="table" class="table w-full">
+                    <thead class="border-b w-full">
+                      <tr role="row">
+                      <!--checkbox-->
+                      <th class="py-2 px-4" colspan="1" role="columnheader">
+                        <div class="flex flex-row items-center justify-start whitespace-nowrap">
+                          <span>
+                            <input class="cursor-pointer form-checkbox h-4 w-4" type="checkbox" title="Toggle All Row Selected">
+                            <span class="ml-auto"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <!--country-->
+                      <th class="cursor-pointer text-gray-500" colspan="1" role="columnheader" title="Toggle SortBy">
+                        <div class="flex flex-row items-center justify-start whitespace-nowrap">
+                          <span>Country</span>
+                        </div>
+                      </th>
+                      <!--Active users-->
+                      <th class="cursor-pointer text-gray-500" colspan="1" role="columnheader" title="Toggle SortBy">
+                        <div class="flex flex-row items-center justify-start whitespace-nowrap">
+                          <span>Active Users</span>
+                        </div>
+                      </th>
+                      <!--team members-->
+                      <th class="cursor-pointer text-gray-500" colspan="1" role="columnheader" title="Toggle SortBy">
+                        <div class="flex flex-row items-center justify-start whitespace-nowrap">
+                          <span>Team Members</span>
+                        </div>
+                      </th>
+                      <!--progress-->
+                      <th class="cursor-pointer text-gray-500" colspan="1" role="columnheader" title="Toggle SortBy">
+                        <div class="flex flex-row items-center justify-start whitespace-nowrap">
+                          <span>Progress</span>
+                        </div>
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody class="w-full" role="rowgroup">
+                      <tr v-for="item in 2" :key="item" role="row" class="border-b items-center">
+                        <!--checkbox-->
+                        <td role="cell" class="px-4 py-6 items-center flex">
+                          <input class="cursor-pointer form-checkbox h-4 w-4" type="checkbox" title="Toggle All Row Selected">
+                        </td>
+                        <!--nation-->
+                        <td role="cell" class="">
+                          <span class="text-sm flag-icon flag-icon-cn"></span>
+                          <span class="ml-2">China</span>
+                        </td>
+                        <!--number users-->
+                        <td role="cell">
+                          <span>1,377,422,166</span>
+                        </td>
+                        <!--team members-->
+                        <td role="cell">
+                          <div class="flex flex-row items-center justify-start">
+                            <img src="https://media.istockphoto.com/photos/closeup-portrait-of-young-smiling-man-in-denim-shirt-isolated-on-gray-picture-id1171169125?b=1&k=6&m=1171169125&s=170667a&w=0&h=4SOSCh5T_4BEDeqS1e0OvKyPQvlSgx4mWNRp5rFdj2o=" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                            <img src="https://cdn.pixabay.com/photo/2017/06/15/11/40/beautiful-2405131__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                            <img src="https://media.istockphoto.com/photos/portrait-of-smiling-male-employee-posing-in-office-picture-id1192579030?b=1&k=6&m=1192579030&s=170667a&w=0&h=LiXaAAWgR2bORhhnqzEy5l3hqx-ZazFoytujtmaD5-g=" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                            <img src="https://media.istockphoto.com/photos/pleasure-fashion-idyllic-perfection-hydration-wellness-wellbeing-picture-id992913432?b=1&k=6&m=992913432&s=170667a&w=0&h=-WiY57m_1VdNTndRYuLb9QyWqZIw_3gYo_YqWDJONWs=" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                          </div>
+                        </td>
+                        <!--progress-->
+                        <td role="cell">
+                          <div class="flex flex-col w-full">
+                            <div class="flex flex-row items-center justify-around">
+                              <div class="relative flex flex-row w-full text-center text-xs items-center h-1">
+                                <div class="top-0 left-0 h-1 w-full bg-indigo-500" style="width: 83%"></div>
+                              </div>
+                              <span class="ml-1 text-gray-500">83%</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr v-for="item in 3" :key="item" role="row" class="border-b items-center">
+                        <!--checkbox-->
+                        <td role="cell" class="px-4 py-6 items-center flex">
+                          <input class="cursor-pointer form-checkbox h-4 w-4" type="checkbox" title="Toggle All Row Selected">
+                        </td>
+                        <!--nation-->
+                        <td role="cell" class="">
+                          <span class="text-sm flag-icon flag-icon-br"></span>
+                          <span class="ml-2">Brasil</span>
+                        </td>
+                        <!--number users-->
+                        <td role="cell">
+                          <span>1,295,210,000</span>
+                        </td>
+                        <!--team members-->
+                        <td role="cell">
+                          <div class="flex flex-row items-center justify-start">
+                            <img src="https://cdn.pixabay.com/photo/2017/06/09/17/11/model-2387582__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                            <img src="https://cdn.pixabay.com/photo/2017/05/24/15/42/eye-2340806__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                            <img src="https://cdn.pixabay.com/photo/2016/03/27/21/52/cold-1284411__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                            <img src="https://cdn.pixabay.com/photo/2017/04/01/21/06/portrait-2194457__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                          </div>
+                        </td>
+                        <!--progress-->
+                        <td role="cell">
+                          <div class="flex flex-col w-full">
+                            <div class="flex flex-row items-center justify-around">
+                              <div class="relative flex flex-row w-full text-center text-xs items-center h-1">
+                                <div class="top-0 left-0 h-1 w-full bg-green-500" style="width: 71%"></div>
+                              </div>
+                              <span class="ml-1 text-gray-500">71%</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr v-for="item in 3" :key="item" role="row" class="border-b items-center">
+                        <!--checkbox-->
+                        <td role="cell" class="px-4 py-6 items-center flex">
+                          <input class="cursor-pointer form-checkbox h-4 w-4" type="checkbox" title="Toggle All Row Selected">
+                        </td>
+                        <!--nation-->
+                        <td role="cell" class="">
+                          <span class="text-sm flag-icon flag-icon-br"></span>
+                          <span class="ml-2">Itália</span>
+                        </td>
+                        <!--number users-->
+                        <td role="cell">
+                          <span>146,599,183</span>
+                        </td>
+                        <!--team members-->
+                        <td role="cell">
+                          <div class="flex flex-row items-center justify-start">
+                            <img src="https://cdn.pixabay.com/photo/2015/08/05/04/02/people-875597__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                            <img src="https://cdn.pixabay.com/photo/2014/08/28/08/31/model-429733__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                            <img src="https://cdn.pixabay.com/photo/2015/07/20/13/01/fred-852770__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                          </div>
+                        </td>
+                        <!--progress-->
+                        <td role="cell">
+                          <div class="flex flex-col w-full">
+                            <div class="flex flex-row items-center justify-around">
+                              <div class="relative flex flex-row w-full text-center text-xs items-center h-1">
+                                <div class="top-0 left-0 h-1 w-full bg-green-700" style="width: 82%"></div>
+                              </div>
+                              <span class="ml-1 text-gray-500">82%</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr v-for="item in 3" :key="item" role="row" class="border-b items-center">
+                        <!--checkbox-->
+                        <td role="cell" class="px-4 py-6 items-center flex">
+                          <input class="cursor-pointer form-checkbox h-4 w-4" type="checkbox" title="Toggle All Row Selected">
+                        </td>
+                        <!--nation-->
+                        <td role="cell" class="">
+                          <span class="text-sm flag-icon flag-icon-br"></span>
+                          <span class="ml-2">França</span>
+                        </td>
+                        <!--number users-->
+                        <td role="cell">
+                          <span>126,960,000</span>
+                        </td>
+                        <!--team members-->
+                        <td role="cell">
+                          <div class="flex flex-row items-center justify-start">
+                            <img src="https://cdn.pixabay.com/photo/2015/03/08/17/25/musician-664432__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                            <img src="https://cdn.pixabay.com/photo/2018/01/04/08/04/people-3060107__340.jpg" alt="media" class="h-8 w-8 ring rounded-full -ml-3">
+                          </div>
+                        </td>
+                        <!--progress-->
+                        <td role="cell">
+                          <div class="flex flex-col w-full">
+                            <div class="flex flex-row items-center justify-around">
+                              <div class="relative flex flex-row w-full text-center text-xs items-center h-1">
+                                <div class="top-0 left-0 h-1 w-full bg-red-500" style="width: 47%"></div>
+                              </div>
+                              <span class="ml-1 text-gray-500">47%</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                  <!--TABLE FOOTER-->
+                  <div class="flex flex-row w-full items-center justify-around lg:justify-between"></div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -1091,5 +1297,13 @@ export default {
 }
 .flag-icon::before {
   content: '\00a0';
+}
+
+.table thead tr th {
+  font-weight: 300;
+  font-size: .80rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
 }
 </style>
