@@ -1009,6 +1009,34 @@
             </div>
             </div>
             
+            <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
+              <!---->
+              <div class="w-full lg:w-1/2">
+                <div class="w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+                  <div class="flex flex-row items-center justify-between mb-6">
+                    <div class="flex flex-col">
+                      <div class="text-sm font-light text-gray-500">Project status</div>
+                      <div class="text-sm font-bold"><span>This week</span></div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row w-full"></div>
+                </div>
+              </div>
+
+              <!--Sales-->
+              <div class="w-full lg:w-1/2">
+                <div class="w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+                  <div class="flex flex-row items-center justify-between mb-6">
+                    <div class="flex flex-col">
+                      <div class="text-sm font-light text-gray-500">Sales</div>
+                      <div class="text-sm font-bold"><span>This month</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
