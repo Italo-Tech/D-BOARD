@@ -982,11 +982,28 @@
                           </div>
                         </td>
                       </tr>
-
                     </tbody>
                   </table>
                   <!--TABLE FOOTER-->
-                  <div class="flex flex-row w-full items-center justify-around lg:justify-between"></div>
+                  <div class="flex flex-row w-full items-center justify-around lg:justify-between my-4">
+                    <!--Next/Last-->
+                    <div class="flex flex-wrap items-center justify-start space-x-2 pagination">
+                      <button class="btn btn-default bg-transparent hover:bg-gray-200 text-gray-900 dark:text-white focus:outline-none">Next</button>
+                      <button class="btn btn-default bg-transparent hover:bg-gray-200 text-gray-900 dark:text-white focus:outline-none">Last</button>
+                    </div>
+                    <!--Page-->
+                    <span class="hidden lg:block">
+                      Page
+                      <b>1 of 11</b>
+                    </span>
+                    <!--Show Items-->
+                    <select class="p-3 cursor-pointer hidden lg:block border rounded text-sm bg-white hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-800 outline-none shadow-none focus:shadow-none">
+                      <option class="font-light block whitespace-nowrap" value="10">Show 10</option>
+                      <option class="font-light block whitespace-nowrap" value="25">Show 25</option>
+                      <option class="font-light block whitespace-nowrap" value="50">Show 50</option>
+                      <option class="font-light block whitespace-nowrap" value="100">Show 100</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>
