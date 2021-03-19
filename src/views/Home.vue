@@ -1010,7 +1010,7 @@
             </div>
             
             <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
-              <!---->
+              <!--Activities Today-->
               <div class="w-full lg:w-1/2">
                 <div class="w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
                   <div class="flex flex-row items-center justify-between mb-6">
@@ -1019,8 +1019,84 @@
                       <div class="text-sm font-bold"><span>This week</span></div>
                     </div>
                   </div>
+                  <div class="flex flex-row w-full">
+                    <div class="flex flex-col w-full">
+                      <div class="flex relative justify-start items-start">
+                        
+                        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                          <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+                        </div>
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full inline-flex items-center justify-center bg-blue-500 text-white relative z-10 font-medium text-sm">1</div>
+                        <div class="flex-grow flex items-start flex-col pb-4">
+                          <div class="flex items-start justify-start px-4">
+                            <div class="flex flex-col w-full">
+                              <div class="text-sm font-bold">Perferendis dignissimos provident saepe in.</div>
+                              <div class="text-sm">Corporis in est quae exercitationem.</div>
+                              <div class="text-sm">a few seconds ago</div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col w-full">
+                    <div class="flex relative justify-start items-start">
 
-                  <div class="flex flex-row w-full"></div>
+                      <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+                      </div>
+                      <div class="flex-shrink-0 w-6 h-6 rounded-full inline-flex items-center justify-center bg-blue-500 text-white relative z-10 font-medium text-sm">2</div>
+                      <div class="flex-grow flex items-start flex-col pb-4">
+                        <div class="flex items-start justify-start px-4">
+                          <div class="flex flex-col w-full">
+                            <div class="text-sm font-bold">Perferendis dignissimos provident saepe in.</div>
+                            <div class="text-sm">Corporis in est quae exercitationem.</div>
+                            <div class="text-sm">a few seconds ago</div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="flex flex-col w-full">
+                    <div class="flex relative justify-start items-start">
+
+                      <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+                      </div>
+                      <div class="flex-shrink-0 w-6 h-6 rounded-full inline-flex items-center justify-center bg-blue-500 text-white relative z-10 font-medium text-sm">3</div>
+                      <div class="flex-grow flex items-start flex-col pb-4">
+                        <div class="flex items-start justify-start px-4">
+                          <div class="flex flex-col w-full">
+                            <div class="text-sm font-bold">Perferendis dignissimos provident saepe in.</div>
+                            <div class="text-sm">Corporis in est quae exercitationem.</div>
+                            <div class="text-sm">a few seconds ago</div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="flex flex-col w-full">
+                    <div class="flex relative justify-start items-start">
+
+                      <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+                      </div>
+                      <div class="flex-shrink-0 w-6 h-6 rounded-full inline-flex items-center justify-center bg-blue-500 text-white relative z-10 font-medium text-sm">4</div>
+                      <div class="flex-grow flex items-start flex-col pb-4">
+                        <div class="flex items-start justify-start px-4">
+                          <div class="flex flex-col w-full">
+                            <div class="text-sm font-bold">Perferendis dignissimos provident saepe in.</div>
+                            <div class="text-sm">Corporis in est quae exercitationem.</div>
+                            <div class="text-sm">a few seconds ago</div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1036,23 +1112,33 @@
                 </div>
               </div>
             </div>
+
+            <LineChart :chartData="state.chartData" :chartOptions="state.chartOptions" />
             
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
 
+
+import LineChart from "@/components/LineChart";
 export default {
   name: 'Home',
-  components: {
-
-    },
+  components: {LineChart},
   data() {
     return {
+      state: {
+        chartData: {},
+        chartOptions: {
+          responsive: true
+        }
+      },
+
       isExplore: false,
 
       isApps: false,
@@ -1079,7 +1165,28 @@ export default {
       isConversions2: false,
     }
   },
+
+  beforeMount () {
+    this.fillData()
+  },
+
   methods: {
+    fillData () {
+      this.state.chartData = {
+        labels: ['label 1', 'Label 2'],
+        datasets: [
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [this.getRandomInt(), this.getRandomInt()]
+          }
+        ]
+      }
+    },
+    getRandomInt () {
+      return Math.floor(Math.random() * (10 - 5 + 1)) + 10
+    },
+
     nation() {
       this.isNation = !this.isNation
       this.isCube = false
@@ -1104,7 +1211,7 @@ export default {
       this.isProjectStatus = false
       this.isProfile = !this.isProfile
     }
-  }
+  },
 }
 </script>
 

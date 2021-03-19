@@ -1,8 +1,13 @@
 <template>
-  <router-view  class="no-js"/>
+  <div id="app">
+    <router-view  class="no-js"/>
+  </div>
 </template>
 
 <script>
+export default {
+  name: "App",
+}
 
 </script>
 
