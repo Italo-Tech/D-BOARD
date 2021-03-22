@@ -102,29 +102,155 @@
           </button>
           </div>
 
-          <!--Sidebar-title-->
+          <!--APLLICATIONS-->
           <div class="left-sidebar-title">
             <span>Applications</span>
           </div>
+          <ul>
+            <!--DASHBOARD-->
+            <li class="l0">
+              <a class="left-sidebar-item active" href="/dashboard">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                <span class="title">Dashboard</span>
+              </a>
+              <ul></ul>
+            </li>
+            <!--APPS-->
+            <li class="l0">
+              <button @click.prevent="isApps = !isApps" class="left-sidebar-item  focus:outline-none">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span class="title">Apps</span>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <!--sub-apps-->
+              <ul v-show="isApps">
+                <li class="l1">
+                  <a class="left-sidebar-item" href="/#">
+                    <span class="title">Social feed</span>
+                  </a>
+                  <ul></ul>
+                </li>
+                <li class="l1">
+                  <a class="left-sidebar-item" href="/#">
+                    <span class="title">Tasks</span>
+                  </a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <!--MENU LEVELS-->
+            <li class="l0">
+              <button @click.prevent="isMenu = !isMenu" class="left-sidebar-item focus:outline-none">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="21" y2="12"></line>
+                  <line x1="8" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+                <span class="title">Menu Levels</span>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+              <ul v-show="isMenu">
+                <!--L1-->
+                <li class="l1">
+                  <button @click.prevent="isMenu1 = !isMenu1" class="left-sidebar-item focus:outline-none">
+                    <span class="title">Level 1-1</span>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                  <!--L2-->
+                  <ul v-show="isMenu1">
+                    <li class="l2">
+                      <button @click.prevent="isMenu2 = !isMenu2" class="left-sidebar-item focus:outline-none">
+                        <span class="title ml-4">Level 2-1</span>
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </button>
+                      <!--L3-->
+                      <ul v-show="isMenu2 ">
+                        <li class="l3">
+                          <button class="left-sidebar-item focus:outline-none">
+                            <span class="title ml-6">Level 3-1</span>
+                          </button>
+                        </li>
+                      </ul>
+                      <ul v-show="isMenu2 ">
+                        <li class="l3">
+                          <button class="left-sidebar-item focus:outline-none">
+                            <span class="title ml-6">Level 3-2</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <!--Demos-->
+            <li class="l0">
+              <button @click.prevent="isDemos = !isDemos" class="left-sidebar-item focus:outline-none">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span class="title">Demos</span>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <ul v-show="isDemos">
+                <li class="l1">
+                  <a class="left-sidebar-item " href="/demo-1"><span class="title">Light background</span></a>
+                  <ul></ul>
+                </li>
+                <li class="l1">
+                  <a class="left-sidebar-item " href="/demo-2"><span class="title">Dark Background</span></a>
+                  <ul></ul>
+                </li>
+                <li class="l1">
+                  <a class="left-sidebar-item " href="/demo-4"><span class="title">Dark Sidebar</span></a>
+                  <ul></ul>
+                </li>
+                <li class="l1">
+                  <a class="left-sidebar-item " href="/demo-3"><span class="title">Small Sidebar</span></a>
+                  <ul></ul>
+                </li>
+                <li class="l1">
+                  <a class="left-sidebar-item " href="/demo-5"><span class="title">Dark Small Sidebar</span></a>
+                  <ul></ul>
+                </li>
+                <li class="l1">
+                  <a class="left-sidebar-item " href="/demo-6"><span class="title">Dark navbar</span></a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
 
+            <li class="l0"></li>
+          </ul>
+
+          <!--COMPONENTS-->
+          <div class="left-sidebar-title">
+            <span>Components</span>
+          </div>
             <ul>
-              <!--DASHBOARD-->
+              <!--UI Elements-->
               <li class="l0">
-                <a class="left-sidebar-item active" href="/dashboard">
+                <a class="left-sidebar-item active" href="#">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-                  <span class="title">Dashboard</span>
+                  <span class="title">UI Elements</span>
                 </a>
                 <ul></ul>
               </li>
-              <!--APPS-->
+              <!--Forms-->
               <li class="l0">
-                <button @click.prevent="isApps = !isApps" class="left-sidebar-item  focus:outline-none">
+                <button @click.prevent="" class="left-sidebar-item  focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                  <span class="title">Apps</span>
+                  <span class="title">Forms</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
                 <!--sub-apps-->
-                <ul v-show="isApps">
+                <!--                <ul v-show="isApps">
                   <li class="l1">
                     <a class="left-sidebar-item" href="/#">
                       <span class="title">Social feed</span>
@@ -137,11 +263,11 @@
                     </a>
                     <ul></ul>
                   </li>
-                </ul>
+                </ul>-->
               </li>
-              <!--MENU LEVELS-->
+              <!--Tables-->
               <li class="l0">
-                <button @click.prevent="isMenu = !isMenu" class="left-sidebar-item focus:outline-none">
+                <button @click.prevent="" class="left-sidebar-item focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                     <line x1="8" y1="6" x2="21" y2="6"></line>
                     <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -150,13 +276,13 @@
                     <line x1="3" y1="12" x2="3.01" y2="12"></line>
                     <line x1="3" y1="18" x2="3.01" y2="18"></line>
                   </svg>
-                  <span class="title">Menu Levels</span>
+                  <span class="title">Tables</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
                 </button>
-                <ul v-show="isMenu">
-                  <!--L1-->
+                <!--                <ul v-show="isMenu">
+                  &lt;!&ndash;L1&ndash;&gt;
                   <li class="l1">
                     <button @click.prevent="isMenu1 = !isMenu1" class="left-sidebar-item focus:outline-none">
                       <span class="title">Level 1-1</span>
@@ -164,7 +290,7 @@
                         <polyline points="9 18 15 12 9 6"></polyline>
                       </svg>
                     </button>
-                    <!--L2-->
+                    &lt;!&ndash;L2&ndash;&gt;
                     <ul v-show="isMenu1">
                       <li class="l2">
                         <button @click.prevent="isMenu2 = !isMenu2" class="left-sidebar-item focus:outline-none">
@@ -172,7 +298,7 @@
                           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline>
                           </svg>
                         </button>
-                        <!--L3-->
+                        &lt;!&ndash;L3&ndash;&gt;
                         <ul v-show="isMenu2 ">
                           <li class="l3">
                             <button class="left-sidebar-item focus:outline-none">
@@ -190,16 +316,16 @@
                       </li>
                     </ul>
                   </li>
-                </ul>
+                </ul>-->
               </li>
-              <!--Demos-->
+              <!--Nortifications-->
               <li class="l0">
-                <button @click.prevent="isDemos = !isDemos" class="left-sidebar-item focus:outline-none">
+                <button @click.prevent="" class="left-sidebar-item focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                  <span class="title">Demos</span>
+                  <span class="title">Notifications</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
-                <ul v-show="isDemos">
+                <!--                <ul v-show="isDemos">
                   <li class="l1">
                     <a class="left-sidebar-item " href="/demo-1"><span class="title">Light background</span></a>
                     <ul></ul>
@@ -224,7 +350,7 @@
                     <a class="left-sidebar-item " href="/demo-6"><span class="title">Dark navbar</span></a>
                     <ul></ul>
                   </li>
-                </ul>
+                </ul>-->
               </li>
 
               <li class="l0"></li>
@@ -686,13 +812,15 @@
                     </div>
                   </div>
                   <!--ghrapics-->
-                  <div class="flex flex-row w-full">
+                  <div class="flex flex-row w-full" style="width: 100%!important; height: 100%!important;">
+
                     <div style="width: 100%;height: 240px">
-                      <div class="recharts-responsive-container" style="width:100%;height:100%">
-                        <div class="recharts-wrapper" style="position: relative; cursor: default; width: 889px; height: 240px;">
-                          <svg class="recharts-surface" width="889" height="240" viewBox="0 0 889 240" version="1.1"><defs><clipPath id="recharts3-clip"><rect x="40" y="10" height="190" width="839"></rect></clipPath></defs><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="74.95833333333334" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="74.95833333333334" dy="0.71em">Jan</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="144.875" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="144.875" dy="0.71em">Feb</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="214.79166666666669" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="214.79166666666669" dy="0.71em">Mar</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="284.7083333333333" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="284.7083333333333" dy="0.71em">Apr</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="354.625" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="354.625" dy="0.71em">May</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="424.5416666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="424.5416666666667" dy="0.71em">Jun</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="494.4583333333333" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="494.4583333333333" dy="0.71em">Jul</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="564.3750000000001" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="564.3750000000001" dy="0.71em">Aug</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="634.2916666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="634.2916666666667" dy="0.71em">Sep</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="704.2083333333334" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="704.2083333333334" dy="0.71em">Oct</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="774.1250000000001" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="774.1250000000001" dy="0.71em">Nov</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="844.0416666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="844.0416666666667" dy="0.71em">Dec</tspan></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="200" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="152.5" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">60</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="105" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">120</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="57.5" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">180</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="10" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">240</tspan></text></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="128.25" x="62" y="71.74999999999999" radius="0" class="recharts-rectangle" d="M 62,71.74999999999999 h 10 v 128.25 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="131.91666666666669" y="105" radius="0" class="recharts-rectangle" d="M 131.91666666666669,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="201.83333333333334" y="105" radius="0" class="recharts-rectangle" d="M 201.83333333333334,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="143.29166666666666" x="271.75" y="56.708333333333336" radius="0" class="recharts-rectangle" d="M 271.75,56.708333333333336 h 10 v 143.29166666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="89.45833333333334" x="341.6666666666667" y="110.54166666666666" radius="0" class="recharts-rectangle" d="M 341.6666666666667,110.54166666666666 h 10 v 89.45833333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="152" x="411.58333333333337" y="48" radius="0" class="recharts-rectangle" d="M 411.58333333333337,48 h 10 v 152 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="143.29166666666666" x="481.5" y="56.70833333333334" radius="0" class="recharts-rectangle" d="M 481.5,56.70833333333334 h 10 v 143.29166666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="98.16666666666667" x="551.4166666666667" y="101.83333333333333" radius="0" class="recharts-rectangle" d="M 551.4166666666667,101.83333333333333 h 10 v 98.16666666666667 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="82.33333333333334" x="621.3333333333334" y="117.66666666666666" radius="0" class="recharts-rectangle" d="M 621.3333333333334,117.66666666666666 h 10 v 82.33333333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="691.25" y="105" radius="0" class="recharts-rectangle" d="M 691.25,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="131.41666666666666" x="761.1666666666667" y="68.58333333333334" radius="0" class="recharts-rectangle" d="M 761.1666666666667,68.58333333333334 h 10 v 131.41666666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="121.91666666666667" x="831.0833333333334" y="78.08333333333333" radius="0" class="recharts-rectangle" d="M 831.0833333333334,78.08333333333333 h 10 v 121.91666666666667 h -10 Z"></path></g></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="187.625" x="76" y="12.374999999999993" radius="0" class="recharts-rectangle" d="M 76,12.374999999999993 h 10 v 187.625 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="118.75" x="145.91666666666669" y="81.25" radius="0" class="recharts-rectangle" d="M 145.91666666666669,81.25 h 10 v 118.75 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="151.20833333333331" x="215.83333333333334" y="48.79166666666668" radius="0" class="recharts-rectangle" d="M 215.83333333333334,48.79166666666668 h 10 v 151.20833333333331 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="187.625" x="285.75" y="12.374999999999991" radius="0" class="recharts-rectangle" d="M 285.75,12.374999999999991 h 10 v 187.625 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="146.45833333333334" x="355.6666666666667" y="53.541666666666664" radius="0" class="recharts-rectangle" d="M 355.6666666666667,53.541666666666664 h 10 v 146.45833333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="176.54166666666669" x="425.58333333333337" y="23.45833333333333" radius="0" class="recharts-rectangle" d="M 425.58333333333337,23.45833333333333 h 10 v 176.54166666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="185.25" x="495.5" y="14.75" radius="0" class="recharts-rectangle" d="M 495.5,14.75 h 10 v 185.25 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="145.66666666666669" x="565.4166666666667" y="54.33333333333332" radius="0" class="recharts-rectangle" d="M 565.4166666666667,54.33333333333332 h 10 v 145.66666666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="182.875" x="635.3333333333334" y="17.124999999999993" radius="0" class="recharts-rectangle" d="M 635.3333333333334,17.124999999999993 h 10 v 182.875 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="178.91666666666666" x="705.25" y="21.083333333333336" radius="0" class="recharts-rectangle" d="M 705.25,21.083333333333336 h 10 v 178.91666666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="181.29166666666669" x="775.1666666666667" y="18.70833333333332" radius="0" class="recharts-rectangle" d="M 775.1666666666667,18.70833333333332 h 10 v 181.29166666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="133" x="845.0833333333334" y="67" radius="0" class="recharts-rectangle" d="M 845.0833333333334,67 h 10 v 133 h -10 Z"></path></g></g></g></g></svg>
+                      <div class="recharts-responsive-container relative" style="width:100%;height:100%">
+                        <div class="recharts-wrapper" style="cursor: default; width: 240px; height: 340px!important;">
+<!--                          <svg class="recharts-surface" width="889" height="240" viewBox="0 0 889 240" version="1.1"><defs><clipPath id="recharts3-clip"><rect x="40" y="10" height="190" width="839"></rect></clipPath></defs><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="74.95833333333334" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="74.95833333333334" dy="0.71em">Jan</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="144.875" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="144.875" dy="0.71em">Feb</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="214.79166666666669" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="214.79166666666669" dy="0.71em">Mar</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="284.7083333333333" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="284.7083333333333" dy="0.71em">Apr</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="354.625" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="354.625" dy="0.71em">May</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="424.5416666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="424.5416666666667" dy="0.71em">Jun</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="494.4583333333333" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="494.4583333333333" dy="0.71em">Jul</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="564.3750000000001" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="564.3750000000001" dy="0.71em">Aug</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="634.2916666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="634.2916666666667" dy="0.71em">Sep</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="704.2083333333334" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="704.2083333333334" dy="0.71em">Oct</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="774.1250000000001" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="774.1250000000001" dy="0.71em">Nov</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="844.0416666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="844.0416666666667" dy="0.71em">Dec</tspan></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="200" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="152.5" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">60</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="105" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">120</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="57.5" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">180</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="10" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">240</tspan></text></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="128.25" x="62" y="71.74999999999999" radius="0" class="recharts-rectangle" d="M 62,71.74999999999999 h 10 v 128.25 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="131.91666666666669" y="105" radius="0" class="recharts-rectangle" d="M 131.91666666666669,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="201.83333333333334" y="105" radius="0" class="recharts-rectangle" d="M 201.83333333333334,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="143.29166666666666" x="271.75" y="56.708333333333336" radius="0" class="recharts-rectangle" d="M 271.75,56.708333333333336 h 10 v 143.29166666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="89.45833333333334" x="341.6666666666667" y="110.54166666666666" radius="0" class="recharts-rectangle" d="M 341.6666666666667,110.54166666666666 h 10 v 89.45833333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="152" x="411.58333333333337" y="48" radius="0" class="recharts-rectangle" d="M 411.58333333333337,48 h 10 v 152 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="143.29166666666666" x="481.5" y="56.70833333333334" radius="0" class="recharts-rectangle" d="M 481.5,56.70833333333334 h 10 v 143.29166666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="98.16666666666667" x="551.4166666666667" y="101.83333333333333" radius="0" class="recharts-rectangle" d="M 551.4166666666667,101.83333333333333 h 10 v 98.16666666666667 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="82.33333333333334" x="621.3333333333334" y="117.66666666666666" radius="0" class="recharts-rectangle" d="M 621.3333333333334,117.66666666666666 h 10 v 82.33333333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="691.25" y="105" radius="0" class="recharts-rectangle" d="M 691.25,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="131.41666666666666" x="761.1666666666667" y="68.58333333333334" radius="0" class="recharts-rectangle" d="M 761.1666666666667,68.58333333333334 h 10 v 131.41666666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="121.91666666666667" x="831.0833333333334" y="78.08333333333333" radius="0" class="recharts-rectangle" d="M 831.0833333333334,78.08333333333333 h 10 v 121.91666666666667 h -10 Z"></path></g></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="187.625" x="76" y="12.374999999999993" radius="0" class="recharts-rectangle" d="M 76,12.374999999999993 h 10 v 187.625 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="118.75" x="145.91666666666669" y="81.25" radius="0" class="recharts-rectangle" d="M 145.91666666666669,81.25 h 10 v 118.75 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="151.20833333333331" x="215.83333333333334" y="48.79166666666668" radius="0" class="recharts-rectangle" d="M 215.83333333333334,48.79166666666668 h 10 v 151.20833333333331 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="187.625" x="285.75" y="12.374999999999991" radius="0" class="recharts-rectangle" d="M 285.75,12.374999999999991 h 10 v 187.625 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="146.45833333333334" x="355.6666666666667" y="53.541666666666664" radius="0" class="recharts-rectangle" d="M 355.6666666666667,53.541666666666664 h 10 v 146.45833333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="176.54166666666669" x="425.58333333333337" y="23.45833333333333" radius="0" class="recharts-rectangle" d="M 425.58333333333337,23.45833333333333 h 10 v 176.54166666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="185.25" x="495.5" y="14.75" radius="0" class="recharts-rectangle" d="M 495.5,14.75 h 10 v 185.25 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="145.66666666666669" x="565.4166666666667" y="54.33333333333332" radius="0" class="recharts-rectangle" d="M 565.4166666666667,54.33333333333332 h 10 v 145.66666666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="182.875" x="635.3333333333334" y="17.124999999999993" radius="0" class="recharts-rectangle" d="M 635.3333333333334,17.124999999999993 h 10 v 182.875 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="178.91666666666666" x="705.25" y="21.083333333333336" radius="0" class="recharts-rectangle" d="M 705.25,21.083333333333336 h 10 v 178.91666666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="181.29166666666669" x="775.1666666666667" y="18.70833333333332" radius="0" class="recharts-rectangle" d="M 775.1666666666667,18.70833333333332 h 10 v 181.29166666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="133" x="845.0833333333334" y="67" radius="0" class="recharts-rectangle" d="M 845.0833333333334,67 h 10 v 133 h -10 Z"></path></g></g></g></g></svg>
                           <div class="recharts-tooltip-wrapper" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; transform: translate(504.458px, 122px);">
-                          </div>
+                          </div>-->
+                          <LineChart class=" bg-yellow-500" :chartData="state.chartData" :chartOptions="state.chartOptions">dasdsa</LineChart>
                         </div>
                       </div>
                     </div>
@@ -740,31 +868,7 @@
                     <div style="width:100%;height:240px">
                       <div class="recharts-responsive-container" style="width:100%;height:100%">
                         <div class="recharts-wrapper relative" style="width: 427px; height: 240px;">
-                          <svg class="recharts-surface" width="427" height="240" viewBox="0 0 427 240" version="1.1"><defs><clipPath id="recharts6-clip"><rect x="5" y="5" height="210" width="417"></rect></clipPath></defs><g class="recharts-layer recharts-pie"><g class="recharts-layer recharts-pie-sector"><path fill="#bfdbfe" stroke="#fff" class="recharts-sector" d="M 297.5,110
-    A 84,84,0,
-    0,0,
-    134.5658198539837,81.2703079606438
-  L 157.1184427528455,89.47879140045987
-            A 60,60,0,
-            0,1,
-            273.5,110 Z"></path></g>
-                            <g class="recharts-layer recharts-pie-sector"><path fill="#60a5fa" stroke="#fff" class="recharts-sector" d="M 134.5658198539837,81.2703079606438A 84,84,0,0,0,
-    228.0864469240221,192.7238512530255
-  L 223.9188906600158,169.0884651807325
-            A 60,60,0,
-            0,1,
-            157.1184427528455,89.47879140045987 Z"></path></g>
-                            <g class="recharts-layer recharts-pie-sector"><path fill="#2563eb" stroke="#fff" class="recharts-sector" d="M 228.0864469240221,192.7238512530255
-    A 84,84,0,
-    0,0,
-    297.5,110.00000000000001
-  L 273.5,110.00000000000001
-            A 60,60,0,
-            0,1,
-            223.9188906600158,169.0884651807325 Z">
-
-                            </path></g></g>
-                          </svg>
+<!--                          <LineChart class="canvas-gr" :chartData="state.chartData" :chartOptions="state.chartOptions" />-->
                           
                           <div class="recharts-legend-wrapper absolute" style="width: 417px; height: auto; left: 5px; bottom: 5px;">
                             <ul class="recharts-default-legend p-0 m-0 text-center">
@@ -1112,10 +1216,9 @@
                 </div>
               </div>
             </div>
-
-            <LineChart :chartData="state.chartData" :chartOptions="state.chartOptions" />
             
           </div>
+<!--          <LineChart :chartData="state.chartData" :chartOptions="state.chartOptions" />-->
         </div>
       </div>
     </div>
@@ -1216,6 +1319,7 @@ export default {
 </script>
 
 <style>
+
 /*RIGHT SIDEBAR*/
 .right-sidebar.right-sidebar-1.openSettings {
   /*transform: translateX(0px);*/

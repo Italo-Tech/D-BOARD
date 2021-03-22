@@ -1,8 +1,8 @@
 import { defineComponent } from 'vue'
-import { Line } from 'vue3-chart-v2'
+import { Bar } from 'vue3-chart-v2'
 
 export default defineComponent({
-    extends: Line,
+    extends: Bar,
     props: {
         chartData: {
             type: Object,
@@ -14,6 +14,15 @@ export default defineComponent({
         }
     },
     mounted () {
-        this.renderChart(this.chartData, this.chartOptions)
+        this.renderChart({
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            datasets: [
+                {
+                    label: 'GitHub Commits',
+                    backgroundColor: '#4c8fdb',
+                    data: [20, 20, 12, 19, 10, 20, 19, 20, 20, 20, 12, 11],
+                }
+            ]
+        })
     }
 })
