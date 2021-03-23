@@ -812,9 +812,8 @@
                     </div>
                   </div>
                 </div>
-                <!--graphics-->
+                <!--Graphic Line-->
                 <PlanetChart />
-
               </div>
 
               <div class="w-full lg:w-1/3">
@@ -854,10 +853,10 @@
                   </div>
 
                   <div class="flex flex-row w-full">
-                    <div style="width:100%;height:240px">
+                  <!--                    <div style="width:100%;height:240px">
                       <div class="recharts-responsive-container" style="width:100%;height:100%">
                         <div class="recharts-wrapper relative" style="width: 427px; height: 240px;">
-<!--                          <LineChart class="canvas-gr" :chartData="state.chartData" :chartOptions="state.chartOptions" />-->
+&lt;!&ndash;                          <LineChart class="canvas-gr" :chartData="state.chartData" :chartOptions="state.chartOptions" />&ndash;&gt;
 
                           <div class="recharts-legend-wrapper absolute" style="width: 417px; height: auto; left: 5px; bottom: 5px;">
                             <ul class="recharts-default-legend p-0 m-0 text-center">
@@ -874,7 +873,8 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div>-->
+                  <BarChart />
                   </div>
 
                 </div>
@@ -1220,9 +1220,10 @@
 
 
 import PlanetChart from "@/components/PlanetChart";
+import BarChart from "@/components/BarChart";
 export default {
   name: 'Home',
-  components: {PlanetChart},
+  components: {BarChart, PlanetChart},
   data() {
     return {
       state: {

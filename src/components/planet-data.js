@@ -96,22 +96,22 @@ export const planetChartData = {
         },
     },*/
 
-    type: "bar",
+    type: "line",
     data: {
         labels: ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         datasets: [
             {
                 label: "Toddy",
-                data: [400, 500, 700, 900, 1000, 750, 500, 600, 300, 250, 120],
-                backgroundColor: "#2563eb",
-                // borderColor: "#2563eb",
+                data: [40, 50, 70, 90, 40, 75, 50, 60, 30, 25, 12],
+                backgroundColor: "transparent",
+                borderColor: "#2563eb",
                 borderWidth: 3
             },
             {
                 label: "Nescau",
-                data: [500, 600, 550, 700, 950, 699, 500, 550, 500, 300, 80],
-                backgroundColor: "#bfdbfe",
-                // borderColor: "#bfdbfe",
+                data: [50, 60, 50, 70, 90, 69, 50, 55, 50, 30, 8],
+                backgroundColor: "transparent",
+                borderColor: "#83b6ff",
                 borderWidth: 3
             }
         ]
@@ -119,6 +119,13 @@ export const planetChartData = {
     options: {
         responsive: false,
         lineTension: 1,
+        legend: {
+            labels: {
+                fontColor: "rgba(0,0,0,.4)",
+            },
+            align: "end",
+            position: "bottom",
+        },
         scales: {
             yAxes: [
                 {
