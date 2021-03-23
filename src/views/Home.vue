@@ -773,8 +773,8 @@
 
             <!--GHRAPICS-->
             <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
-              <div class="w-full lg:w-2/3">
-                <div class="w-full p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+              <div class="w-full lg:w-2/3 p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+                <div class="w-full">
                   <!--header ghrapics-->
                   <div class="flex flex-row items-center justify-between mb-6">
                     <!--conversions title-->
@@ -811,21 +811,10 @@
                       </div>
                     </div>
                   </div>
-                  <!--ghrapics-->
-                  <div class="flex flex-row w-full" style="width: 100%!important; height: 100%!important;">
-
-                    <div style="width: 100%;height: 240px">
-                      <div class="recharts-responsive-container relative" style="width:100%;height:100%">
-                        <div class="recharts-wrapper" style="cursor: default; width: 240px; height: 340px!important;">
-<!--                          <svg class="recharts-surface" width="889" height="240" viewBox="0 0 889 240" version="1.1"><defs><clipPath id="recharts3-clip"><rect x="40" y="10" height="190" width="839"></rect></clipPath></defs><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="74.95833333333334" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="74.95833333333334" dy="0.71em">Jan</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="144.875" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="144.875" dy="0.71em">Feb</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="214.79166666666669" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="214.79166666666669" dy="0.71em">Mar</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="284.7083333333333" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="284.7083333333333" dy="0.71em">Apr</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="354.625" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="354.625" dy="0.71em">May</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="424.5416666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="424.5416666666667" dy="0.71em">Jun</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="494.4583333333333" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="494.4583333333333" dy="0.71em">Jul</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="564.3750000000001" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="564.3750000000001" dy="0.71em">Aug</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="634.2916666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="634.2916666666667" dy="0.71em">Sep</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="704.2083333333334" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="704.2083333333334" dy="0.71em">Oct</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="774.1250000000001" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="774.1250000000001" dy="0.71em">Nov</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="839" height="30" x="844.0416666666667" y="208" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="844.0416666666667" dy="0.71em">Dec</tspan></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="200" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="152.5" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">60</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="105" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">120</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="57.5" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">180</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text width="30" height="190" x="32" y="10" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="32" dy="0.355em">240</tspan></text></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="128.25" x="62" y="71.74999999999999" radius="0" class="recharts-rectangle" d="M 62,71.74999999999999 h 10 v 128.25 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="131.91666666666669" y="105" radius="0" class="recharts-rectangle" d="M 131.91666666666669,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="201.83333333333334" y="105" radius="0" class="recharts-rectangle" d="M 201.83333333333334,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="143.29166666666666" x="271.75" y="56.708333333333336" radius="0" class="recharts-rectangle" d="M 271.75,56.708333333333336 h 10 v 143.29166666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="89.45833333333334" x="341.6666666666667" y="110.54166666666666" radius="0" class="recharts-rectangle" d="M 341.6666666666667,110.54166666666666 h 10 v 89.45833333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="152" x="411.58333333333337" y="48" radius="0" class="recharts-rectangle" d="M 411.58333333333337,48 h 10 v 152 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="143.29166666666666" x="481.5" y="56.70833333333334" radius="0" class="recharts-rectangle" d="M 481.5,56.70833333333334 h 10 v 143.29166666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="98.16666666666667" x="551.4166666666667" y="101.83333333333333" radius="0" class="recharts-rectangle" d="M 551.4166666666667,101.83333333333333 h 10 v 98.16666666666667 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="82.33333333333334" x="621.3333333333334" y="117.66666666666666" radius="0" class="recharts-rectangle" d="M 621.3333333333334,117.66666666666666 h 10 v 82.33333333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="95" x="691.25" y="105" radius="0" class="recharts-rectangle" d="M 691.25,105 h 10 v 95 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="131.41666666666666" x="761.1666666666667" y="68.58333333333334" radius="0" class="recharts-rectangle" d="M 761.1666666666667,68.58333333333334 h 10 v 131.41666666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#bfdbfe" width="10" height="121.91666666666667" x="831.0833333333334" y="78.08333333333333" radius="0" class="recharts-rectangle" d="M 831.0833333333334,78.08333333333333 h 10 v 121.91666666666667 h -10 Z"></path></g></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="187.625" x="76" y="12.374999999999993" radius="0" class="recharts-rectangle" d="M 76,12.374999999999993 h 10 v 187.625 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="118.75" x="145.91666666666669" y="81.25" radius="0" class="recharts-rectangle" d="M 145.91666666666669,81.25 h 10 v 118.75 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="151.20833333333331" x="215.83333333333334" y="48.79166666666668" radius="0" class="recharts-rectangle" d="M 215.83333333333334,48.79166666666668 h 10 v 151.20833333333331 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="187.625" x="285.75" y="12.374999999999991" radius="0" class="recharts-rectangle" d="M 285.75,12.374999999999991 h 10 v 187.625 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="146.45833333333334" x="355.6666666666667" y="53.541666666666664" radius="0" class="recharts-rectangle" d="M 355.6666666666667,53.541666666666664 h 10 v 146.45833333333334 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="176.54166666666669" x="425.58333333333337" y="23.45833333333333" radius="0" class="recharts-rectangle" d="M 425.58333333333337,23.45833333333333 h 10 v 176.54166666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="185.25" x="495.5" y="14.75" radius="0" class="recharts-rectangle" d="M 495.5,14.75 h 10 v 185.25 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="145.66666666666669" x="565.4166666666667" y="54.33333333333332" radius="0" class="recharts-rectangle" d="M 565.4166666666667,54.33333333333332 h 10 v 145.66666666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="182.875" x="635.3333333333334" y="17.124999999999993" radius="0" class="recharts-rectangle" d="M 635.3333333333334,17.124999999999993 h 10 v 182.875 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="178.91666666666666" x="705.25" y="21.083333333333336" radius="0" class="recharts-rectangle" d="M 705.25,21.083333333333336 h 10 v 178.91666666666666 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="181.29166666666669" x="775.1666666666667" y="18.70833333333332" radius="0" class="recharts-rectangle" d="M 775.1666666666667,18.70833333333332 h 10 v 181.29166666666669 h -10 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path fill="#2563eb" width="10" height="133" x="845.0833333333334" y="67" radius="0" class="recharts-rectangle" d="M 845.0833333333334,67 h 10 v 133 h -10 Z"></path></g></g></g></g></svg>
-                          <div class="recharts-tooltip-wrapper" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; transform: translate(504.458px, 122px);">
-                          </div>-->
-                          <LineChart class=" bg-yellow-500" :chartData="state.chartData" :chartOptions="state.chartOptions">dasdsa</LineChart>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
+                <!--graphics-->
+                <PlanetChart />
+
               </div>
 
               <div class="w-full lg:w-1/3">
@@ -869,7 +858,7 @@
                       <div class="recharts-responsive-container" style="width:100%;height:100%">
                         <div class="recharts-wrapper relative" style="width: 427px; height: 240px;">
 <!--                          <LineChart class="canvas-gr" :chartData="state.chartData" :chartOptions="state.chartOptions" />-->
-                          
+
                           <div class="recharts-legend-wrapper absolute" style="width: 417px; height: auto; left: 5px; bottom: 5px;">
                             <ul class="recharts-default-legend p-0 m-0 text-center">
                               <li class="recharts-legend-item legend-item-0 inline-block" style="margin-right: 10px;"><svg class="recharts-surface" width="14" height="14" viewBox="0 0 32 32" version="1.1" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path fill="#bfdbfe" class="recharts-symbols" transform="translate(16, 16)" d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"></path></svg>
@@ -887,8 +876,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
 
@@ -1112,7 +1101,7 @@
               </div>
             </div>
             </div>
-            
+
             <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
               <!--Activities Today-->
               <div class="w-full lg:w-1/2">
@@ -1126,7 +1115,7 @@
                   <div class="flex flex-row w-full">
                     <div class="flex flex-col w-full">
                       <div class="flex relative justify-start items-start">
-                        
+
                         <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
                           <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
                         </div>
@@ -1140,7 +1129,7 @@
                             </div>
                           </div>
                         </div>
-                        
+
                       </div>
                     </div>
                   </div>
@@ -1216,7 +1205,7 @@
                 </div>
               </div>
             </div>
-            
+
           </div>
 <!--          <LineChart :chartData="state.chartData" :chartOptions="state.chartOptions" />-->
         </div>
@@ -1229,10 +1218,11 @@
 <script>
 
 
-import LineChart from "@/components/LineChart";
+
+import PlanetChart from "@/components/PlanetChart";
 export default {
   name: 'Home',
-  components: {LineChart},
+  components: {PlanetChart},
   data() {
     return {
       state: {
