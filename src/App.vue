@@ -23,10 +23,26 @@ export default {
     opacity: 0;
 
   }
-  /*to {
-    transform: translateY(0);
-    opacity: 100;
-  }*/
+}
+/*Transition-right-to-left*/
+.trs-right-to-left{
+  animation: trs-right-to-left .5s;
+}
+@keyframes trs-right-to-left {
+  from {
+    transform: translatex(20px);
+    opacity: 1;
+
+  }
+}
+.trs-left-to-right {
+  animation: trs-left-to-right .5s;
+}
+@keyframes trs-left-to-right {
+  from {
+    transform: translatex(-20px);
+    opacity: 0;
+  }
 }
 </style>
 

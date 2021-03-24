@@ -2,14 +2,14 @@
   <div id="__next" class="bg-white w-full min-w-min h-screen min-h-full p-0 m-0 relative">
     <div class="font-sans antialiased text-sm disable-scrollbars w-full text-gray-900 bg-white" data-layout="layout-1" data-collapsed="false" data-navbar="light" data-left-sidebar="light">
     <!--SETTINGS RIGHT-->
-      <div class="right-sidebar bg-white text-gray-900 right-sidebar-1 openSettings">
+      <div v-show="isSettings" :class="isSettings ? 'trs-right-to-left' : 'settings-leave-active'" class="right-sidebar bg-white text-gray-900 right-sidebar-1 openSettings">
         <div>
           <div>
             <!--Cabeçalho DEMO-->
             <div class="flex flex-col">
               <div class="px-4 h-16 flex flex-row items-center justify-between text-white bg-blue-500">
                 <div class="uppercase text-sm font-bold tracking-wider">Settings</div>
-                <button class="btn btn-circle focus:outline-none">
+                <button @click.prevent="isSettings = !isSettings" class="btn btn-circle focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
               </div>
@@ -17,14 +17,14 @@
 
             <!--Colors DEMO-->
             <div class="flex flex-col p-4">
-              <div class="uppercase tex-sm font-bold tracking-wider">Demos</div>
+              <div class="uppercase tex-sm font-bold tracking-wider mb-2">Demos</div>
               <div class="flex flex-col">
-                <button class="flex h-8 w-full hover:bg-transparent">Light Background</button>
-                <button class="flex h-8 w-full hover:bg-transparent">Dark Background</button>
-                <button class="flex h-8 w-full hover:bg-transparent">Small Sidebar</button>
-                <button class="flex h-8 w-full hover:bg-transparent">Dark Sidebar</button>
-                <button class="flex h-8 w-full hover:bg-transparent">Dark small sidebar</button>
-                <button class="flex h-8 w-full hover:bg-transparent">Dark navbar</button>
+                <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Light Background</button>
+                <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Dark Background</button>
+                <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Small Sidebar</button>
+                <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Dark Sidebar</button>
+                <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Dark small sidebar</button>
+                <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Dark navbar</button>
               </div>
             </div>
 
@@ -54,24 +54,24 @@
               <div class="mb-2">
                 <div class="uppercase text-sm font-normal text-gray-500 tracking-wider mb-2">Background</div>
                 <div class="flex flex-row space-x-1">
-                  <button class="btn btn-circle btn-raised bg-white text-white hover:bg-transparent"></button>
-                  <button class="btn btn-circle btn-raised bg-gray-900 text-gray-900 hover:bg-gray-900"></button>
+                  <button class="btn btn-circle btn-raised bg-white text-white hover:bg-transparent focus:outline-none"></button>
+                  <button class="btn btn-circle btn-raised bg-gray-900 text-gray-900 hover:bg-gray-900 focus:outline-none"></button>
                 </div>
               </div>
               <!--navbar-->
               <div class="mb-2">
                 <div class="uppercase text-sm font-normal text-gray-500 tracking-wider mb-2">Navbar</div>
                 <div class="flex flex-row space-x-1">
-                  <button class="btn btn-circle btn-raised bg-white text-white hover:bg-transparent"></button>
-                  <button class="btn btn-circle btn-raised bg-gray-900 text-gray-900 hover:bg-gray-900"></button>
+                  <button class="btn btn-circle btn-raised bg-white text-white hover:bg-transparent focus:outline-none"></button>
+                  <button class="btn btn-circle btn-raised bg-gray-900 text-gray-900 hover:bg-gray-900 focus:outline-none"></button>
                 </div>
               </div>
               <!--left sidebar-->
               <div class="mb-2">
                 <div class="uppercase text-sm font-normal text-gray-500 tracking-wider mb-2">Left sidebar</div>
                 <div class="flex flex-row space-x-1">
-                  <button class="btn btn-circle btn-raised bg-white text-white hover:bg-transparent"></button>
-                  <button class="btn btn-circle btn-raised bg-gray-900 text-gray-900 hover:bg-gray-900"></button>
+                  <button class="btn btn-circle btn-raised bg-white text-white hover:bg-transparent focus:outline-none"></button>
+                  <button class="btn btn-circle btn-raised bg-gray-900 text-gray-900 hover:bg-gray-900 focus:outline-none"></button>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@
       <!--WRAPPER ALL-->
       <div class="wrapper">
         <!--D-BOARD LEFT-->
-        <div class="left-sidebar left-sidebar-1">
+        <div v-show="dBoard" class="left-sidebar left-sidebar-1 trs-left-to-right">
           <!--Logo-->
           <div class="logo truncate">
             <a href="/" class="flex flex-row items-center justify-start space-x-2">
@@ -362,7 +362,9 @@
           <!--NAVBAR-->
           <div class="navbar navbar-1 border-b">
             <div class="navbar-inner  w-full flex items-center justify-start">
-              <button class="mx-4 focus:outline-none"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+              <button @click.prevent="dBoard = ! dBoard" class="mx-4 focus:outline-none">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+              </button>
               <!--Button Search-->
               <form class="w-full max-w-xs navbar-search">
                 <div class="relative">
@@ -853,27 +855,6 @@
                   </div>
 
                   <div class="flex flex-row w-full">
-                  <!--                    <div style="width:100%;height:240px">
-                      <div class="recharts-responsive-container" style="width:100%;height:100%">
-                        <div class="recharts-wrapper relative" style="width: 427px; height: 240px;">
-&lt;!&ndash;                          <LineChart class="canvas-gr" :chartData="state.chartData" :chartOptions="state.chartOptions" />&ndash;&gt;
-
-                          <div class="recharts-legend-wrapper absolute" style="width: 417px; height: auto; left: 5px; bottom: 5px;">
-                            <ul class="recharts-default-legend p-0 m-0 text-center">
-                              <li class="recharts-legend-item legend-item-0 inline-block" style="margin-right: 10px;"><svg class="recharts-surface" width="14" height="14" viewBox="0 0 32 32" version="1.1" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path fill="#bfdbfe" class="recharts-symbols" transform="translate(16, 16)" d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"></path></svg>
-                                <span class="recharts-legend-item-text">Desktop</span>
-                              </li>
-                              <li class="recharts-legend-item legend-item-1 inline-block" style="margin-right: 10px;"><svg class="recharts-surface" width="14" height="14" viewBox="0 0 32 32" version="1.1" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path fill="#60a5fa" class="recharts-symbols" transform="translate(16, 16)" d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"></path></svg>
-                                <span class="recharts-legend-item-text">Mobile</span>
-                              </li>
-                              <li class="recharts-legend-item legend-item-2 inline-block" style="margin-right: 10px;"><svg class="recharts-surface" width="14" height="14" viewBox="0 0 32 32" version="1.1" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path fill="#2563eb" class="recharts-symbols" transform="translate(16, 16)" d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"></path></svg>
-                                <span class="recharts-legend-item-text">Tablet</span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>-->
                   <BarChart />
                   </div>
 
@@ -1232,6 +1213,9 @@ export default {
           responsive: true
         }
       },
+      isCog: false,
+
+      dBoard: false,
 
       isExplore: false,
 
@@ -1251,9 +1235,7 @@ export default {
 
       isProfile: false,
 
-      setting: {
-        isSettings: false,
-      },
+      isSettings: false,
 
       isConversions: false,
       isConversions2: false,
@@ -1313,7 +1295,7 @@ export default {
 
 /*RIGHT SIDEBAR*/
 .right-sidebar.right-sidebar-1.openSettings {
-  /*transform: translateX(0px);*/
+  transform: translateX(0px);
 }
 .right-sidebar.right-sidebar-1 {
   height: 100%;
