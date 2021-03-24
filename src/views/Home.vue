@@ -381,7 +381,7 @@
                   <span class="mr-2">Explore</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>
-                  <div v-show="isExplore" class="dropdown transition absolute top-0 left-0 mt-16">
+                  <div v-show="isExplore" class="absolute top-0 mt-16 bg-gray-50 border-2 rounded-lg border-gray-200 transition shadow-xl">
                     <div class="dropdown-content bottom-start" style="width: 32rem">
                       <div class="flex flex-row flex-wrap focus:outline-none">
                         <!--Teams-->
@@ -397,7 +397,7 @@
                           </div>
                         </div>
                         <!--Blog-->
-                        <div class="w-1/2 p-2 dropdown-item">
+                        <div class="w-1/2 p-2 cursor-pointer">
                           <div class="flex flex-row items-center justify-start hover:bg-gray-200">
                             <div class="flex-shrink-0 w-8">
                               <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">01</span>
@@ -409,7 +409,7 @@
                           </div>
                         </div>
                         <!--Meetups-->
-                        <div class="w-1/2 p-2 dropdown-item">
+                        <div class="w-1/2 p-2 cursor-pointer">
                           <div class="flex flex-row items-center justify-start hover:bg-gray-200">
                             <div class="flex-shrink-0 w-8">
                               <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">03</span>
@@ -421,7 +421,7 @@
                           </div>
                         </div>
                         <!--Advertise-->
-                        <div class="w-1/2 p-2 dropdown-item">
+                        <div class="w-1/2 p-2 cursor-pointer">
                           <div class="flex flex-row items-center justify-start hover:bg-gray-200">
                             <div class="flex-shrink-0 w-8">
                               <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">04</span>
@@ -433,7 +433,7 @@
                           </div>
                         </div>
                         <!--Features-->
-                        <div class="w-1/2 p-2 dropdown-item">
+                        <div class="w-1/2 p-2 cursor-pointer">
                           <div class="flex flex-row items-center justify-start hover:bg-gray-200">
                             <div class="flex-shrink-0 w-8">
                               <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">05</span>
@@ -445,7 +445,7 @@
                           </div>
                         </div>
                         <!--League-->
-                        <div class="w-1/2 p-2 dropdown-item">
+                        <div class="w-1/2 p-2 cursor-pointer">
                           <div class="flex flex-row items-center justify-start hover:bg-gray-200">
                             <div class="flex-shrink-0 w-8">
                               <span class="h-8 w-8 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-display font-bold">06</span>
@@ -773,7 +773,7 @@
               </div>
             </div>
 
-            <!--GHRAPICS-->
+            <!--GRAPHICS-->
             <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
               <div class="w-full lg:w-2/3 p-4 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
                 <div class="w-full">
