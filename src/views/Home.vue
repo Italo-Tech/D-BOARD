@@ -814,7 +814,7 @@
                     </div>
                   </div>
                 </div>
-                <!--Graphic Line-->
+                <!--Graphic Bar-->
                 <PlanetChart />
               </div>
 
@@ -855,7 +855,8 @@
                   </div>
 
                   <div class="flex flex-row w-full">
-                  <BarChart />
+                    <!--Radar-->
+                    <BarChart />
                   </div>
 
                 </div>
@@ -1180,15 +1181,19 @@
                   <div class="flex flex-row items-center justify-between mb-6">
                     <div class="flex flex-col">
                       <div class="text-sm font-light text-gray-500">Sales</div>
-                      <div class="text-sm font-bold"><span>This month</span></div>
+                      <div class="text-sm font-bold"><span>This year</span></div>
                     </div>
                   </div>
+
+                    <div class="w-full">
+                      <LineChart />
+                    </div>
+
                 </div>
               </div>
             </div>
 
           </div>
-<!--          <LineChart :chartData="state.chartData" :chartOptions="state.chartOptions" />-->
         </div>
       </div>
     </div>
@@ -1202,9 +1207,10 @@
 
 import PlanetChart from "@/components/PlanetChart";
 import BarChart from "@/components/BarChart";
+import LineChart from "@/components/graphics/LineChart";
 export default {
   name: 'Home',
-  components: {BarChart, PlanetChart},
+  components: {LineChart, BarChart, PlanetChart},
   data() {
     return {
       state: {

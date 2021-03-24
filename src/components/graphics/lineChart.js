@@ -1,4 +1,4 @@
-export const planetChartData = {
+export const LineChartData = {
     /*type: "line",
     data: {
         labels: [
@@ -96,14 +96,14 @@ export const planetChartData = {
         },
     },*/
 
-    type: "bar",
+    type: "line",
     data: {
         labels: ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         datasets: [
             {
                 label: "Toddy",
                 data: [40, 50, 70, 80, 40, 45, 25, 60, 30, 25, 12],
-                backgroundColor: "#2563eb",
+                backgroundColor: "transparent",
                 borderColor: "#2563eb",
                 borderWidth: 3,
                 barThickness: 20,
@@ -111,7 +111,7 @@ export const planetChartData = {
             {
                 label: "Nescau",
                 data: [50, 40, 50, 70, 80, 69, 50, 55, 20, 30, 8],
-                backgroundColor: "#83b6ff",
+                backgroundColor: "transparent",
                 borderColor: "#83b6ff",
                 borderWidth: 3,
                 barThickness: 20,
@@ -141,4 +141,4 @@ export const planetChartData = {
     }
 };
 
-export default planetChartData;
+export default LineChartData;

@@ -2,7 +2,6 @@
   <div>
     <canvas id="bar-chart" width="500" height="350"></canvas>
   </div>
-
 </template>
 
 <script>

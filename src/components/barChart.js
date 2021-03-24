@@ -1,5 +1,5 @@
 export const BarChartData = {
-    type: "bar",
+    type: "radar",
     data: {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
         datasets: [
@@ -7,8 +7,8 @@ export const BarChartData = {
                 label: new Date().getFullYear(),
                 /*Dados*/
                 data: [30, 78, 56, 34, 100, 45, 13],
-                backgroundColor: "#ed64a6",
-                borderColor: "#ed64a6",
+                backgroundColor: "#83b6ff",
+                borderColor: "#83b6ff",
                 borderWidth: 3,
                 fill: false,
                 /*Largura barra*/
