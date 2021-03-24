@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import SocialFeed from "@/views/SocialFeed";
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/social',
+    name: 'Social',
+    component: SocialFeed
   },
   /*{
     path: '/about',
