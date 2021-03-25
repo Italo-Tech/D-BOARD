@@ -110,10 +110,10 @@
             <ul>
               <!--DASHBOARD-->
               <li class="l0">
-                <a class="left-sidebar-item active" href="/dashboard">
+                <router-link class="left-sidebar-item active" :to="{ name: 'Home' }">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
                   <span class="title">Dashboard</span>
-                </a>
+                </router-link>
                 <ul></ul>
               </li>
               <!--APPS-->
@@ -126,12 +126,10 @@
                 <!--sub-apps-->
                 <ul v-show="isApps">
                   <li class="l1">
-                    <a class="left-sidebar-item" href="/#">
-                      <!--TESTE VUE-ROUTER-->
-                      <div>
-                        <router-link :to="{ name: 'Social' }">Social Feed</router-link>
-                      </div>
-                    </a>
+                    <router-link class="left-sidebar-item" :to="{ name: 'Social' }">
+                      <!--Social Feed-->
+                      <span class="title">Social Feed</span>
+                    </router-link>
                     <ul></ul>
                   </li>
                   <li class="l1">
