@@ -238,47 +238,46 @@
             <ul>
               <!--UI Elements-->
               <li class="l0">
-                <a class="left-sidebar-item active" href="#">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-                  <span class="title">UI Elements</span>
-                </a>
-                <ul></ul>
+                <button @click.prevent="isUIElement = !isUIElement" class="left-sidebar-item focus:outline-none">
+                  <span class="text-xl ml-5">
+                    <i class='bx bx-droplet'></i>
+                  </span>
+                  <span class="title ml-6">UI Elements</span>
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <ul v-show="isUIElement">
+                  <!--buttons-->
+                  <li class="">
+                    <!--Badges-->
+                    <router-link :to="{ name: 'Badges' }" class="left-sidebar-item focus:outline-none">
+                      <span class="title">Badges</span>
+                    </router-link>
+                    <!--Breadcrumps-->
+                    <router-link :to="{ name: 'Breadcrumbs' }" class="left-sidebar-item focus:outline-none">
+                      <span class="title">Breadcrumbs</span>
+                    </router-link>
+                  </li>
+                </ul>
               </li>
               <!--Forms-->
               <li class="l0">
                 <button @click.prevent="" class="left-sidebar-item  focus:outline-none">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                  <span class="title">Forms</span>
+                  <span class="text-xl ml-5">
+                    <i class='bx bx-calendar-week'></i>
+                  </span>
+                  <span class="title ml-6">Forms</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
-                <!--sub-apps-->
-                <!--                <ul v-show="isApps">
-                  <li class="l1">
-                    <a class="left-sidebar-item" href="/#">
-                      <span class="title">Social feed</span>
-                    </a>
-                    <ul></ul>
-                  </li>
-                  <li class="l1">
-                    <a class="left-sidebar-item" href="/#">
-                      <span class="title">Tasks</span>
-                    </a>
-                    <ul></ul>
-                  </li>
-                </ul>-->
               </li>
               <!--Tables-->
               <li class="l0">
                 <button @click.prevent="" class="left-sidebar-item focus:outline-none">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="8" y1="6" x2="21" y2="6"></line>
-                    <line x1="8" y1="12" x2="21" y2="12"></line>
-                    <line x1="8" y1="18" x2="21" y2="18"></line>
-                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                  </svg>
-                  <span class="title">Tables</span>
+                  <span class="text-xl ml-5">
+                    <i class='bx bx-table'></i>
+                  </span>
+                  <span class="title ml-6">Tables</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
@@ -287,13 +286,13 @@
               <!--Nortifications-->
               <li class="l0">
                 <button @click.prevent="" class="left-sidebar-item focus:outline-none">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                  <span class="title">Notifications</span>
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <span class="text-xl ml-5">
+                    <i class="far fa-clock"></i>
+                  </span>
+                  <span class="title ml-6">Notifications</span>
                 </button>
               </li>
 
-              <li class="l0"></li>
             </ul>
           </div>
 
@@ -691,6 +690,9 @@ export default {
 
       isConversions: false,
       isConversions2: false,
+
+      isUIElement: false,
+
     }
   },
 

@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import SocialFeed from "@/views/SocialFeed";
+import Breadcrumbs from "@/components/UIElements/Breadcrumbs";
+import Badges from "@/components/UIElements/Badges";
 
 const routes = [
   {
@@ -12,6 +14,16 @@ const routes = [
     path: '/social',
     name: 'Social',
     component: SocialFeed
+  },
+  {
+    path: '/badges',
+    name: 'Badges',
+    component: Badges
+  },
+  {
+    path: '/breadcrumbs',
+    name: 'Breadcrumbs',
+    component: Breadcrumbs
   },
   /*{
     path: '/about',
