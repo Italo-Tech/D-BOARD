@@ -50,5 +50,18 @@
             color: #3B82F6;
         }
 
+        /*COMPONENTS*/
+        /*Badges*/
+        .btn-primary {
+            @apply uppercase font-bold text-white bg-blue-500 hover:bg-blue-600 cursor-pointer text-xs inline-flex text-center transition duration-200
+        }
+        .btn-primary-outline {
+            @apply uppercase font-bold text-white border border-blue-500 border-current bg-transparent hover:bg-blue-600 cursor-pointer text-blue-500 hover:text-white inline-flex text-center transition duration-200
+        }
+        .btn-alternative {
+            @apply uppercase font-medium text-blue-500 border-current bg-blue-300 cursor-pointer text-blue-500 hover:text-white inline-flex text-center transition duration-200
+        }
+
+
 @tailwind components;
 @tailwind utilities;
