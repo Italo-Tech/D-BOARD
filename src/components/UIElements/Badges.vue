@@ -19,6 +19,21 @@
           </div>
         </div>
       </div>
+      <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
+        <span class="uppercase font-bold text-white bg-blue-500 text-xs inline-flex text-center p-2">Default</span>
+        <span class="uppercase font-bold text-white bg-blue-500 text-xs inline-flex text-center p-1">Default</span>
+        <span class="uppercase font-bold text-white bg-blue-500 text-xs inline-flex text-center px-2">Default</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
+        <span class="uppercase font-bold text-white bg-blue-500 text-xs inline-flex text-center p-2 rounded-lg">Default</span>
+        <span class="uppercase font-bold text-white bg-blue-500 text-xs inline-flex text-center p-1 rounded-lg">Default</span>
+        <span class="uppercase font-bold text-white bg-blue-500 text-xs inline-flex text-center px-2 rounded-lg">Default</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
+        <span class="uppercase font-bold text-white bg-blue-500 text-xs inline-flex text-xs p-0 h-6 w-6 rounded-full text-center justify-center">1º</span>
+        <span class="uppercase font-bold text-white bg-blue-500 text-xs inline-flex text-xs p-0 h-5 w-5 rounded-full text-center justify-center">1º</span>
+        <span class="uppercase font-bold text-white bg-blue-500 text-xs inline-flex text-xs p-0 h-4 w-4 rounded-full text-center justify-center">1º</span>
+      </div>
     </section>
   </div>
 </template>
