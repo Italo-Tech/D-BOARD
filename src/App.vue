@@ -248,7 +248,7 @@
                   </svg>
                 </button>
                 <ul v-show="isUIElement">
-                  <!--buttons-->
+                  <!--Buttons-->
                   <li class="">
                     <!--Badges-->
                     <router-link :to="{ name: 'Badges' }" class="left-sidebar-item focus:outline-none">
@@ -257,6 +257,14 @@
                     <!--Breadcrumps-->
                     <router-link :to="{ name: 'Breadcrumbs' }" class="left-sidebar-item focus:outline-none">
                       <span class="title">Breadcrumbs</span>
+                    </router-link>
+                    <!--Buttons-->
+                    <router-link :to="{ name: 'Buttons' }" class="left-sidebar-item focus:outline-none">
+                      <span class="title">Buttons</span>
+                    </router-link>
+                    <!--Dropdowns-->
+                    <router-link :to="{ name: 'Dropdowns' }" class="left-sidebar-item focus:outline-none">
+                      <span class="title">Dropdowns</span>
                     </router-link>
                   </li>
                 </ul>

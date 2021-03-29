@@ -5,7 +5,7 @@
       <div class="flex flex-row items-center justify-between mb-4">
         <div class="flex flex-col">
           <div class="text-xs uppercase font-light text-gray-500">UI Elements</div>
-          <div class="text-xl font-bold">Badges</div>
+          <div class="text-xl font-bold">Dropdowns</div>
         </div>
       </div>
     </div>
@@ -20,19 +20,19 @@
         </div>
       </div>
       <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
-        <span class="badge-primary p-2">Default</span>
-        <span class="badge-primary p-1">Default</span>
-        <span class="badge-primary px-2">Default</span>
+        <span class="btn-primary p-2">Default</span>
+        <span class="btn-primary p-1">Default</span>
+        <span class="btn-primary px-2">Default</span>
       </div>
       <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
-        <span class="badge-primary text-center rounded-lg p-2">Default</span>
-        <span class="badge-primary text-center rounded-lg p-1">Default</span>
-        <span class="badge-primary text-center rounded-lg px-2">Default</span>
+        <span class="btn-primary text-center rounded-lg p-2">Default</span>
+        <span class="btn-primary text-center rounded-lg p-1">Default</span>
+        <span class="btn-primary text-center rounded-lg px-2">Default</span>
       </div>
       <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
-        <span class="badge-primary rounded-full items-center justify-center p-0 h-7 w-7">1º</span>
-        <span class="badge-primary rounded-full items-center justify-center p-0 h-6 w-6">1º</span>
-        <span class="badge-primary rounded-full items-center justify-center p-0 h-5 w-5">1º</span>
+        <span class="btn-primary rounded-full items-center justify-center p-0 h-7 w-7">1º</span>
+        <span class="btn-primary rounded-full items-center justify-center p-0 h-6 w-6">1º</span>
+        <span class="btn-primary rounded-full items-center justify-center p-0 h-5 w-5">1º</span>
       </div>
     </section>
 
@@ -47,19 +47,19 @@
         </div>
       </div>
       <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
-        <span class="badge-primary-outline p-2">Default</span>
-        <span class="badge-primary-outline p-1">Default</span>
-        <span class="badge-primary-outline px-2">Default</span>
+        <span class="btn-primary-outline p-2">Default</span>
+        <span class="btn-primary-outline p-1">Default</span>
+        <span class="btn-primary-outline px-2">Default</span>
       </div>
       <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
-        <span class="badge-primary-outline text-center rounded-lg p-2">Default</span>
-        <span class="badge-primary-outline text-center rounded-lg p-1">Default</span>
-        <span class="badge-primary-outline text-center rounded-lg px-2">Default</span>
+        <span class="btn-primary-outline text-center rounded-lg p-2">Default</span>
+        <span class="btn-primary-outline text-center rounded-lg p-1">Default</span>
+        <span class="btn-primary-outline text-center rounded-lg px-2">Default</span>
       </div>
       <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
-        <span class="badge-primary-outline rounded-full items-center justify-center p-0 h-7 w-7">1º</span>
-        <span class="badge-primary-outline rounded-full items-center justify-center p-0 h-6 w-6">1º</span>
-        <span class="badge-primary-outline rounded-full items-center justify-center p-0 h-5 w-5">1º</span>
+        <span class="btn-primary-outline rounded-full items-center justify-center p-0 h-7 w-7">1º</span>
+        <span class="btn-primary-outline rounded-full items-center justify-center p-0 h-6 w-6">1º</span>
+        <span class="btn-primary-outline rounded-full items-center justify-center p-0 h-5 w-5">1º</span>
       </div>
     </section>
 
@@ -74,19 +74,19 @@
         </div>
       </div>
       <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
-        <span class="badge-alternative p-2">Default</span>
-        <span class="badge-alternative p-1">Default</span>
-        <span class="badge-alternative px-2">Default</span>
+        <span class="btn-alternative p-2">Default</span>
+        <span class="btn-alternative p-1">Default</span>
+        <span class="btn-alternative px-2">Default</span>
       </div>
       <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
-        <span class="badge-alternative text-center rounded-lg p-2">Default</span>
-        <span class="badge-alternative text-center rounded-lg p-1">Default</span>
-        <span class="badge-alternative text-center rounded-lg px-2">Default</span>
+        <span class="btn-alternative text-center rounded-lg p-2">Default</span>
+        <span class="btn-alternative text-center rounded-lg p-1">Default</span>
+        <span class="btn-alternative text-center rounded-lg px-2">Default</span>
       </div>
       <div class="flex flex-wrap items-center justify-start mb-2 w-full space-x-2">
-        <span class="badge-alternative rounded-full items-center justify-center p-0 h-7 w-7">1º</span>
-        <span class="badge-alternative rounded-full items-center justify-center p-0 h-6 w-6">1º</span>
-        <span class="badge-alternative rounded-full items-center justify-center p-0 h-5 w-5">1º</span>
+        <span class="btn-alternative rounded-full items-center justify-center p-0 h-7 w-7">1º</span>
+        <span class="btn-alternative rounded-full items-center justify-center p-0 h-6 w-6">1º</span>
+        <span class="btn-alternative rounded-full items-center justify-center p-0 h-5 w-5">1º</span>
       </div>
     </section>
   </div>

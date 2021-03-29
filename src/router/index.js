@@ -3,6 +3,8 @@ import Home from '../views/Home.vue'
 import SocialFeed from "@/views/SocialFeed";
 import Breadcrumbs from "@/components/UIElements/Breadcrumbs";
 import Badges from "@/components/UIElements/Badges";
+import Buttons from "@/components/UIElements/Buttons";
+import Dropdowns from "@/components/UIElements/Dropdowns";
 
 const routes = [
   {
@@ -24,6 +26,16 @@ const routes = [
     path: '/breadcrumbs',
     name: 'Breadcrumbs',
     component: Breadcrumbs
+  },
+  {
+    path: '/buttons',
+    name: 'Buttons',
+    component: Buttons
+  },
+  {
+    path: '/dropdowns',
+    name: 'Dropdowns',
+    component: Dropdowns
   },
   /*{
     path: '/about',

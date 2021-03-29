@@ -47,19 +47,40 @@
         }
 
         .left-sidebar-item.active, .left-sidebar-item:hover {
-            color: #3B82F6;
+            color: #3b82f6;
         }
 
         /*COMPONENTS*/
         /*Badges*/
+        .badge-primary {
+            @apply uppercase font-bold text-white bg-blue-500 hover:bg-blue-600 cursor-pointer text-xs inline-flex text-center transition duration-200
+        }
+        .badge-primary-outline {
+            @apply uppercase font-bold text-white border border-blue-500 border-current bg-transparent hover:bg-blue-600 cursor-pointer text-blue-500 hover:text-white inline-flex text-center transition duration-200
+        }
+        .badge-alternative {
+            @apply uppercase font-medium text-blue-500 border-current bg-blue-300 cursor-pointer text-blue-500 hover:text-white inline-flex text-center transition duration-200
+        }
+
+        /*Buttons*/
         .btn-primary {
             @apply uppercase font-bold text-white bg-blue-500 hover:bg-blue-600 cursor-pointer text-xs inline-flex text-center transition duration-200
         }
         .btn-primary-outline {
-            @apply uppercase font-bold text-white border border-blue-500 border-current bg-transparent hover:bg-blue-600 cursor-pointer text-blue-500 hover:text-white inline-flex text-center transition duration-200
+            @apply uppercase font-bold text-blue-500 border border-blue-500 border-current bg-transparent hover:border-blue-700 cursor-pointer hover:text-blue-700 inline-flex text-center transition duration-200
         }
-        .btn-alternative {
-            @apply uppercase font-medium text-blue-500 border-current bg-blue-300 cursor-pointer text-blue-500 hover:text-white inline-flex text-center transition duration-200
+        .btn-raised {
+            @apply uppercase shadow font-medium text-blue-500 border-current bg-transparent hover:bg-blue-100 cursor-pointer text-blue-500 inline-flex text-center transition duration-200
+        }
+        .btn-flat {
+            @apply uppercase font-medium text-blue-500 border-current hover:bg-blue-100 cursor-pointer text-blue-500 inline-flex text-center transition duration-200
+        }
+
+        .btn-lg {
+        @apply py-3 px-4 uppercase font-bold text-white bg-blue-500 hover:bg-blue-600 cursor-pointer text-xs inline-flex text-center transition duration-200
+        }
+        .btn-sm {
+        @apply uppercase font-bold text-white bg-blue-500 hover:bg-blue-600 cursor-pointer text-xs inline-flex text-center transition duration-200
         }
 
 

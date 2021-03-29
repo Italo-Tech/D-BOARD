@@ -494,8 +494,6 @@
 
 <script>
 
-
-
 import PlanetChart from "@/components/PlanetChart";
 import BarChart from "@/components/BarChart";
 import LineChart from "@/components/graphics/LineChart";
