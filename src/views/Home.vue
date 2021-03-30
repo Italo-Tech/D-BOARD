@@ -151,7 +151,7 @@
 
                 <div class="flex flex-row w-full">
                   <!--Radar-->
-                  <BarChart />
+                  <RadarChart />
                 </div>
 
               </div>
@@ -495,11 +495,13 @@
 <script>
 
 import PlanetChart from "@/components/PlanetChart";
-import BarChart from "@/components/BarChart";
 import LineChart from "@/components/graphics/LineChart";
+import RadarChart from "@/components/graphics/RadarChart";
+
+
 export default {
   name: 'Home',
-  components: { LineChart, BarChart, PlanetChart},
+  components: {RadarChart, LineChart, PlanetChart},
   data() {
     return {
       state: {

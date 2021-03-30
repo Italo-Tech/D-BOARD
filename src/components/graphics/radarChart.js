@@ -1,12 +1,12 @@
-export const BarChartData = {
+export const RadarChartData = {
     type: "radar",
     data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "ago"],
         datasets: [
             {
                 label: new Date().getFullYear(),
                 /*Dados*/
-                data: [30, 78, 56, 34, 100, 45, 13],
+                data: [30, 78, 56, 34, 100, 45, 13, 14],
                 backgroundColor: "#83b6ff",
                 borderColor: "#83b6ff",
                 borderWidth: 3,
@@ -18,7 +18,7 @@ export const BarChartData = {
                 label: new Date().getFullYear() - 1,
                 fill: false,
                 /*Dados*/
-                data: [27, 68, 86, 74, 10, 4, 87],
+                data: [27, 68, 86, 74, 10, 4, 87, 14],
                 backgroundColor: "#4c51bf",
                 borderColor: "#4c51bf",
                 borderWidth: 3,
@@ -57,14 +57,6 @@ export const BarChartData = {
                     display: true,
                     labelString: "Month",
                 },
-                /*gridLines: {
-                    borderDash: [2],
-                    borderDashOffset: [2],
-                    color: "rgba(33, 37, 41, 0.3)",
-                    zeroLineColor: "rgba(33, 37, 41, 0.3)",
-                    zeroLineBorderDash: [2],
-                    zeroLineBorderDashOffset: [2],
-                },*/
             }
         ],
         yAxes: [
@@ -74,23 +66,8 @@ export const BarChartData = {
                     display: false,
                     labelString: "Value",
                 },
-                /*gridLines: {
-                    borderDash: [2],
-                    drawBorder: false,
-                    borderDashOffset: [2],
-                    color: "rgba(33, 37, 41, 0.2)",
-                    zeroLineColor: "rgba(33, 37, 41, 0.15)",
-                    zeroLineBorderDash: [2],
-                    zeroLineBorderDashOffset: [2],
-                },*/
             },
         ],
-
-
-
-
-
-
         lineTension: 1,
         scales: {
             yAxes: [
@@ -105,4 +82,4 @@ export const BarChartData = {
     }
 };
 
-export default BarChartData;
+export default RadarChartData
