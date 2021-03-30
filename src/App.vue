@@ -266,6 +266,10 @@
                     <router-link :to="{ name: 'Dropdowns' }" class="left-sidebar-item focus:outline-none">
                       <span class="title">Dropdowns</span>
                     </router-link>
+                    <!--Images-->
+                    <router-link :to="{ name: 'Images' }" class="left-sidebar-item focus:outline-none">
+                      <span class="title">Images</span>
+                    </router-link>
                   </li>
                 </ul>
               </li>

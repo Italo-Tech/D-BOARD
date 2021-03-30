@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/UIElements/Breadcrumbs";
 import Badges from "@/components/UIElements/Badges";
 import Buttons from "@/components/UIElements/Buttons";
 import Dropdowns from "@/components/UIElements/Dropdowns";
+import Images from "@/components/UIElements/Images";
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/dropdowns',
     name: 'Dropdowns',
     component: Dropdowns
+  },
+  {
+    path: '/images',
+    name: 'Images',
+    component: Images
   },
   /*{
     path: '/about',
