@@ -151,7 +151,7 @@
 
 <script>
 export default {
-  name: "Badges"
+  name: "Buttons"
 }
 </script>
 
