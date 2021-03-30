@@ -1,4 +1,4 @@
-export const planetChartData = {
+export const barChartData = {
     /*type: "line",
     data: {
         labels: [
@@ -141,4 +141,4 @@ export const planetChartData = {
     }
 };
 
-export default planetChartData;
+export default barChartData;

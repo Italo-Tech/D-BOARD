@@ -1,4 +1,4 @@
-<template>radar
+<template>
   <div>
     <canvas id="radar-chart" width="500" height="350"></canvas>
   </div>

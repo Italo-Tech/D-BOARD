@@ -110,7 +110,7 @@
                 </div>
               </div>
               <!--Graphic Bar-->
-              <PlanetChart />
+              <BarChart />
             </div>
 
             <div class="w-full lg:w-1/3">
@@ -494,14 +494,14 @@
 
 <script>
 
-import PlanetChart from "@/components/PlanetChart";
 import LineChart from "@/components/graphics/LineChart";
 import RadarChart from "@/components/graphics/RadarChart";
+import BarChart from "@/components/graphics/BarChart";
 
 
 export default {
   name: 'Home',
-  components: {RadarChart, LineChart, PlanetChart},
+  components: {BarChart, RadarChart, LineChart},
   data() {
     return {
       state: {
