@@ -7,6 +7,8 @@ import Buttons from "@/components/UIElements/Buttons";
 import Dropdowns from "@/components/UIElements/Dropdowns";
 import Images from "@/components/UIElements/Images";
 import ProgressBars from "@/components/UIElements/ProgressBars";
+import Pagination from "../components/UIElements/Pagination";
+import Tabs from "../components/UIElements/Tabs";
 
 const routes = [
   {
@@ -48,6 +50,16 @@ const routes = [
     path: '/progress',
     name: 'Progress',
     component: ProgressBars
+  },
+  {
+    path: '/pagination',
+    name: 'Pagination',
+    component: Pagination
+  },
+  {
+    path: '/tabs',
+    name: 'Tabs',
+    component: Tabs
   },
   /*{
     path: '/about',

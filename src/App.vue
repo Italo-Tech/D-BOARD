@@ -274,6 +274,14 @@
                     <router-link :to="{ name: 'Progress' }" class="left-sidebar-item focus:outline-none">
                       <span class="title">ProgressBars</span>
                     </router-link>
+                    <!--Pagination-->
+                    <router-link :to="{ name: 'Pagination' }" class="left-sidebar-item focus:outline-none">
+                      <span class="title">Pagination</span>
+                    </router-link>
+                    <!--Tabs-->
+                    <router-link :to="{ name: 'Tabs' }" class="left-sidebar-item focus:outline-none">
+                      <span class="title">Tabs</span>
+                    </router-link>
                   </li>
                 </ul>
               </li>
