@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <!---->
+    <!--Vertical Tabs-->
     <section class="w-full p-4 mb-6 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
       <div class="flex flex-row items-center justify-between mb-6">
         <div class="flex flex-col">
@@ -20,8 +20,31 @@
         </div>
       </div>
 
-      <div class="flex flex-col w-full">
+      <div class="flex flex-wrap">
+        <div class="w-full">
+          <div class="flex flex-row items-start justify-start tabs">
+            <!--Buttons-->
+            <div class="flex-shrink-0">
+              <div class="flex flex-wrap flex-col space-y-2">
 
+                <button :class="tabActive && favourites ? 'tab-active' : 'tab'" class="" @click.prevent="favActive" type="button">
+                  <i class="far fa-heart text-lg"></i>
+                  <span class="mt-3">Favourites</span>
+                </button>
+
+                <button :class="tabActive && options ? 'tab-active' : 'tab'" class="" @click.prevent="optActive" type="button">
+                  <i class="fas fa-bars text-lg"></i>
+                  <span class="mt-3">Options</span>
+                </button>
+
+                <button :class="tabActive && settings ? 'tab-active' : 'tab'" class="" @click.prevent="setActive" type="button">
+                  <i class="fas fa-cog text-lg"></i>
+                  <span class="mt-3">Settings</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section>
@@ -30,7 +53,32 @@
 
 <script>
 export default {
-  name: "Pagination"
+  name: "Pagination",
+  data() {
+    return {
+      tabActive: true,
+      favourites: false,
+      options: false,
+      settings: false,
+    }
+  },
+  methods: {
+    favActive() {
+      this.favourites = true,
+      this.options = false,
+      this.settings = false
+    },
+    optActive() {
+      this.favourites = false,
+      this.options = true,
+      this.settings = false
+    },
+    setActive() {
+      this.favourites = false,
+      this.options = false,
+      this.settings = true
+    }
+  }
 }
 
 </script>

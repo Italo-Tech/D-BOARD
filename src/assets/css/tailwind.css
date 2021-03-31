@@ -83,6 +83,17 @@
         @apply uppercase font-bold text-white bg-blue-500 hover:bg-blue-600 cursor-pointer text-xs inline-flex text-center transition duration-200
         }
 
+        /*Tabs*/
+        .tab {
+            @apply leading-3 rounded-lg font-bold uppercase text-sm p-4 flex flex-col items-center content-center w-24 focus:outline-none bg-white hover:bg-blue-50
+        }
+        .tab-active {
+            @apply leading-3 rounded-lg font-bold uppercase text-sm p-4 flex flex-col items-center content-center w-24 focus:outline-none bg-blue-500 text-white
+        }
+
+
+
+
 
 @tailwind components;
 @tailwind utilities;
