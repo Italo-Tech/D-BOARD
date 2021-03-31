@@ -6,6 +6,7 @@ import Badges from "@/components/UIElements/Badges";
 import Buttons from "@/components/UIElements/Buttons";
 import Dropdowns from "@/components/UIElements/Dropdowns";
 import Images from "@/components/UIElements/Images";
+import ProgressBars from "@/components/UIElements/ProgressBars";
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: '/images',
     name: 'Images',
     component: Images
+  },
+  {
+    path: '/progress',
+    name: 'Progress',
+    component: ProgressBars
   },
   /*{
     path: '/about',

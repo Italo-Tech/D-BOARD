@@ -270,6 +270,10 @@
                     <router-link :to="{ name: 'Images' }" class="left-sidebar-item focus:outline-none">
                       <span class="title">Images</span>
                     </router-link>
+                    <!--ProgressBars-->
+                    <router-link :to="{ name: 'Progress' }" class="left-sidebar-item focus:outline-none">
+                      <span class="title">ProgressBars</span>
+                    </router-link>
                   </li>
                 </ul>
               </li>
