@@ -90,6 +90,18 @@
         .tab-active {
             @apply leading-3 rounded-lg font-bold uppercase text-sm p-4 flex flex-col items-center content-center w-24 focus:outline-none bg-blue-500 text-white
         }
+        .tab-underline {
+            @apply leading-3 font-bold uppercase text-sm p-2 flex flex-row items-center content-center w-28 focus:outline-none border-b-2 hover:border-blue-500
+        }
+        .tab-active-underline {
+            @apply leading-3 font-bold uppercase text-sm p-2 flex flex-row items-center content-center w-28 focus:outline-none border-b-2 border-blue-500
+        }
+        .tab-default {
+            @apply leading-3 font-bold uppercase text-sm p-2 flex flex-row items-center content-center w-28 focus:outline-none hover:bg-blue-100
+        }
+        .tab-active-default {
+            @apply leading-3 font-bold uppercase text-sm p-2 flex flex-row items-center content-center w-28 focus:outline-none bg-blue-500 text-white
+        }
 
 
 
