@@ -1,7 +1,7 @@
 <template>
   <div class="navbar navbar-1 border-b">
     <div class="navbar-inner  w-full flex items-center justify-start">
-      <button @click.prevent="this.$store.state.dBoard = !this.$store.state.dBoard" class="mx-4 focus:outline-none">
+      <button @click.prevent="this.dBoard = !this.dBoard" class="mx-4 focus:outline-none">
         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
       <!--Button Search-->
@@ -16,7 +16,7 @@
 
       <!--EXPLORE-->
       <div class="relative">
-        <button @click.prevent="this.isExplore = !this.isExplore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
+        <button @click.prevent="explore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
           <span class="mr-2">Explore</span>
           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
@@ -293,7 +293,7 @@
       <div class="hidden lg:flex relative">
         <button @click.prevent="profile" class="flex h-16 w-8 focus:outline-none relative ml-2">
                     <span class="absolute top-0 left-0 pt-4">
-                      <img class="h-8 w-8 rounded-full shadow bg-yellow-500" src="./assets/img/perfil.png" alt="avatar">
+                      <img class="h-8 w-8 rounded-full shadow bg-yellow-500" src="../../assets/img/perfil.png" alt="avatar">
                       <span class="absolute uppercase font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-red-500 text-white ring-white" style="top: 10px; right: -4px">2</span>
                     </span>
         </button>
@@ -346,7 +346,7 @@
 </template>
 
 <script>
-import {mapActions} from "vuex";
+import {mapActions, mapState} from "vuex";
 
 export default {
   name: "NavBar",
@@ -355,10 +355,15 @@ export default {
 
     }
   },
+  computed: {
+    ...mapState([
+        'dBoard','isNation','isCube','isProjectStatus','isProfile','isExplore'
+    ])
+  },
   methods: {
     ...mapActions([
-      'settingsRight'
-    ]),
+      'nation','cube','projectStatus','profile','settingsRight'
+    ])
   }
 }
 </script>

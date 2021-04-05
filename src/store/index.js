@@ -2,13 +2,10 @@ import Vuex from "vuex";
 
 export default new Vuex.Store({
   state: {
-
     /**/
-
     isCog: false,
 
     dBoard: false,
-
     isExplore: false,
 
     isApps: false,
@@ -34,6 +31,7 @@ export default new Vuex.Store({
 
   },
   actions: {
+    /*Modais NavBar*/
     nation() {
       this.state.isNation = !this.state.isNation
       this.state.isCube = false
@@ -58,6 +56,7 @@ export default new Vuex.Store({
       this.state.isProjectStatus = false
       this.state.isProfile = !this.state.isProfile
     },
+
     /*Abre/Fecha -> SettingsRight*/
     settingsRight() {
       this.state.isSettings = !this.state.isSettings;
