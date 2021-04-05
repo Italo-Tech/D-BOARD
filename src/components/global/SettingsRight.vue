@@ -6,7 +6,7 @@
         <div class="flex flex-col">
           <div class="px-4 h-16 flex flex-row items-center justify-between text-white bg-blue-500">
             <div class="uppercase text-sm font-bold tracking-wider">Settings</div>
-            <button @click.prevent="this.state.isSettings = !this.state.isSettings;" class="btn btn-circle focus:outline-none">
+            <button @click.prevent="settingsRight" class="btn btn-circle focus:outline-none">
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import {mapState} from "vuex";
+import {mapActions, mapState} from "vuex";
 
 export default {
   name: "SettingsRight",
@@ -90,6 +90,11 @@ export default {
   computed: mapState([
     'isSettings'
   ]),
+  methods: {
+    ...mapActions([
+      'settingsRight'
+    ]),
+  }
 }
 </script>
 
