@@ -4,86 +4,13 @@
       <div class="font-sans antialiased text-sm disable-scrollbars w-full text-gray-900 bg-white" data-layout="layout-1" data-collapsed="false" data-navbar="light" data-left-sidebar="light">
 
         <!--SETTINGS RIGHT-->
-        <div v-show="isSettings" :class="isSettings ? 'trs-right-to-left' : 'settings-leave-active'" class="right-sidebar bg-white text-gray-900 right-sidebar-1 openSettings">
-          <div>
-            <div>
-              <!--Cabeçalho DEMO-->
-              <div class="flex flex-col">
-                <div class="px-4 h-16 flex flex-row items-center justify-between text-white bg-blue-500">
-                  <div class="uppercase text-sm font-bold tracking-wider">Settings</div>
-                  <button @click.prevent="isSettings = !isSettings;" class="btn btn-circle focus:outline-none">
-                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                  </button>
-                </div>
-              </div>
+        <SettingsRight v-show="this.$store.state.isSettings" :class="this.$store.state.isSettings ? 'trs-right-to-left' : 'settings-leave-active'">
 
-              <!--Colors DEMO-->
-              <div class="flex flex-col p-4">
-                <div class="uppercase tex-sm font-bold tracking-wider mb-2">Demos</div>
-                <div class="flex flex-col">
-                  <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Light Background</button>
-                  <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Dark Background</button>
-                  <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Small Sidebar</button>
-                  <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Dark Sidebar</button>
-                  <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Dark small sidebar</button>
-                  <button class="flex h-8 w-full hover:bg-transparent focus:outline-none">Dark navbar</button>
-                </div>
-              </div>
-
-              <!--Toggle Sidebar-->
-              <div class="flex flex-col p-4">
-                <div class="uppercase text-sm font-bold tracking-wider mb-2">Toggle Siderbar</div>
-                <div class="flex flex-col">
-                  <div class="react-switch relative inline-block text-left opacity-100" style="">
-
-                    <div class="react-switch-bg h-5 w-12 m-0.5 relative bg-gray-300 cursor-pointer">
-                    </div>
-
-                    <div class="react-switch-handle h-6 w-6 bg-white inline-block cursor-pointer rounded-full absolute top-0 border-0">
-                    </div>
-
-                    <input class="input-toggle-sidebar overflow-hidden p-0 absolute border-0" type="checkbox" role="switch">
-                  </div>
-                </div>
-              </div>
-
-              <!--Colors Sidebar-->
-              <div class="flex flex-col p-4">
-                <div class="mb-2">
-                  <div class="uppercase text-sm font-bold tracking-wider mb-2">Colors</div>
-                </div>
-                <!--background-->
-                <div class="mb-2">
-                  <div class="uppercase text-sm font-normal text-gray-500 tracking-wider mb-2">Background</div>
-                  <div class="flex flex-row space-x-1">
-                    <button class="btn btn-circle btn-raised bg-white text-white hover:bg-transparent focus:outline-none"></button>
-                    <button class="btn btn-circle btn-raised bg-gray-900 text-gray-900 hover:bg-gray-900 focus:outline-none"></button>
-                  </div>
-                </div>
-                <!--navbar-->
-                <div class="mb-2">
-                  <div class="uppercase text-sm font-normal text-gray-500 tracking-wider mb-2">Navbar</div>
-                  <div class="flex flex-row space-x-1">
-                    <button class="btn btn-circle btn-raised bg-white text-white hover:bg-transparent focus:outline-none"></button>
-                    <button class="btn btn-circle btn-raised bg-gray-900 text-gray-900 hover:bg-gray-900 focus:outline-none"></button>
-                  </div>
-                </div>
-                <!--left sidebar-->
-                <div class="mb-2">
-                  <div class="uppercase text-sm font-normal text-gray-500 tracking-wider mb-2">Left sidebar</div>
-                  <div class="flex flex-row space-x-1">
-                    <button class="btn btn-circle btn-raised bg-white text-white hover:bg-transparent focus:outline-none"></button>
-                    <button class="btn btn-circle btn-raised bg-gray-900 text-gray-900 hover:bg-gray-900 focus:outline-none"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </SettingsRight>
 
         <div class="wrapper">
           <!--D-BOARD LEFT-->
-          <div v-show="dBoard" class="left-sidebar left-sidebar-1 trs-left-to-right">
+          <div v-show="this.$store.state.dBoard" class="left-sidebar left-sidebar-1 trs-left-to-right">
             <!--Logo-->
             <div class="logo truncate">
               <a href="/" class="flex flex-row items-center justify-start space-x-2">
@@ -118,13 +45,13 @@
               </li>
               <!--APPS-->
               <li class="l0">
-                <button @click.prevent="isApps = !isApps" class="left-sidebar-item  focus:outline-none">
+                <button @click.prevent="this.isApps = !this.isApps" class="left-sidebar-item  focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                   <span class="title">Apps</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
                 <!--sub-apps-->
-                <ul v-show="isApps">
+                <ul v-show="this.isApps">
                   <li class="l1">
                     <router-link class="left-sidebar-item" :to="{ name: 'Social' }">
                       <!--Social Feed-->
@@ -142,7 +69,7 @@
               </li>
               <!--MENU LEVELS-->
               <li class="l0">
-                <button @click.prevent="isMenu = !isMenu" class="left-sidebar-item focus:outline-none">
+                <button @click.prevent="this.isMenu = !this.isMenu" class="left-sidebar-item focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                     <line x1="8" y1="6" x2="21" y2="6"></line>
                     <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -156,32 +83,32 @@
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
                 </button>
-                <ul v-show="isMenu">
+                <ul v-show="this.isMenu">
                   <!--L1-->
                   <li class="l1">
-                    <button @click.prevent="isMenu1 = !isMenu1" class="left-sidebar-item focus:outline-none">
+                    <button @click.prevent="this.isMenu1 = !this.isMenu1" class="left-sidebar-item focus:outline-none">
                       <span class="title">Level 1-1</span>
                       <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <polyline points="9 18 15 12 9 6"></polyline>
                       </svg>
                     </button>
                     <!--L2-->
-                    <ul v-show="isMenu1">
+                    <ul v-show="this.isMenu1">
                       <li class="l2">
-                        <button @click.prevent="isMenu2 = !isMenu2" class="left-sidebar-item focus:outline-none">
+                        <button @click.prevent="this.isMenu2 = !this.isMenu2" class="left-sidebar-item focus:outline-none">
                           <span class="title ml-4">Level 2-1</span>
                           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline>
                           </svg>
                         </button>
                         <!--L3-->
-                        <ul v-show="isMenu2 ">
+                        <ul v-show="this.isMenu2 ">
                           <li class="l3">
                             <button class="left-sidebar-item focus:outline-none">
                               <span class="title ml-6">Level 3-1</span>
                             </button>
                           </li>
                         </ul>
-                        <ul v-show="isMenu2 ">
+                        <ul v-show="this.isMenu2 ">
                           <li class="l3">
                             <button class="left-sidebar-item focus:outline-none">
                               <span class="title ml-6">Level 3-2</span>
@@ -195,12 +122,12 @@
               </li>
               <!--Demos-->
               <li class="l0">
-                <button @click.prevent="isDemos = !isDemos" class="left-sidebar-item focus:outline-none">
+                <button @click.prevent="this.isDemos = !this.isDemos" class="left-sidebar-item focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                   <span class="title">Demos</span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
-                <ul v-show="isDemos">
+                <ul v-show="this.isDemos">
                   <li class="l1">
                     <a class="left-sidebar-item " href="/demo-1"><span class="title">Light background</span></a>
                     <ul></ul>
@@ -238,7 +165,7 @@
             <ul>
               <!--UI Elements-->
               <li class="l0">
-                <button @click.prevent="isUIElement = !isUIElement" class="left-sidebar-item focus:outline-none">
+                <button @click.prevent="this.isUIElement = !this.isUIElement" class="left-sidebar-item focus:outline-none">
                   <span class="text-xl ml-5">
                     <i class='bx bx-droplet'></i>
                   </span>
@@ -247,7 +174,7 @@
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
                 </button>
-                <ul v-show="isUIElement">
+                <ul v-show="this.isUIElement">
                   <!--Buttons-->
                   <li class="">
                     <!--Badges-->
@@ -325,7 +252,7 @@
             <!--NAVBAR-->
             <div class="navbar navbar-1 border-b">
               <div class="navbar-inner  w-full flex items-center justify-start">
-                <button @click.prevent="dBoard = ! dBoard" class="mx-4 focus:outline-none">
+                <button @click.prevent="this.$store.state.dBoard = !this.$store.state.dBoard" class="mx-4 focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
                 <!--Button Search-->
@@ -340,11 +267,11 @@
 
                 <!--EXPLORE-->
                 <div class="relative">
-                  <button @click.prevent="isExplore = !isExplore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
+                  <button @click.prevent="this.isExplore = !this.isExplore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
                     <span class="mr-2">Explore</span>
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
                   </button>
-                  <div v-show="isExplore" class="absolute top-0 mt-16 bg-gray-50 border-2 rounded-lg border-gray-200 transition shadow-xl">
+                  <div v-show="this.isExplore" class="absolute top-0 mt-16 bg-gray-50 border-2 rounded-lg border-gray-200 transition shadow-xl">
                     <div class="dropdown-content bottom-start" style="width: 32rem">
                       <div class="flex flex-row flex-wrap focus:outline-none">
                         <!--Teams-->
@@ -431,7 +358,7 @@
                   <button @click.prevent="nation" class="flex items-center justify-center h-16 w-12 focus:outline-none">
                     <span class="text-base flag-icon flag-icon-br"></span>
                   </button>
-                  <div v-show="isNation" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
+                  <div v-show="this.isNation" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
                     <div class="dropdown-content w-64 bottom-start">
                       <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Escolha um país</div>
                       <div class="flex flex-wrap">
@@ -485,7 +412,7 @@
                   <button @click.prevent="cube" class="flex items-center justify-center h-16 w-12 focus:outline-none">
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                   </button>
-                  <div v-show="isCube" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
+                  <div v-show="this.isCube" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
                     <div class="dropdown-content w-64 bottom-start">
                       <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Apps</div>
                       <div class="flex flex-wrap">
@@ -549,7 +476,7 @@
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                     <span class="uppercase absolute font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-blue-500 text-white" style="top: 14px; right: 8px">5</span>
                   </button>
-                  <div v-show="isProjectStatus" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
+                  <div v-show="this.isProjectStatus" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
                     <div class="dropdown-content w-64 bottom-start">
                       <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Project Status</div>
                       <div class="flex flex-col">
@@ -621,7 +548,7 @@
           <span class="absolute uppercase font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-red-500 text-white ring-white" style="top: 10px; right: -4px">2</span>
         </span>
                   </button>
-                  <div v-show="isProfile" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
+                  <div v-show="this.isProfile" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
                     <div class="w-48 bottom-end">
                       <div class="flex flex-col w-full">
                         <ul class="list-none shadow-xl">
@@ -662,7 +589,7 @@
                 </div>
 
                 <!--BUTTON CONFIG-->
-                <button @click.prevent="isSettings = !isSettings" class="btn-transparent flex items-center justify-center h-16 w-8 mx-4 focus:outline-none">
+                <button @click.prevent="this.$store.state.isSettings = !this.$store.state.isSettings" class="btn-transparent flex items-center justify-center h-16 w-8 mx-4 focus:outline-none">
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
                 </button>
               </div>
@@ -677,9 +604,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import SettingsRight from "./components/global/SettingsRight";
 
 export default {
   name: 'App',
+  components: {SettingsRight},
   data() {
     return {
       state: {
@@ -688,46 +618,18 @@ export default {
           responsive: true
         },
       },
-      isCog: false,
-
-      dBoard: false,
-
-      isExplore: false,
-
-      isApps: false,
-
-      isMenu: false,
-      isMenu1: false,
-      isMenu2: false,
-      isMenu3: false,
-
-      isDemos: false,
-
-      isNation: false,
-      isCube: false,
-
-      isProjectStatus: false,
-
-      isProfile: false,
-
-      isSettings: false,
-
-      isConversions: false,
-      isConversions2: false,
-
-      isUIElement: false,
-
     }
   },
-
-
+  computed: mapState([
+    'isCube','isCog','isExplore','isApps','isMenu','isMenu1','isMenu2','isMenu3','isDemos','isNation','isCube','isProjectStatus','isProfile','isSettings','isConversions','isConversions2','isUIElement'
+  ]),
   beforeMount () {
     this.fillData()
   },
 
   methods: {
     fillData () {
-      this.state.chartData = {
+      this.chartData = {
         labels: ['label 1', 'Label 2'],
         datasets: [
           {
@@ -743,28 +645,28 @@ export default {
     },
 
     nation() {
-      this.isNation = !this.isNation
-      this.isCube = false
-      this.isProjectStatus = false
-      this.isProfile = false
+      this.$store.state.isNation = !this.$store.state.isNation
+      this.$store.state.isCube = false
+      this.$store.state.isProjectStatus = false
+      this.$store.state.isProfile = false
     },
     cube() {
-      this.isNation = false
-      this.isCube = !this.isCube
-      this.isProjectStatus = false
-      this.isProfile = false
+      this.$store.state.isNation = false
+      this.$store.state.isCube = !this.$store.state.isCube
+      this.$store.state.isProjectStatus = false
+      this.$store.state.isProfile = false
     },
     projectStatus() {
-      this.isNation = false
-      this.isCube = false
-      this.isProjectStatus = !this.isProjectStatus
-      this.isProfile = false
+      this.$store.state.isNation = false
+      this.$store.state.isCube = false
+      this.$store.state.isProjectStatus = !this.$store.state.isProjectStatus
+      this.$store.state.isProfile = false
     },
     profile() {
-      this.isNation = false
-      this.isCube = false
-      this.isProjectStatus = false
-      this.isProfile = !this.isProfile
+      this.$store.state.isNation = false
+      this.$store.state.isCube = false
+      this.$store.state.isProjectStatus = false
+      this.$store.state.isProfile = !this.$store.state.isProfile
     }
   },
 }
