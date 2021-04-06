@@ -9,6 +9,10 @@ import Images from "@/components/UIElements/Images";
 import ProgressBars from "@/components/UIElements/ProgressBars";
 import Pagination from "../components/UIElements/Pagination";
 import Tabs from "../components/UIElements/Tabs";
+import DefaultForm from "../components/Forms/DefaultForm";
+import SampleForm from "../components/Forms/SampleForm";
+import DatePicker from "../components/Forms/DatePicker";
+import Switches from "../components/Forms/Switches";
 
 const routes = [
   {
@@ -21,6 +25,8 @@ const routes = [
     name: 'Social',
     component: SocialFeed
   },
+
+    /*UI Elements*/
   {
     path: '/badges',
     name: 'Badges',
@@ -60,6 +66,29 @@ const routes = [
     path: '/tabs',
     name: 'Tabs',
     component: Tabs
+  },
+
+
+/*Forms*/
+  {
+    path: '/default-form',
+    name: 'Default',
+    component: DefaultForm
+  },
+  {
+    path: '/sample-form',
+    name: 'Sample',
+    component: SampleForm
+  },
+  {
+    path: '/date-picker',
+    name: 'Date',
+    component: DatePicker
+  },
+  {
+    path: '/switches',
+    name: 'Switches',
+    component: Switches
   },
   /*{
     path: '/about',

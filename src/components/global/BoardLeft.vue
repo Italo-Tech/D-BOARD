@@ -201,13 +201,34 @@
       </li>
       <!--Forms-->
       <li class="l0">
-        <button @click.prevent="" class="left-sidebar-item  focus:outline-none">
+        <button @click.prevent="isForms = !isForms" class="left-sidebar-item  focus:outline-none">
                   <span class="text-xl ml-5">
                     <i class='bx bx-calendar-week'></i>
                   </span>
           <span class="title ml-6">Forms</span>
           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
+        <ul v-show="isForms">
+          <!--Buttons-->
+          <li class="">
+            <!--Default Form-->
+            <router-link :to="{ name: 'Default' }" class="left-sidebar-item focus:outline-none">
+              <span class="title">Default Forms</span>
+            </router-link>
+            <!--Sample Form-->
+            <router-link :to="{ name: 'Sample' }" class="left-sidebar-item focus:outline-none">
+              <span class="title">Sample Forms</span>
+            </router-link>
+            <!--Date Picker-->
+            <router-link :to="{ name: 'Date' }" class="left-sidebar-item focus:outline-none">
+              <span class="title">Date Picker</span>
+            </router-link>
+            <!--Swtiches-->
+            <router-link :to="{ name: 'Switches' }" class="left-sidebar-item focus:outline-none">
+              <span class="title">Switches</span>
+            </router-link>
+          </li>
+        </ul>
       </li>
       <!--Tables-->
       <li class="l0">
@@ -251,6 +272,7 @@ export default {
 
       /*COMPONENTS*/
       isUIElement: false,
+      isForms: false,
     }
   },
   computed: {
