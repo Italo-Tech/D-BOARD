@@ -1,7 +1,7 @@
 <template>
   <div class="navbar navbar-1 border-b">
     <div class="navbar-inner  w-full flex items-center justify-start">
-      <button @click.prevent="this.dBoard = !this.dBoard" class="mx-4 focus:outline-none">
+      <button @click.prevent="this.$store.state.dBoard = !this.$store.state.dBoard" class="mx-4 focus:outline-none">
         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
       <!--Button Search-->
@@ -16,11 +16,11 @@
 
       <!--EXPLORE-->
       <div class="relative">
-        <button @click.prevent="explore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
+        <button @click.prevent="this.isExplore = !this.isExplore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
           <span class="mr-2">Explore</span>
           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
-        <div v-show="this.isExplore" class="absolute top-0 mt-16 bg-gray-50 border-2 rounded-lg border-gray-200 transition shadow-xl">
+        <div v-show="isExplore" class="absolute top-0 mt-16 bg-gray-50 border-2 rounded-lg border-gray-200 transition shadow-xl">
           <div class="dropdown-content bottom-start" style="width: 32rem">
             <div class="flex flex-row flex-wrap focus:outline-none">
               <!--Teams-->
@@ -107,7 +107,7 @@
         <button @click.prevent="nation" class="flex items-center justify-center h-16 w-12 focus:outline-none">
           <span class="text-base flag-icon flag-icon-br"></span>
         </button>
-        <div v-show="this.isNation" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
+        <div v-show="isNation" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
           <div class="dropdown-content w-64 bottom-start">
             <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Escolha um país</div>
             <div class="flex flex-wrap">
@@ -161,7 +161,7 @@
         <button @click.prevent="cube" class="flex items-center justify-center h-16 w-12 focus:outline-none">
           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
         </button>
-        <div v-show="this.isCube" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
+        <div v-show="isCube" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
           <div class="dropdown-content w-64 bottom-start">
             <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Apps</div>
             <div class="flex flex-wrap">
@@ -225,7 +225,7 @@
           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
           <span class="uppercase absolute font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-blue-500 text-white" style="top: 14px; right: 8px">5</span>
         </button>
-        <div v-show="this.isProjectStatus" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
+        <div v-show="isProjectStatus" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
           <div class="dropdown-content w-64 bottom-start">
             <div class="font-bold p-4 uppercase text-gray-700 text-sm leading-5">Project Status</div>
             <div class="flex flex-col">
@@ -297,7 +297,7 @@
                       <span class="absolute uppercase font-bold inline-flex text-center p-0 leading-none text-2xs h-4 w-4 items-center justify-center rounded-full bg-red-500 text-white ring-white" style="top: 10px; right: -4px">2</span>
                     </span>
         </button>
-        <div v-show="this.isProfile" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
+        <div v-show="isProfile" class="absolute top-0 right-0 mt-16 bg-gray-100 border-2 rounded-lg border-gray-300 transition shadow-2xl">
           <div class="w-48 bottom-end">
             <div class="flex flex-col w-full">
               <ul class="list-none shadow-xl">
@@ -363,7 +363,10 @@ export default {
   methods: {
     ...mapActions([
       'nation','cube','projectStatus','profile','settingsRight'
-    ])
+    ]),
+    explore() {
+      this.isExplore = !this.isExplore
+    }
   }
 }
 </script>
