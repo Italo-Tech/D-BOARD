@@ -1,7 +1,7 @@
 <template>
   <div class="navbar navbar-1 border-b">
     <div class="navbar-inner  w-full flex items-center justify-start">
-      <button @click.prevent="this.$store.state.dBoard = !this.$store.state.dBoard" class="mx-4 focus:outline-none">
+      <button @click.prevent="dashLeft" class="mx-4 focus:outline-none">
         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
       <!--Button Search-->
@@ -16,7 +16,7 @@
 
       <!--EXPLORE-->
       <div class="relative">
-        <button @click.prevent="this.isExplore = !this.isExplore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
+        <button @click.prevent="isExplore = !isExplore" class="btn btn-default btn-icon bg-transparent h-16 focus:outline-none">
           <span class="mr-2">Explore</span>
           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="stroke-current" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
@@ -352,21 +352,48 @@ export default {
   name: "NavBar",
   data() {
     return {
+      isExplore: false,
 
+      isNation: false,
+      isCube: false,
+      isProjectStatus: false,
+      isProfile: false
     }
   },
   computed: {
     ...mapState([
-        'dBoard','isNation','isCube','isProjectStatus','isProfile','isExplore'
+        'dBoard'
     ])
   },
   methods: {
     ...mapActions([
-      'nation','cube','projectStatus','profile','settingsRight'
+      'settingsRight','dashLeft'
     ]),
-    explore() {
-      this.isExplore = !this.isExplore
-    }
+    /*Modais NavBar*/
+    nation() {
+      this.isNation = !this.isNation
+      this.isCube = false
+      this.isProjectStatus = false
+      this.isProfile = false
+    },
+    cube() {
+      this.isNation = false
+      this.isCube = !this.isCube
+      this.isProjectStatus = false
+      this.isProfile = false
+    },
+    projectStatus() {
+      this.isNation = false
+      this.isCube = false
+      this.isProjectStatus = !this.isProjectStatus
+      this.isProfile = false
+    },
+    profile() {
+      this.isNation = false
+      this.isCube = false
+      this.isProjectStatus = false
+      this.isProfile = !this.isProfile
+    },
   }
 }
 </script>

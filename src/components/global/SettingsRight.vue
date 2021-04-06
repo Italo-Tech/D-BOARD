@@ -99,5 +99,22 @@ export default {
 </script>
 
 <style scoped>
-
+/*RIGHT SIDEBAR*/
+.right-sidebar.right-sidebar-1.openSettings {
+  transform: translateX(0px);
+}
+.right-sidebar.right-sidebar-1 {
+  height: 100%;
+  font-size: .825rem;
+  line-height: 1.25rem;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+  width: 16rem;
+  z-index: 10;
+}
 </style>
