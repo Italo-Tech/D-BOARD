@@ -13,6 +13,7 @@ import DefaultForm from "../components/Forms/DefaultForm";
 import SampleForm from "../components/Forms/SampleForm";
 import DatePicker from "../components/Forms/DatePicker";
 import Switches from "../components/Forms/Switches";
+import Sliders from "../components/Forms/Sliders";
 
 const routes = [
   {
@@ -79,6 +80,11 @@ const routes = [
     path: '/sample-form',
     name: 'Sample',
     component: SampleForm
+  },
+  {
+    path: '/sliders',
+    name: 'Sliders',
+    component: Sliders
   },
   {
     path: '/date-picker',
