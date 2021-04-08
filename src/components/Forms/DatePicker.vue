@@ -1,10 +1,19 @@
 <template>
-  <div>Date Picker</div>
+  <div>
+    date picker
+  </div>
 </template>
 
 <script>
+
+
 export default {
-  name: "DatePicker"
+  name: "DatePicker",
+  data () {
+    return {
+
+    }
+  },
 }
 </script>
 

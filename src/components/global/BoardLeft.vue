@@ -220,9 +220,9 @@
               <span class="title">Sample Forms</span>
             </router-link>
             <!--Sliders-->
-            <router-link :to="{ name: 'Sliders' }" class="left-sidebar-item focus:outline-none">
+<!--            <router-link :to="{ name: 'Sliders' }" class="left-sidebar-item focus:outline-none">
               <span class="title">Sliders</span>
-            </router-link>
+            </router-link>-->
             <!--Date Picker-->
             <router-link :to="{ name: 'Date' }" class="left-sidebar-item focus:outline-none">
               <span class="title">Date Picker</span>
