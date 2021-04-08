@@ -11,9 +11,9 @@ import Pagination from "../components/UIElements/Pagination";
 import Tabs from "../components/UIElements/Tabs";
 import DefaultForm from "../components/Forms/DefaultForm";
 import SampleForm from "../components/Forms/SampleForm";
-import DatePicker from "../components/Forms/DatePicker";
 import Switches from "../components/Forms/Switches";
 import Sliders from "../components/Forms/Sliders";
+import Charts from "../components/Others/Charts";
 
 const routes = [
   {
@@ -87,14 +87,16 @@ const routes = [
     component: Sliders
   },
   {
-    path: '/date-picker',
-    name: 'Date',
-    component: DatePicker
-  },
-  {
     path: '/switches',
     name: 'Switches',
     component: Switches
+  },
+
+    /*OTHERS*/
+  {
+    path: '/charts',
+    name: 'Charts',
+    component: Charts
   },
   /*{
     path: '/about',

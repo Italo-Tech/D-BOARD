@@ -219,14 +219,6 @@
             <router-link :to="{ name: 'Sample' }" class="left-sidebar-item focus:outline-none">
               <span class="title">Sample Forms</span>
             </router-link>
-            <!--Sliders-->
-<!--            <router-link :to="{ name: 'Sliders' }" class="left-sidebar-item focus:outline-none">
-              <span class="title">Sliders</span>
-            </router-link>-->
-            <!--Date Picker-->
-            <router-link :to="{ name: 'Date' }" class="left-sidebar-item focus:outline-none">
-              <span class="title">Date Picker</span>
-            </router-link>
             <!--Swtiches-->
             <router-link :to="{ name: 'Switches' }" class="left-sidebar-item focus:outline-none">
               <span class="title">Switches</span>
@@ -234,21 +226,30 @@
           </li>
         </ul>
       </li>
-      <!--Tables-->
+      <!--Others-->
       <li class="l0">
-        <button @click.prevent="" class="left-sidebar-item focus:outline-none">
+        <button @click.prevent="isOthers = !isOthers" class="left-sidebar-item focus:outline-none">
                   <span class="text-xl ml-5">
                     <i class='bx bx-table'></i>
                   </span>
-          <span class="title ml-6">Tables</span>
+          <span class="title ml-6">Others</span>
           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
+        <ul v-show="isOthers">
+          <!--Buttons-->
+          <li class="">
+            <!--Default Form-->
+            <router-link :to="{ name: 'Charts' }" class="left-sidebar-item focus:outline-none">
+              <span class="title">Charts</span>
+            </router-link>
+          </li>
+        </ul>
       </li>
       <!--Nortifications-->
       <li class="l0">
-        <button @click.prevent="" class="left-sidebar-item focus:outline-none">
+        <button @click.prevent="isOthers" class="left-sidebar-item focus:outline-none">
                   <span class="text-xl ml-5">
                     <i class="far fa-clock"></i>
                   </span>
@@ -277,6 +278,9 @@ export default {
       /*COMPONENTS*/
       isUIElement: false,
       isForms: false,
+
+      /*OTHERS*/
+      isOthers: false,
     }
   },
   computed: {

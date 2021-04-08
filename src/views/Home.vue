@@ -463,11 +463,11 @@ export default {
   },
 
   beforeMount () {
-    this.fillData()
+    // this.fillData()
   },
 
   methods: {
-    fillData () {
+    /*fillData () {
       this.state.chartData = {
         labels: ['label 1', 'Label 2'],
         datasets: [
@@ -481,7 +481,7 @@ export default {
     },
     getRandomInt () {
       return Math.floor(Math.random() * (10 - 5 + 1)) + 10
-    },
+    },*/
   }
 }
 </script>
