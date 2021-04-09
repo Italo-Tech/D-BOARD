@@ -248,6 +248,10 @@
             <router-link :to="{ name: 'LineC' }" class="left-sidebar-item focus:outline-none">
               <span class="title">Line</span>
             </router-link>
+            <!--Radar-->
+            <router-link :to="{ name: 'RadarC' }" class="left-sidebar-item focus:outline-none">
+              <span class="title">Radar</span>
+            </router-link>
           </li>
         </ul>
       </li>

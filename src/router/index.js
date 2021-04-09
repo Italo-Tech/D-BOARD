@@ -15,6 +15,7 @@ import Switches from "../components/Forms/Switches";
 import Sliders from "../components/Forms/Sliders";
 import BarC from "../components/Charts/BarC";
 import LineC from "../components/Charts/LineC";
+import RadarC from "../components/Charts/RadarC";
 
 const routes = [
   {
@@ -103,6 +104,11 @@ const routes = [
     path: '/line',
     name: 'LineC',
     component: LineC
+  },
+  {
+    path: '/radar',
+    name: 'RadarC',
+    component: RadarC
   },
   /*{
     path: '/about',

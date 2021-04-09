@@ -6,18 +6,17 @@
 
 <script>
 import Chart from "chart.js";
-import radarChartData from "@/components/graphics/radarChart";
-
+import RadarChartData from "./radarChart";
 export default {
   name: "RadarChart",
   data() {
     return {
-      radarChartData
+      RadarChartData
     }
   },
   mounted() {
     const ctx = document.getElementById('radar-chart');
-    new Chart(ctx, this.radarChartData);
+    new Chart(ctx, this.RadarChartData);
   }
 }
 </script>
