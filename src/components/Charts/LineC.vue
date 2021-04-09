@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <!--Chart line-->
+    <!--Chart line 1-->
     <section class="w-full p-4 mb-8 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
       <!--Title-->
       <div class="flex flex-row items-center justify-between mb-6">
@@ -27,7 +27,7 @@
       </div>
     </section>
 
-    <!--Chart line-->
+    <!--Chart line 2-->
     <section class="w-full p-4 mb-8 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
       <!--Title-->
       <div class="flex flex-row items-center justify-between mb-6">
@@ -46,7 +46,7 @@
       </div>
     </section>
 
-    <!--Chart line-->
+    <!--Chart line 3-->
     <section class="w-full p-4 mb-8 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
       <!--Title-->
       <div class="flex flex-row items-center justify-between mb-6">
@@ -63,6 +63,24 @@
         <LineChartThree />
       </div>
     </section>
+
+    <!--Chart line 4-->
+    <section class="w-full p-4 mb-8 rounded-lg bg-white border border-gray-100 dark:bg-gray-900 dark:border-gray-800">
+      <!--Title-->
+      <div class="flex flex-row items-center justify-between mb-6">
+        <div class="flex flex-col">
+          <div class="text-sm font-light text-gray-500">Line Charts - One Line</div>
+          <div class="text-sm font-bold">
+            <span>Line Chart with one Line and background</span>
+          </div>
+        </div>
+      </div>
+
+      <!--Charts-->
+      <div class="flex flex-row w-full">
+        <LineChartFour />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -70,9 +88,10 @@
 import LineChartOne from "./line/LineChartOne";
 import LineChartTwo from "./line/LineChartTwo";
 import LineChartThree from "./line/LineChartThree";
+import LineChartFour from "./line/LineChartFour";
 export default {
   name: "LineC",
-  components: {LineChartThree, LineChartTwo, LineChartOne}
+  components: {LineChartFour, LineChartThree, LineChartTwo, LineChartOne}
 }
 </script>
 
