@@ -16,6 +16,7 @@ import Sliders from "../components/Forms/Sliders";
 import BarC from "../components/Charts/BarC";
 import LineC from "../components/Charts/LineC";
 import RadarC from "../components/Charts/RadarC";
+import DoughnutPie from "../components/Charts/DoughnutPie";
 
 const routes = [
   {
@@ -106,9 +107,19 @@ const routes = [
     component: LineC
   },
   {
+    path: '/doughnut',
+    name: 'DoughnutPie',
+    component: DoughnutPie
+  },
+  {
     path: '/radar',
     name: 'RadarC',
     component: RadarC
+  },
+  {
+    path: '/doughnut',
+    name: 'DoughnutPie',
+    component: DoughnutPie
   },
   /*{
     path: '/about',

@@ -252,6 +252,10 @@
             <router-link :to="{ name: 'RadarC' }" class="left-sidebar-item focus:outline-none">
               <span class="title">Radar</span>
             </router-link>
+            <!--Doughnut and Pie-->
+            <router-link :to="{ name: 'DoughnutPie' }" class="left-sidebar-item focus:outline-none">
+              <span class="title">Doughnut and Pie</span>
+            </router-link>
           </li>
         </ul>
       </li>
