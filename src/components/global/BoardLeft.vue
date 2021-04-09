@@ -226,30 +226,34 @@
           </li>
         </ul>
       </li>
-      <!--Others-->
+      <!--Charts-->
       <li class="l0">
-        <button @click.prevent="isOthers = !isOthers" class="left-sidebar-item focus:outline-none">
+        <button @click.prevent="isChart = !isChart" class="left-sidebar-item focus:outline-none">
                   <span class="text-xl ml-5">
-                    <i class='bx bx-table'></i>
+                    <img src="../../assets/img/pie.png" alt="pie" class="h-5">
                   </span>
-          <span class="title ml-6">Others</span>
+          <span class="title ml-6">Charts</span>
           <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-auto arrow" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
-        <ul v-show="isOthers">
+        <ul v-show="isChart">
           <!--Buttons-->
           <li class="">
-            <!--Default Form-->
-            <router-link :to="{ name: 'Charts' }" class="left-sidebar-item focus:outline-none">
-              <span class="title">Charts</span>
+            <!--Bar-->
+            <router-link :to="{ name: 'BarC' }" class="left-sidebar-item focus:outline-none">
+              <span class="title">Bar</span>
+            </router-link>
+            <!--Line-->
+            <router-link :to="{ name: 'LineC' }" class="left-sidebar-item focus:outline-none">
+              <span class="title">Line</span>
             </router-link>
           </li>
         </ul>
       </li>
       <!--Nortifications-->
       <li class="l0">
-        <button @click.prevent="isOthers" class="left-sidebar-item focus:outline-none">
+        <button @click.prevent="isChart" class="left-sidebar-item focus:outline-none">
                   <span class="text-xl ml-5">
                     <i class="far fa-clock"></i>
                   </span>
@@ -280,7 +284,7 @@ export default {
       isForms: false,
 
       /*OTHERS*/
-      isOthers: false,
+      isChart: false,
     }
   },
   computed: {

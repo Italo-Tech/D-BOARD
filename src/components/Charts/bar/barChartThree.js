@@ -1,4 +1,4 @@
-export const barChartDataOne = {
+export const barChartDataThree = {
     type: "bar",
     data: {
         labels: ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -6,30 +6,24 @@ export const barChartDataOne = {
             {
                 label: "Toddy",
                 data: [40, 50, 70, 80, 40, 15, 25, 60, 30, 25, 12],
-                backgroundColor: "#2563eb",
-                borderColor: "#2563eb",
-                borderWidth: 3,
-                barThickness: 20,
-            },
-            {
-                label: "Nescau",
-                data: [50, 40, 50, 70, 80, 69, 50, 55, 20, 30, 8],
-                backgroundColor: "#83b6ff",
-                borderColor: "#83b6ff",
-                borderWidth: 3,
-                barThickness: 20,
+                backgroundColor: "#f87171",
+                borderColor: "#f87171",
+                borderWidth: 1,
+                barThickness: 100,
             }
         ]
     },
     options: {
+        indexAxis: 'y',
         responsive: true,
         lineTension: 1,
+
         legend: {
             labels: {
                 fontColor: "rgba(0,0,0,.4)",
             },
-            align: "end",
-            position: "bottom",
+            align: "center",
+            position: "top",
         },
         scales: {
             yAxes: [
@@ -44,4 +38,4 @@ export const barChartDataOne = {
     }
 };
 
-export default barChartDataOne;
+export default barChartDataThree;

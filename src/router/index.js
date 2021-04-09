@@ -13,7 +13,8 @@ import DefaultForm from "../components/Forms/DefaultForm";
 import SampleForm from "../components/Forms/SampleForm";
 import Switches from "../components/Forms/Switches";
 import Sliders from "../components/Forms/Sliders";
-import Charts from "../components/Others/Charts";
+import BarC from "../components/Charts/BarC";
+import LineC from "../components/Charts/LineC";
 
 const routes = [
   {
@@ -92,11 +93,16 @@ const routes = [
     component: Switches
   },
 
-    /*OTHERS*/
+    /*CHARTS*/
   {
-    path: '/charts',
-    name: 'Charts',
-    component: Charts
+    path: '/bar',
+    name: 'BarC',
+    component: BarC
+  },
+  {
+    path: '/line',
+    name: 'LineC',
+    component: LineC
   },
   /*{
     path: '/about',
