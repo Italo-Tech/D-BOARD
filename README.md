@@ -17,39 +17,40 @@
 <div align="center" style="background-color: slategray!important;">
   <div>
     <h4 align="center">HomePage</h4>
-    <img alt="Home Page" src="./public/img/home-page.jpeg" width="80%">
+    <img alt="Home Page" src="./public/img/home-page.jpeg" width="100%">
   </div><br>
 
   <div>
     <h4 align="center">Social Feed</h4>
-    <img alt="Social Feed" src="./public/img/social-feed.jpeg" width="80%">
+    <img alt="Social Feed" src="./public/img/social-feed.jpeg" width="100%">
   </div><br>
 
   <div>
     <h4 align="center">Switches</h4>
-    <img alt="Switches" src="./public/img/switches.jpeg" width="80%">
+    <img alt="Switches" src="./public/img/switches.jpeg" width="100%">
   </div><br>
 
   <div>
     <h4 align="center">Bar Chart</h4>
-    <img alt="Bar Chart" src="./public/img/bar-chart.jpeg" width="80%">
+    <img alt="Bar Chart" src="./public/img/bar-chart.jpeg" width="100%">
   </div><br>
 
   <div>
     <h4 align="center">Line Chart</h4>
-    <img alt="Line Chart" src="./public/img/line-chart2.jpeg" width="80%">
+    <img alt="Line Chart" src="./public/img/line-chart2.jpeg" width="100%">
   </div><br>
 
   <div>
     <h4 align="center">Radar Chart</h4>
-    <img alt="Radar Chart" src="./public/img/radar-chart.jpeg" width="80%">
+    <img alt="Radar Chart" src="./public/img/radar-chart.jpeg" width="100%">
   </div>
-
+<br><br>
 </div>
 
 ## 👨🏼‍💻 Desenvolvedor
 
 - [Ítalo Henrique](https://www.linkedin.com/in/italo-tech/)
+  <br><br>
 
 ## :rocket: Tecnologias
 
@@ -57,14 +58,17 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Vue.js](https://vuejs.org/)
 - [Tailwindcss](https://tailwindcss.com/docs)
+  <br><br>
 
 ## 💻 Projeto
 
 O D-BOARD é um Dashboard que visa informar métricas específicas com gráficos e principalmente treinar todo seu layout utilizando apenas Tailwincss.
+<br><br>
 
 ## Passos para utilizar
 1. Faça um clone desse repositório;
 2. Entre na pasta `cd D-BOARD`;
+   <br><br>
 
 ## Como rodar o projeto?
 Após baixar o projeto, acesse ele via seu terminal rode os comandos:
