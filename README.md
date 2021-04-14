@@ -60,7 +60,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O D-BOARD é um Dashboard que visa informar métricas específicas com gráficos e principalmente treinar todo seu layout utilizando Tailwincss.
+O D-BOARD é um Dashboard que visa informar métricas específicas com gráficos e principalmente treinar todo seu layout utilizando apenas Tailwincss.
 
 ## Passos para utilizar
 1. Faça um clone desse repositório;
