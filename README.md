@@ -14,7 +14,7 @@
 <h2 align="center">Prévia de Componentes</h2>
 <br>
 
-<div align="center">
+<div align="center" style="background-color: slategray">
   <div>
     <h4 align="center">HomePage</h4>
     <img alt="Home Page" src="./public/img/home-page.jpeg" width="80%">
