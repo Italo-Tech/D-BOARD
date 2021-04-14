@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="DevRadar" title="#DevRadar" src="./src/assets/img/d-board-logo.png" width="300px" />
+    <img alt="D-BOARD" title="#D-BOARD" src="./public/img/d-board-logo.png" width="300px" />
 </h1>
 
 <h2 align="center">
@@ -16,9 +16,9 @@
 <br>
 
 <p align="center">
-  <img alt="Home Page" src="./src/assets/img/home-page.jpeg" width="80%">
-  <img alt="" src="./src/assets/img/social-feed.jpeg" width="80%">
-  <img alt="" src="./src/assets/img/bar-chart.jpeg" width="80%">
+  <img alt="Home Page" src="./public/img/home-page.jpeg" width="80%">
+  <img alt="" src="./public/img/social-feed.jpeg" width="80%">
+  <img alt="" src="./public/img/bar-chart.jpeg" width="80%">
 </p>
 
 ## 👨🏼‍💻 Desenvolvedor
