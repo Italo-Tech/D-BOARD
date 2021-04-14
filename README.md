@@ -1,10 +1,6 @@
 <h1 align="center">
-    <img alt="D-BOARD" title="#D-BOARD" src="./public/img/d-board-logo.png" width="300px" />
+    <img alt="D-BOARD" title="#D-BOARD" src="./public/img/d-board-logo.png" width="200px" />
 </h1>
-
-<h2 align="center">
-  🚀 D-BOARD
-</h2>
 
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -15,11 +11,43 @@
 
 <br>
 
-<p align="center">
-  <img alt="Home Page" src="./public/img/home-page.jpeg" width="80%">
-  <img alt="" src="./public/img/social-feed.jpeg" width="80%">
-  <img alt="" src="./public/img/bar-chart.jpeg" width="80%">
-</p>
+<h2 align="center">Prévia de Componentes</h2>
+<br>
+
+<div align="center">
+  <div>
+    <h3 align="start">HomePage</h3>
+    <img alt="Home Page" src="./public/img/home-page.jpeg" width="80%">
+  </div>
+
+  <div>
+    <h3 align="start">Social Feed</h3>
+    <img alt="Social Feed" src="./public/img/social-feed.jpeg" width="80%">
+  </div>
+
+  <div>
+    <h3 align="start">Switches</h3>
+    <img alt="Switches" src="./public/img/switches.jpeg" width="80%">
+  </div>
+
+  <div>
+    <h3 align="start">Bar Chart</h3>
+    <img alt="Bar Chart" src="./public/img/bar-chart.jpeg" width="80%">
+  </div>
+
+  <div>
+    <h3 align="start">Line Chart</h3>
+    <img alt="Line Chart" src="./public/img/line-chart2.jpeg" width="80%">
+  </div>
+
+  <div>
+    <h3 align="start">Radar Chart</h3>
+    <img alt="Radar Chart" src="./public/img/radar-chart.jpeg" width="80%">
+  </div>
+
+
+
+</div>
 
 ## 👨🏼‍💻 Desenvolvedor
 
