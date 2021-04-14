@@ -16,32 +16,32 @@
 
 <div align="center">
   <div>
-    <h3 align="start">HomePage</h3>
+    <h4 align="center">HomePage</h4>
     <img alt="Home Page" src="./public/img/home-page.jpeg" width="80%">
   </div>
 
   <div>
-    <h3 align="start">Social Feed</h3>
+    <h4 align="center">Social Feed</h4>
     <img alt="Social Feed" src="./public/img/social-feed.jpeg" width="80%">
   </div>
 
   <div>
-    <h3 align="start">Switches</h3>
+    <h4 align="center">Switches</h4>
     <img alt="Switches" src="./public/img/switches.jpeg" width="80%">
   </div>
 
   <div>
-    <h3 align="start">Bar Chart</h3>
+    <h4 align="center">Bar Chart</h4>
     <img alt="Bar Chart" src="./public/img/bar-chart.jpeg" width="80%">
   </div>
 
   <div>
-    <h3 align="start">Line Chart</h3>
+    <h4 align="center">Line Chart</h4>
     <img alt="Line Chart" src="./public/img/line-chart2.jpeg" width="80%">
   </div>
 
   <div>
-    <h3 align="start">Radar Chart</h3>
+    <h4 align="center">Radar Chart</h4>
     <img alt="Radar Chart" src="./public/img/radar-chart.jpeg" width="80%">
   </div>
 
