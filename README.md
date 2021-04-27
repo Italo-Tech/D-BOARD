@@ -75,4 +75,4 @@ Após baixar o projeto, acesse ele via seu terminal rode os comandos:
 
 Rode `yarn install` para instalar as dependências;
 <br>
-Rode `yarn start` para iniciar a aplicação;
+Rode `yarn serve` para iniciar a aplicação;
