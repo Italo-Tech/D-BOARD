@@ -14,6 +14,7 @@
                 <div class="font-light text-xs text-gray-500 uppercase">Members</div>
                 <div class="text-lg font-bold">Ítalo Henrique</div>
               </div>
+
               <div class="hidden lg:flex flex-shrink-0 space-x-2">
                 <button class="btn btn-default rounded-lg bg-blue-500 hover:bg-blue-600 text-white">Subscribe</button>
                 <button class="btn btn-default rounded-lg bg-blue-500 hover:bg-blue-600 text-white">Follow</button>
