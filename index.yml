@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="React TailwindCSS admin template">
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>D-board</title>
+    <meta name="next-head-count" content="3">
+    <link rel="preload" href="/_next/static/css/3836f918ec3705e1f348.css" as="style">
+    <link rel="stylesheet" href="/_next/static/css/3836f918ec3705e1f348.css" data-n-g="">
+    <noscript data-n-css=""></noscript>
+    <link rel="preload" href="/_next/static/chunks/main-bdc1311b5d287368c36c.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/webpack-e067438c4cf4ef2ef178.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/framework.a3ab6d70963b928e4674.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/5bfee4fb19ae23551062f386782f9c4706748be8.c77d3722392d1406a88f.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/8da6b5ecd7db099ffaa055c8eb319a5785ca98ec.31709e6789014fb5c002.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/8bab16237b6390afce5bf573bb926f25fb44058c.7b4a4f1164a299eb496b.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/a31a331c03918d293cc76c73022ac042566c58ad.e294ef0e41be4c2301f9.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/pages/_app-8189bf430e5d396de266.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/75fc9c18.6c8f97b1758722c33b2b.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/adce4e8c100eeb78fbb6aa227fc5bae09e0abfee.3d5a2347f9161b8a2684.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/659d287e5f2ba23092c00d3e79ce033565166930.e1f6d1b17a8942db14ac.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/e307bf274ed54948bcb6dbf5396b2b3d2241d08f.56f85a0ce1aac18d6244.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/8ceaa29b11aa16f5ef2028a0ba8a50f1abefff70.2789a0fc06f742f0eb0d.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/3549fc0b7234fae2980ee12d3941339d68554a6c.d2f396902d910b1ce6d6.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/30e6bf3dd2818b0c902bad4f0f4d85fb2279fc2b.b57155097ea5ce4d1c3a.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/6ce14619abb9de17fc2e5f3943b2c8cf547a7e5a.175f14db449b020b9fa3.js" as="script">
+    <link rel="preload" href="/_next/static/chunks/pages/index-32fbf2acd596b257b0a7.js" as="script">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/75fc9c18.6c8f97b1758722c33b2b.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/adce4e8c100eeb78fbb6aa227fc5bae09e0abfee.3d5a2347f9161b8a2684.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/659d287e5f2ba23092c00d3e79ce033565166930.e1f6d1b17a8942db14ac.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/e307bf274ed54948bcb6dbf5396b2b3d2241d08f.56f85a0ce1aac18d6244.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/8ceaa29b11aa16f5ef2028a0ba8a50f1abefff70.2789a0fc06f742f0eb0d.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/3549fc0b7234fae2980ee12d3941339d68554a6c.d2f396902d910b1ce6d6.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/30e6bf3dd2818b0c902bad4f0f4d85fb2279fc2b.b57155097ea5ce4d1c3a.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/6ce14619abb9de17fc2e5f3943b2c8cf547a7e5a.175f14db449b020b9fa3.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/index-32fbf2acd596b257b0a7.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/dashboard-2a2698c8edd390ab2476.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/documentation-933c4eae628a36ce2d31.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/landing-8c06e36871feef005360.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/social-feed-5d8e2f452c5585194435.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/tasks-7a9cb71c59b530720d88.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/297103e9a71195ed2052a7239fbd201b1bda76a0.bde9b9da80e07b2efdd4.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/inbox-187235cf026181af626a.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/bee240a3.5a1e16c0047f963ab19c.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/kanban-147e0343bb2eac3ea272.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/todo-30d72a68fc507175cfec.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/badges-7ba048b82255ff1d2f72.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/breadcrumbs-6e5cfbc80b4f7e467009.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/buttons-1348c11c3725c25a1b54.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/59192815e522bf180a3ea388343e93b45d6dd5e6.19b6151c123b1ebf1325.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/dropdowns-b561b7d28acd96100c6c.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/images-f4628b553c568a3bf2a1.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/1bfc9850.150c3b2c90bc5a6f7b76.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/lists-2c66b55e75792f4a34a7.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/progress-bars-5d99a457f8e5fa3906f7.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/pagination-6f78a64e0b6d1c4ae4b1.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/tabs-e9de3fde0f155ab06737.js">
+    <link as="script" rel="prefetch" href="/_next/static/chunks/pages/typography-0cdc2b57e4aff4b6a228.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body cz-shortcut-listen="true">
+    <div id="app"></div>
+</body>
+</html>
